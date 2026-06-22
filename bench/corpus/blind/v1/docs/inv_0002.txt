@@ -1,0 +1,24 @@
+========================================
+         GLOBAL SERVICES INC
+   500 Corporate Blvd, Wilmington DE
+========================================
+
+Invoice #: 2024-GSI-4471
+Invoice Date: March 28, 2024
+Terms: Due upon receipt
+
+Customer: BrightStar LLC
+          789 Commerce Way
+
+Item                          Qty    Unit Price    Line Total
+---                           ---    ----------    ----------
+Software License (Annual)     1      $12,000.00   $12,000.00
+Premium Support Package       1      $3,500.00    $3,500.00
+Training Session (On-site)    2      $1,200.00    $2,400.00
+
+                              Sub-Total:          $17,900.00
+                              Sales Tax (6.5%):   $1,163.50
+                              ===========================
+                              GRAND TOTAL:        $19,063.50
+
+Remit to: Global Services Inc, PO Box 1234, Wilmington DE 19801

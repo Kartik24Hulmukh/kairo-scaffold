@@ -1,0 +1,159 @@
+{
+  "doc_id": "inv_0003",
+  "pack": "invoice",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "vendor_name",
+      "value": "Nordic Tech AB",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.05
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_number",
+      "value": "NT-2024-0033",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_date",
+      "value": "2024-04-10",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "due_date",
+      "value": "2024-05-10",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "total_amount",
+      "value": "8184.0",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.3,
+          1.0,
+          0.10000000000000003
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "currency",
+      "value": "EUR",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.21666666666666667,
+          1.0,
+          0.06666666666666665
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "line_items",
+      "value": "[{'description': 'Konsulttjänster', 'quantity': 40, 'unit_price': 95.0, 'total': 3800.0}, {'description': 'Licens (årlig)', 'quantity': 1, 'unit_price': 2200.0, 'total': 2200.0}, {'description': 'Support-paket', 'quantity': 1, 'unit_price': 600.0, 'total': 600.0}]",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "tax_amount",
+      "value": "1584.0",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.3,
+          1.0,
+          0.10000000000000003
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "30 dagar",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.3,
+          1.0,
+          0.10000000000000003
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

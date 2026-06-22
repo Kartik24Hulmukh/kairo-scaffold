@@ -1,0 +1,79 @@
+{
+  "doc_id": "gen_0002",
+  "pack": "generic",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "summary",
+      "value": "The electric vehicle (EV) market has experienced significant growth in 2024, with global sales reaching 14.2 million units.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.03333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": "['China remains the largest EV market with 8.1 million units sold', 'European adoption accelerated due to new EU emissions regulations', 'North American growth was slower at 18% YoY', 'Battery costs declined to $98/kWh, approaching price parity with ICE vehicles']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.08333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "entities",
+      "value": "['Market Intelligence Group', 'China', 'European', 'North American']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "topics",
+      "value": "['technology', 'market', 'automotive']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

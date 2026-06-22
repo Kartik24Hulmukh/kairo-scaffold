@@ -1,0 +1,127 @@
+{
+  "doc_id": "con_0003",
+  "pack": "contract",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "parties",
+      "value": "['BlueOcean Ventures LP', 'GreenField Capital Ltd']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "effective_date",
+      "value": "2024-02-01",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.01666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "termination_date",
+      "value": "2034-01-31",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "obligations",
+      "value": "['Each partner shall contribute capital within 60 days of signing.', 'BlueOcean shall contribute $5,000,000.', 'GreenField shall contribute $3,000,000.']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.18333333333333332,
+          1.0,
+          0.033333333333333354
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "governing_law",
+      "value": "Ireland",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.05
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "within 60 days",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.18333333333333332,
+          1.0,
+          0.033333333333333354
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "confidentiality_clause",
+      "value": "All financial data, investor information, and proprietary strategies disclosed between partners are deemed strictly confidential.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.23333333333333334,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

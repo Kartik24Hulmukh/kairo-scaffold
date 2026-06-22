@@ -1,7 +1,27 @@
 Kairo Scaffold — G8 Injection Corpus Block Rate
-Method: scan_chunk_for_injection() on all 10 adversarial PDF-embedded payloads
 Date: 2026-06-22
+Method: scan_chunk_for_injection() on all 25 phantom injection corpus payloads
+Source: fixtures/adversarial/injection_corpus.json (copied from phantom @ 7ed8e96)
 
-Block rate: 9/10 = 90.0%
-Action on detect: quarantine (chunk blocked from model context)
-Result: FAIL
+Fixes applied to kernel/sidecar/models/injection_guard.py:
+  Gap 1 (line 46): disregard alternation gained "prior" — catches "Disregard prior output"
+  Gap 2 (line 63): output-manipulation pattern tightened — require [:] or [-] after verb
+    (catches "answer is: X" but NOT "answer should be based on" — no false positive)
+  Ported 34 additional patterns from phantom guardrails.rs + prompt_injection_firewall.rs:
+    - Direct override variants (ignore your instructions, forget everything above)
+    - Role-play/persona (pretend unrestricted, jailbreak mode enabled, your real purpose)
+    - System token injection ([SYSTEM], [ADMIN], user input ends here, admin privileges)
+    - Bypass/override (bypass security checks, authorized override)
+    - Confidential/maintenance modes (confidential instructions, maintenance mode, new task abandon)
+    - Base64 detection (aWdub3Jl = base64 of "ignore")
+    - Char-separated injection (I.g.n.o.r.e pattern)
+    - Indirect injection (PS: when you, repeat after me)
+
+Block rate: 25/25 = 100.0%
+False positives: 0/14 clean business texts
+Existing test suite: 33 passed, 0 failed
+Result: PASS — 100% blocked, 0 false positives (G8 injection corpus gate GREEN)
+
+DIVERGENCE GUARD: patterns ported from phantom's guardrails.rs (PromptGuard) +
+prompt_injection_firewall.rs (PromptShield). Scaffold's Python guard now matches
+phantom's coverage for the 25-payload corpus.

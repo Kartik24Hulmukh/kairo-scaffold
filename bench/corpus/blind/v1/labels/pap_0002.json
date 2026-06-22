@@ -1,0 +1,143 @@
+{
+  "doc_id": "pap_0002",
+  "pack": "paper",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "title",
+      "value": "Scaling Laws for Neural Language Models",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.016666666666666666
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "authors",
+      "value": "['Tom Brown', 'Benjamin Mann', 'Nick Ryder', 'Melanie Subbiah']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.01666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "abstract_summary",
+      "value": "We investigate the scaling properties of neural language models and find that performance depends strongly on model size, dataset size, and compute.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.03333333333333334
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": "['Performance follows a power law in model parameters with exponent 0.076', 'Optimal batch size scales linearly with model size', 'Overfitting occurs when dataset size is insufficient relative to model parameters']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.11666666666666667,
+          1.0,
+          0.06666666666666665
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "methods",
+      "value": "['We trained models ranging from 10^7 to 10^11 parameters on datasets from 10^9 to 10^12 tokens.']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.2,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "reported_numbers",
+      "value": "['0.076']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.11666666666666667,
+          1.0,
+          0.06666666666666665
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "figure_references",
+      "value": "['Figure 3']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "table_references",
+      "value": "['Table 1']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

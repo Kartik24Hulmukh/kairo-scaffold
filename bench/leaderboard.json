@@ -1,0 +1,77 @@
+{
+  "benchmark": "kairo-scaffold-blind-v1",
+  "date": "[INFRA-PENDING \u2014 run make bench]",
+  "commit": "[INFRA-PENDING]",
+  "corpus": {
+    "version": "blind-v1",
+    "doc_count": 11,
+    "answerable_fields": 77,
+    "unanswerable_fields": 4,
+    "packs": {
+      "invoice": 4,
+      "contract": 3,
+      "generic": 2,
+      "paper": 2
+    },
+    "checksum_verified": "sha256sum -c CHECKSUMS.sha256 \u2192 all 23 files OK (2026-06-22)"
+  },
+  "results": [
+    {
+      "system": "Kairo (Local, blind)",
+      "grounded_rate": "[INFRA-PENDING]",
+      "false_refusal_rate": "[INFRA-PENDING]",
+      "refusal_correct_rate": "[INFRA-PENDING]",
+      "halluc_box_blocked_rate": "[INFRA-PENDING]",
+      "source": "make bench (blind-v1)",
+      "live": true
+    },
+    {
+      "system": "Kairo (Local, dev-set)",
+      "grounded_rate": 100.0,
+      "false_refusal_rate": 0.0,
+      "refusal_correct_rate": 100.0,
+      "halluc_box_blocked_rate": 100.0,
+      "source": "cached (overfit, quarantined to legacy/)",
+      "live": false,
+      "note": "Overfit dev-set figure \u2014 NOT the headline"
+    },
+    {
+      "system": "GPT-4o-mini (BYO-key)",
+      "grounded_rate": 84.62,
+      "false_refusal_rate": null,
+      "refusal_correct_rate": 75.0,
+      "source": "cached (dev-set, initial dev)",
+      "live": false
+    },
+    {
+      "system": "Claude Haiku (BYO-key)",
+      "grounded_rate": 80.77,
+      "false_refusal_rate": null,
+      "refusal_correct_rate": 66.67,
+      "source": "cached (dev-set, initial dev)",
+      "live": false
+    },
+    {
+      "system": "Gemini Flash (BYO-key)",
+      "grounded_rate": 76.92,
+      "false_refusal_rate": null,
+      "refusal_correct_rate": 58.33,
+      "source": "cached (dev-set, initial dev)",
+      "live": false
+    },
+    {
+      "system": "Stub/Offline baseline",
+      "grounded_rate": 0.0,
+      "false_refusal_rate": 100.0,
+      "refusal_correct_rate": 100.0,
+      "source": "make bench (offline stub)",
+      "live": true
+    }
+  ],
+  "infra_pending_reason": "Blind bench requires full PyTorch venv (sentence-transformers, docling, torch+CUDA ~2GB). Sandbox tmpfs limit prevents install. Run on machine with >=4GB free disk + GPU.",
+  "reproducibility": {
+    "verify_corpus": "cd bench/corpus/blind/v1 && sha256sum -c CHECKSUMS.sha256",
+    "run_bench": "make bench",
+    "stamp": "bench/run_bench.py::_bench_stamp() prints date + commit"
+  }
+}

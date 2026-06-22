@@ -43,7 +43,7 @@ from typing import List, Tuple
 _RAW_INJECTION_PATTERNS: List[str] = [
     # Direct override directives
     r"ignore\s+(all\s+)?previous\s+instructions?",
-    r"disregard\s+(all\s+)?(previous|your|the\s+above)",
+    r"disregard\s+(all\s+)?(previous|prior|your|the\s+above)",
     r"forget\s+(all\s+)?(previous|prior|earlier|above)\s+(instructions?|context|rules?)",
     r"override\s+(your\s+)?(safety|system|previous|all)",
     # Role-play / persona hijack
@@ -60,7 +60,7 @@ _RAW_INJECTION_PATTERNS: List[str] = [
     r"###\s*(system|instruction)",
     r"system\s*:\s*you\s+(are|must|shall|will)",
     # Output manipulation
-    r"(your\s+)?(new\s+)?(answer|response|reply|output)\s+(is|must\s+be|should\s+be)\s*[:\-]?\s*[\"']",
+    r"(your\s+)?(new\s+)?(answer|response|reply|output)\s+(is|must\s+be)\s*[:\-]\s*[\"']?",
     r"output\s+only\s+(the\s+following|this\s+text|these\s+words)",
     r"always\s+respond\s+with",
     # Exfiltration attempts
@@ -70,6 +70,48 @@ _RAW_INJECTION_PATTERNS: List[str] = [
     # Continuation injection (multi-line attacks)
     r"end\s+of\s+document.*?(new\s+)?(task|instruction|command)",
     r"---\s*(end|stop)\s*---.*?(now|next)",
+    # === Phantom-ported patterns (guardrails.rs + prompt_injection_firewall.rs) ===
+    # Direct override variants (inj-002, inj-004, inj-025)
+    r"ignore\s+(your|all)\s+instructions",
+    r"ignore\s+your\s+system\s+prompt",
+    r"forget\s+everything\s+above",
+    r"forget\s+(all\s+)?(everything|prior|above)",
+    r"your\s+new\s+instructions\s+are",
+    r"new\s+instructions\s+(are|to)\s+output",
+    # Role-play / persona (inj-006, inj-015, inj-022)
+    r"pretend\s+you\s+are\s+(an?\s+)?(unrestricted|free)",
+    r"no\s+safety\s+filters?",
+    r"without\s+(any\s+)?(safety\s+)?restrictions?",
+    r"stop\s+being\s+a\s+document",
+    r"your\s+(real|true)\s+(purpose|self)",
+    r"jailbreak\s+mode\s+(enabled|on|active)",
+    r"produce\s+any\s+output\s+without",
+    # System token injection (inj-009, inj-024)
+    r"\[system\]",
+    r"\[admin\]",
+    r"<<<?admin>?>>",
+    r"user\s+input\s+ends\s+here",
+    r"admin\s+privileges",
+    r"disable\s+content\s+filtering",
+    r"end\s+of\s+(system\s+prompt|instructions|user\s+input)",
+    # Bypass / override (inj-010, inj-014)
+    r"bypass\s+(all\s+)?(security|safety)\s+checks?",
+    r"bypass\s+(your\s+)?(guidelines|rules|training)",
+    r"authorized\s+override",
+    # Confidential / maintenance modes (inj-016, inj-017, inj-018)
+    r"confidential\s+instructions",
+    r"maintenance\s+mode",
+    r"new\s+task:\s+(abandon|ignore|stop)",
+    r"execute\s+the\s+following",
+    r"output\s+(all|your)\s+(extracted|full)\s+(data|configuration)",
+    # Repeat / indirect (inj-019, inj-023)
+    r"repeat\s+after\s+me",
+    r"ps:\s*(when|if)\s+you",
+    # Base64 detection (inj-011) — detect base64-encoded injection
+    r"aWdub3Jl",  # base64 of "ignore"
+    # Char-separated injection (inj-013) — I.g.n.o.r.e pattern
+    r"I\.g\.n\.o\.r\.e",
+    r"\w\.\w\.\w\.\w\.\w\.\w\.\w\.\w",  # generic char-separated words
 ]
 
 # Compile all patterns once

@@ -1,0 +1,20 @@
+Kairo Scaffold — L1 Refusal-First GIF
+Date: 2026-06-22
+
+Deliverable: refusal_demo.gif (89.6 KB, 4 frames, 900×560px)
+Path: repo root (refusal_demo.gif)
+
+Content (refusal-first sequence):
+  Frame 1: CLI loads document → indexes → cascade stages shown
+  Frame 2: REFUSAL — ungroundable fields (purchase_order_number, tax_id) blocked
+  Frame 3: GROUNDED — answerable fields cited with page + bbox
+  Frame 4: Summary — "4 grounded · 2 refused · 0 hallucinated"
+           Tagline: "Refusal first. Citation second. Never both wrong."
+
+README hero updated: demo.gif → refusal_demo.gif
+  Alt text: "Kairo Refusal Demo — refusal first, citation second"
+
+Size: 89.6 KB (well under 5MB limit)
+Format: Animated GIF, loop=0 (infinite), 1200ms/frame
+
+Status: PASS — refusal-first GIF generated, README hero updated.

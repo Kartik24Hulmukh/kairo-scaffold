@@ -1,0 +1,149 @@
+{
+  "doc_id": "inv_0002",
+  "pack": "invoice",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "vendor_name",
+      "value": "GLOBAL SERVICES INC",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_number",
+      "value": "2024-GSI-4471",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.05
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_date",
+      "value": "2024-03-28",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "due_date",
+      "value": null,
+      "answerable": false,
+      "notes": "no value present — correct behavior is BLOCK/refuse"
+    },
+    {
+      "field": "total_amount",
+      "value": "19063.5",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.3,
+          1.0,
+          0.06666666666666665
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "currency",
+      "value": "USD",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "line_items",
+      "value": "[{'description': 'Software License (Annual)', 'quantity': 1, 'unit_price': 12000.0, 'total': 12000.0}, {'description': 'Premium Support Package', 'quantity': 1, 'unit_price': 3500.0, 'total': 3500.0}, {'description': 'Training Session (On-site)', 'quantity': 2, 'unit_price': 1200.0, 'total': 2400.0}]",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "tax_amount",
+      "value": "1163.5",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.3,
+          1.0,
+          0.06666666666666665
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "Due upon receipt",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.05
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

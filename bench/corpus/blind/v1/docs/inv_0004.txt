@@ -1,0 +1,24 @@
+ACME Dynamics
+"Your Partner in Excellence"
+456 Industrial Park Rd
+Austin, TX 78745
+
+RECEIPT / INVOICE
+Receipt No: #RC-9981
+Date Issued: 04/12/2024
+Due: 04/12/2024 (Same Day)
+
+For: Quantum Research Labs
+     1200 University Blvd
+
+Services Rendered:
+  - Equipment Calibration (8 hrs @ $175/hr)     $1,400.00
+  - Diagnostic Report Generation                 $350.00
+  - Travel Reimbursement                         $125.00
+
+  Subtotal                                       $1,875.00
+  Tax (8.25%)                                    $154.69
+  Balance Due                                    $2,029.69
+
+Thank you for your business!
+Payment due immediately upon receipt.

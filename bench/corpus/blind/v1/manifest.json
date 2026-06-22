@@ -1,0 +1,90 @@
+{
+  "corpus_version": "blind-v1",
+  "built_at": "2026-06-22",
+  "doc_count": 11,
+  "packs": {
+    "invoice": 4,
+    "contract": 3,
+    "generic": 2,
+    "paper": 2
+  },
+  "docs": [
+    {
+      "doc_id": "inv_0001",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0001.txt",
+      "sha256": "3f04a3d025f716025c8d5f4934b1a25e7cb03e42cf056f5c67f102bf8ee1b7f6"
+    },
+    {
+      "doc_id": "inv_0002",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0002.txt",
+      "sha256": "4a8e4cbb354a14416fa9c83a86139c21e8213875462f1cb51dd912c7ff8ed0b7"
+    },
+    {
+      "doc_id": "inv_0003",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0003.txt",
+      "sha256": "a688ea9d62f8d87bf658c56d6cc0382764df22407b9152b5600173438ea5ebe5"
+    },
+    {
+      "doc_id": "inv_0004",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0004.txt",
+      "sha256": "959b773fe03adf0da2540f53a7cf69093b5de43c55766dff18c38021f87f5c6d"
+    },
+    {
+      "doc_id": "con_0001",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0001.txt",
+      "sha256": "a288ad5012b9a602beb01a9b2603ef0560d5dd12645660b9f3eff52f79daae72"
+    },
+    {
+      "doc_id": "con_0002",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0002.txt",
+      "sha256": "f3bbdb626f96b21fb1dc0e0d2b94f2d93337cdf3df0c252dfb7f79cd42713373"
+    },
+    {
+      "doc_id": "con_0003",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0003.txt",
+      "sha256": "fb6dae4b8b17fd67500e666fb64874d8e174193fa42e1f9e3d909df31a080c3e"
+    },
+    {
+      "doc_id": "gen_0001",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0001.txt",
+      "sha256": "a5b3c5e5cb8fa08138e31f1f7fc0727143c57248b631cce453b3dddc83a92ed2"
+    },
+    {
+      "doc_id": "gen_0002",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0002.txt",
+      "sha256": "4b56e73cc40ef1f7353325a65f21378a218dc278760d07dda68969d893e9e5e6"
+    },
+    {
+      "doc_id": "pap_0001",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0001.txt",
+      "sha256": "63e13d9c0c3d888409bf68c3af1a0f1edaa32027cc61f384d8256b0109392ec9"
+    },
+    {
+      "doc_id": "pap_0002",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0002.txt",
+      "sha256": "16a68f7027b83e239a8bd2a2136eb5f79b262e76b6bc3cb5c2ab76355815f5e7"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "doc_id": "pap_0001",
+  "pack": "paper",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "title",
+      "value": "Diffusion Models Beat GANs on Image Synthesis",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.016666666666666666
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "authors",
+      "value": "['Prafulla Dhariwal', 'Alex Nichol']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.01666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "abstract_summary",
+      "value": "We show that diffusion models achieve image sample quality superior to current state-of-the-art generative models.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.03333333333333334
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": "['Our model achieves FID 2.45 on CIFAR-10, compared to 3.05 for the best GAN.', 'Diffusion models show better diversity metrics across all evaluated datasets.']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.11666666666666667,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "methods",
+      "value": "['We use a U-Net architecture with attention mechanisms at each resolution.']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.18333333333333332,
+          1.0,
+          0.033333333333333354
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "reported_numbers",
+      "value": "['2.45', '3.05', '2.27', '4.59', '0.84', '0.53']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "figure_references",
+      "value": "['Figure 1']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.23333333333333334,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "table_references",
+      "value": "['Table 2']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.23333333333333334,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

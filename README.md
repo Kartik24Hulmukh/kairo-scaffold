@@ -2,7 +2,7 @@
 
 A local-first document intelligence system combining a stateless Python FastAPI ingestion sidecar, a Rust SQLite storage core, a desktop Tauri overlay, and a fully client-side React+WASM web demonstration.
 
-![Kairo Demo](demo.gif)
+![Kairo Refusal Demo — refusal first, citation second](refusal_demo.gif)
 
 ---
 

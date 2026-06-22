@@ -1,0 +1,23 @@
+From: Nordic Tech AB
+Address: Storgatan 22, 114 51 Stockholm, Sweden
+VAT No: SE556789012301
+
+FAKTURA / INVOICE
+Fakturanr: NT-2024-0033
+Fakturadatum: 2024-04-10
+Förfallodatum: 2024-05-10
+
+Kund / Customer:
+DataCorp Oy
+Helsinki, Finland
+
+Beskrivning              Antal    Pris (EUR)    Belopp (EUR)
+Konsulttjänster          40       95.00         3,800.00
+Licens (årlig)           1        2,200.00      2,200.00
+Support-paket            1        600.00        600.00
+
+Delsumma:                                         6,600.00
+Moms (24%):                                         1,584.00
+Totalt att betala:                                  8,184.00
+Valuta: EUR
+Betalningsvillkor: 30 dagar

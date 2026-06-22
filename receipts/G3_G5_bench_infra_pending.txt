@@ -1,0 +1,28 @@
+Kairo Scaffold — G3/G5 Benchmark Run (INFRA-PENDING)
+Date: 2026-06-22
+
+Status: INFRA-PENDING — benchmark cannot run in this sandbox
+
+Resource gap (exact):
+  - Requires: full PyTorch venv (sentence-transformers, docling, torch+CUDA)
+  - torch wheels: ~532 MB (cuda) + ~366 MB (cudnn) + ~423 MB (cublas) = ~2 GB total
+  - Sandbox tmpfs limit: 2 GB (No space left on device during pip install)
+  - Needs: machine with ≥4 GB free disk + GPU (or CPU fallback with 8 GB RAM)
+
+What IS ready (no inference needed):
+  - bench/corpus/blind/v1/ — 11 docs, 11 labels, manifest.json, CHECKSUMS.sha256 ✓
+  - bench/score.py — shared scorer (461 lines, from phantom) ✓
+  - sha256sum -c CHECKSUMS.sha256 — all 23 files OK ✓
+  - bench/run_bench.py — date+commit stamp added ✓
+  - bench/leaderboard.json — template with structure ready ✓
+  - BENCHMARKS.md — dev-vs-blind columns template ✓
+  - FAILURE_TAXONOMY.md — failure category template ✓
+
+To unblock (on GPU machine):
+  make build   # installs requirements.lock
+  make bench   # prints dev + blind columns, stamped with date+commit
+  # Paste numbers into BENCHMARKS.md + FAILURE_TAXONOMY.md + leaderboard.json
+
+Phantom's blind number (reference): ~67.5% grounded / 32.5% false-refusal
+  (from phantom commit 3dd4197 "Blind holdout verification: dev 100% vs blind 67.5%")
+  Scaffold's number MUST match (proven by sha256 checksums).

@@ -1,0 +1,21 @@
+MASTER SERVICE AGREEMENT
+
+This Master Service Agreement is dated as of the 15th day of January, 2024, by and between:
+Omega Systems LLC, a limited liability company organized under the laws of the State of Washington (hereinafter "Provider"),
+and
+Delta Corporation, a corporation incorporated in Ontario, Canada (hereinafter "Client").
+
+1. SCOPE OF SERVICES
+Provider shall deliver cloud migration services as described in Schedule A. Client shall remit payment within forty-five (45) days of receipt of each invoice. Provider shall maintain service availability of 99.9% uptime.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence and used solely for the purposes of this Agreement. This obligation shall persist for a period of seven (7) years following termination.
+
+3. TERM
+This Agreement commences on January 15, 2024 and shall remain in effect until January 14, 2027, unless terminated earlier pursuant to Section 5.
+
+4. GOVERNING LAW
+This Agreement shall be construed in accordance with the laws of the Province of Ontario and the federal laws of Canada applicable therein.
+
+5. TERMINATION
+Either party may terminate this Agreement with sixty (60) days written notice.

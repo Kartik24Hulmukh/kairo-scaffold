@@ -1,0 +1,79 @@
+{
+  "doc_id": "gen_0001",
+  "pack": "generic",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "summary",
+      "value": "Project Atlas is a cross-functional initiative to modernize the company's data infrastructure.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.03333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": "['Data migration completed for 4 of 6 business units', 'API gateway latency reduced by 34% after optimization', 'Two critical security vulnerabilities patched in November', 'User adoption rate at 62%, below the 75% target']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.08333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "entities",
+      "value": "['Project Atlas', 'Infrastructure Modernization Team']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "topics",
+      "value": "['technology', 'security', 'data']",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}
