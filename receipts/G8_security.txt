@@ -1,0 +1,30 @@
+Kairo Scaffold — G8 Security Parity (secrets + air-gap)
+Date: 2026-06-22
+
+1. SECRETS KEYCHAIN-ONLY (kernel/sidecar/models/secrets.py):
+   - get_api_key: keyring (OS keychain) first, env var fallback
+   - set_api_key: writes to keyring only; never logs/prints key
+   - redact_key: returns "[REDACTED]" or first4...last4
+   - Never stores keys in plaintext files
+   Status: PASS (keychain-first, redacted, never logged)
+
+2. AIR-GAP ZERO TRAFFIC (kernel/sidecar/models/tier_client.py):
+   - Offline mode (_offline_stub): deterministic stub, ZERO network calls
+   - HTTP path: calls localhost:4000 only (local Ollama/llama.cpp), not external
+   - GATEWAY_BASE_URL defaults to http://localhost:4000
+   - No telemetry, no cloud sync (check_not_list.py bans 'telemetry','cloud_sync')
+   Status: PASS (offline path = zero traffic; local path = localhost only)
+
+3. INJECTION CORPUS (see receipts/G8_injection_corpus_block.txt):
+   - Block rate: 9/10 = 90% (FAIL — needs 100%)
+   - Root cause: 2 pattern gaps in injection_guard.py
+   - DIVERGENCE GUARD: fix upstream in phantom, then re-pull
+   Status: FAIL (90%, not 100%) — BLOCKED on upstream phantom fix
+
+4. LOGS REDACTED:
+   - InjectionScanResult intentionally does NOT store span_text (redacted in logs)
+   - redact_key used for all key display
+   Status: PASS
+
+OVERALL G8: PARTIAL — secrets/air-gap/logs PASS; injection corpus FAIL (90%).
+  Needs upstream phantom fix for injection_guard patterns, then re-pull + re-verify.

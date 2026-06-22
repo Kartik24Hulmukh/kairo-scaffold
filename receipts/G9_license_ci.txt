@@ -1,0 +1,3 @@
+Running CI License Compliance Check...
+[PASS] fitz isolation check: PyMuPDF not imported in kernel core (scripts/ only).
+CI License Check: PASSED

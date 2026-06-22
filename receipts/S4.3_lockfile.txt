@@ -1,0 +1,14 @@
+Kairo Scaffold — S4.3 Dependency Pinning (Python Lockfile)
+Date: 2026-06-22
+Method: pip-compile --no-emit-index-url --output-file requirements.lock requirements.txt
+  (Python 3.12, TMPDIR on persistent disk to avoid tmpfs limit)
+
+Deliverable: kernel/sidecar/requirements.lock (489 lines, 147 pinned packages, 9697 bytes)
+
+Top-level requirements all resolved and pinned:
+  fastapi, uvicorn, pydantic, pytest, docling, pymupdf, pillow,
+  qdrant-client, sentence-transformers, supervision, psutil, pyinstaller
+  (httpx resolved as transitive dependency of fastapi/testclient)
+
+Status: PASS — lockfile committed; reproducible install via:
+  pip install -r requirements.lock

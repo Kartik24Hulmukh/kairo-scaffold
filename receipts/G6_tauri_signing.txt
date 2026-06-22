@@ -1,0 +1,24 @@
+Kairo Scaffold — G6/S4.1 Tauri Signed Installers
+Date: 2026-06-22
+
+Status: INFRA-PENDING (code/config complete; blocked on real secrets)
+
+Workflow: .github/workflows/release.yml
+  - Cross-platform (macOS/Win/Linux) via tauri-apps/tauri-action
+  - Tauri signing: TAURI_SIGNING_PRIVATE_KEY / _PASSWORD — "skipped gracefully" if absent
+  - macOS codesign: conditional on secrets.APPLE_CERTIFICATE != '' (gated)
+  - macOS notarize: conditional on secrets (gated)
+  - tauri.conf.json: signingIdentity = null (unsigned-labeled until secrets provisioned)
+
+Missing secrets (exact):
+  1. TAURI_SIGNING_PRIVATE_KEY        (Tauri updater signing key)
+  2. TAURI_SIGNING_PRIVATE_KEY_PASSWORD
+  3. APPLE_CERTIFICATE                (base64 .p12, Apple Developer)
+  4. APPLE_CERTIFICATE_PASSWORD
+  5. KEYCHAIN_PASSWORD                (macOS build keychain)
+
+Assessment: The CI builds unsigned installers (clearly labeled via signingIdentity=null)
+  when secrets are absent, and signed installers when provisioned. This is the correct
+  INFRA-PENDING pattern per the ship plan. No code change needed — only secret provisioning.
+
+Status: INFRA-PENDING — deliver code/config (done); mark with exact missing secrets (above).

@@ -1,0 +1,7 @@
+Kairo Scaffold — G8 Injection Corpus Block Rate
+Method: scan_chunk_for_injection() on all 10 adversarial PDF-embedded payloads
+Date: 2026-06-22
+
+Block rate: 9/10 = 90.0%
+Action on detect: quarantine (chunk blocked from model context)
+Result: FAIL

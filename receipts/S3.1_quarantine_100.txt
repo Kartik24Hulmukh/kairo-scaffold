@@ -1,0 +1,25 @@
+Kairo Scaffold — S3.1 Reconcile & Quarantine the 100%
+Date: 2026-06-22
+
+Problem: README headline showed "Kairo (Local) 100.00%" — the overfit dev-set
+figure on ~19 golden fixtures. Shipping this as the headline is the fastest way
+to get torn apart on HN (per ship plan Part 0.4 "the trap").
+
+Fix applied (README.md):
+  - Replaced the 100% headline with a "Headline (blind corpus)" section
+  - Blind grounded-rate / false-refusal / hallucinated-bbox = PENDING
+    (blocked on phantom corpus copy-in, sha256sum -c must pass first)
+  - Added "Why we report blind, not tuned" disclosure block
+  - Moved the 100% to "Dev-set reference (NOT the headline — quarantined)"
+    pointing to legacy/bench_README.md
+  - Competitor rows relabeled "cached (capture date: initial dev)"
+  - Kairo row now points to "see blind headline above" instead of 100%
+
+Verification:
+  - grep '100.00%' README.md: only the Stub/Offline baseline (legitimate metric)
+    and the quarantine disclosure text remain. No Kairo 100% headline.
+  - index.html (landing): 0 matches for 100%/perfect/flawless → PASS
+  - docs/SHOW_HN.md: 0 matches for 100% → PASS
+
+Status: PASS — legacy 100% quarantined; headline = blind number (PENDING corpus).
+  G2 will go GREEN when the blind corpus is copied in and the number is filled.

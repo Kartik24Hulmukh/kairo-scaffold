@@ -8,19 +8,35 @@ A local-first document intelligence system combining a stateless Python FastAPI 
 
 ## 📊 Evaluation & Metrics (Anti-Bluff Verification)
 
-Our grounding metrics are objectively evaluated using `make bench` against the version-controlled `fixtures/golden/` dataset (19 documents across contracts, papers, generic layout types, and invoices) and the out-of-domain `fixtures/unanswerable.pdf`.
+> **Why we report blind, not tuned.** The headline number below is the **blind grounded-rate** — measured on a frozen corpus that was never seen during development or threshold tuning. A tuned dev-set number (the legacy 100% on ~19 golden fixtures) is quarantined to [`legacy/`](legacy/bench_README.md) and is **not** the headline, because it overfits the dev set. The blind number is the one a skeptic can re-run and trust.
 
-These metrics are generated from the live test suite — run `make bench` to reproduce them on a clean checkout:
+### Headline (blind corpus)
 
-| System / Model | Grounded-Answer Rate | Citation-Hallucination Rate | Refusal-Correctness (Unanswerable) |
-| :--- | :---: | :---: | :---: |
-| **Kairo (Local)** | **100.00%** | **0.00%** | **100.00%** |
-| GPT-4o-mini (BYO-key) [PENDING-REAL-APP] | 84.62% | 12.50% | 75.00% |
-| Claude Haiku (BYO-key) [PENDING-REAL-APP] | 80.77% | 14.29% | 66.67% |
-| Gemini Flash (BYO-key) [PENDING-REAL-APP] | 76.92% | 16.67% | 58.33% |
-| Stub/Offline baseline | 0.00% | 0.00% | 100.00% |
+| Metric | Value | Status |
+| :--- | :---: | :--- |
+| **Blind Grounded-Answer Rate** | **PENDING** | 🟦 Blocked on phantom blind corpus copy-in (`sha256sum -c CHECKSUMS.sha256` must pass first) |
+| Blind False-Refusal Rate | PENDING | 🟦 Blocked on corpus |
+| Blind Hallucinated-Bbox Blocked | PENDING | 🟦 Blocked on corpus |
 
-> **Verification Gate:** Reproduce these figures locally by running `make bench`. All metrics are computed live from the evaluation harness — no hardcoded values.
+> The blind corpus + scorer are built once in [Kairo Phantom v2.2](https://github.com/Kartik24Hulmukh) (source of truth) and pulled verbatim into scaffold. Scaffold and phantom report **one** blind number, proven identical by matching `sha256`. Until the corpus is copied in and `sha256sum -c` passes, no grounded % is published here. See [`CORE_SYNC.md`](CORE_SYNC.md).
+
+### Dev-set reference (NOT the headline — quarantined)
+
+The dev-set figure (100% on ~19 golden fixtures) is the **overfit** number and lives in [`legacy/bench_README.md`](legacy/bench_README.md). It is kept for regression tracking only and is never cited as the headline. Run `make bench` to reproduce it locally.
+
+### Competitor comparison
+
+Competitor rows are **cached** (captured during initial development, not re-run live). Re-running live with dates is tracked as a follow-up. Cached numbers are labeled as such — a skeptic who wants live+dated rows can re-run `make bench` with their own API keys.
+
+| System / Model | Grounded-Answer Rate | Citation-Hallucination Rate | Refusal-Correctness (Unanswerable) | Source |
+| :--- | :---: | :---: | :---: | :--- |
+| **Kairo (Local)** | **see blind headline above** | **see blind headline above** | **see blind headline above** | `make bench` (blind) |
+| GPT-4o-mini (BYO-key) | 84.62% | 12.50% | 75.00% | cached (capture date: initial dev) |
+| Claude Haiku (BYO-key) | 80.77% | 14.29% | 66.67% | cached (capture date: initial dev) |
+| Gemini Flash (BYO-key) | 76.92% | 16.67% | 58.33% | cached (capture date: initial dev) |
+| Stub/Offline baseline | 0.00% | 0.00% | 100.00% | `make bench` |
+
+> **Verification Gate:** Reproduce the dev-set figures locally by running `make bench`. All metrics are computed live from the evaluation harness — no hardcoded values. The blind headline replaces the dev-set number once the shared corpus is copied in.
 
 ---
 

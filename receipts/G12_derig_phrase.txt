@@ -1,0 +1,10 @@
+Kairo Scaffold — G12 De-rigging Phrase Check
+Date: 2026-06-22
+Method: grep -rniE 'de-rig|derig' across all public artifacts
+  (README.md, docs/SHOW_HN.md, docs/AUDIT.md, docs/THREATMODEL.md,
+   index.html, web-demo/src/, web-demo/index.html, overlay/index.html, legacy/)
+
+Result: 0 matches found (grep exit 1) → PASS
+
+Fix applied: docs/AUDIT.md row P8 renamed "De-rigged README" -> "Honest README Metrics".
+The forbidden phrase no longer appears in any public artifact.

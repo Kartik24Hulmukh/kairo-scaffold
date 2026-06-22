@@ -1,0 +1,10 @@
+Kairo Scaffold — G11 CORE_SYNC.md
+Date: 2026-06-22
+Deliverable: CORE_SYNC.md created at repo root.
+Documents the one-way phantom->scaffold core sync flow:
+  - phantom = upstream (source of truth); scaffold = downstream (pulls)
+  - cascade + verifier + 5 intelligence modules flow phantom->scaffold
+  - corpus + scorer flow via content-addressed copy + sha256sum -c
+  - core fixes go upstream first, then re-pull (never edit core in scaffold)
+  - sync log + current blockers recorded
+Status: PASS (file created; sync log entry pending corpus copy-in)

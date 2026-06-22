@@ -1,0 +1,20 @@
+Kairo Scaffold — S4.2 In-Browser OCR Warning Review
+Date: 2026-06-22
+
+Finding: The OCR warning is ACCURATE and correctly gated. No fix needed.
+
+Warning text (web-demo/src/index.js:78):
+  "This looks scanned — the desktop app does OCR; the web demo handles native-text PDFs."
+
+Gating logic (web-demo/src/index.js:75-85):
+  - Warning shows ONLY when selected document name includes 'scanned'
+  - Hidden for all native-text (non-scanned) documents
+  - Correctly directs users to the desktop app (the supported OCR path)
+
+Assessment:
+  - The warning is honest: web demo = native-text PDFs only; desktop = OCR
+  - The desktop path is the supported one (per feature matrix)
+  - Warning is gated (not always-on), not misleading
+  - No misleading OCR warning in the shipped surface
+
+Status: PASS — OCR warning is accurate and gated; desktop path is supported.

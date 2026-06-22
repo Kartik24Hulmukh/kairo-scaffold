@@ -1,0 +1,22 @@
+Kairo Scaffold — L2 Show HN Post
+Date: 2026-06-22
+
+Rewrite: docs/SHOW_HN.md (was 35 lines citing "Kairo Phantom" + dev-set 0% CHR;
+  now 4817 chars, scaffold-branded, pre-empts 3 killer comments).
+
+Pre-empted killer comments:
+  1. "Are these numbers real or did you tune to the eval set?"
+     → "The honest number" section: blind vs tuned, 100% quarantined
+  2. "What model does it use? Can I swap it?"
+     → "Pre-empting" section: model-independent cascade, BYO-key
+  3. "Does it work on real messy files?"
+     → "What it can't do yet" section: real-world pass pending, gauntlet covers adversarial
+
+Added sections:
+  - 5-minute quickstart (clone → make build → make bench)
+  - "Why we report blind, not tuned" disclosure
+  - "What it can't do yet" (radically honest: blind pending, signed installers
+    INFRA-PENDING, OCR limited, competitor rows cached, real-world pass pending)
+  - CORE_SYNC.md reference for one-way phantom→scaffold flow
+
+Status: PASS — Show HN draft pre-empts the 3 killer comments + honest limitations.

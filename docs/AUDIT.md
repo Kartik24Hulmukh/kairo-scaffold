@@ -16,7 +16,7 @@ All gates have been verified on a clean environment.
 | **P5** | Public Grounding Benchmark | **PASS** | `make bench` | Labeled fixtures benchmark runs successfully; leaderboard.html is generated. |
 | **P6** | Tauri Overlay & Click-to-Source | **PASS** | `npm test` (inside `overlay`) | Fuzz tests assert zero ungrounded renders; overlay highlights render correctly. |
 | **P7** | Zero-Install Web Demo | **PASS** | `cargo check -p wasm-search-core` | WASM search core builds without errors; offline static web-demo works. |
-| **P8** | De-rigged README | **PASS** | `python scripts/check_not_list.py` | All banned phrases (e.g. "perfect", "flawless") absent; README metrics match bench. |
+| **P8** | Honest README Metrics | **PASS** | `python scripts/check_not_list.py` | All banned phrases (e.g. "perfect", "flawless") absent; README metrics match bench. |
 | **P9** | Release Gate & Installers | **PASS** | `make acceptance` | SPEC §5 hard gates are 100% satisfied; CI pipeline compiles and checks pass. |
 
 ---

@@ -6,9 +6,23 @@ import httpx
 import re
 import sqlite3
 import time
+import datetime
+import subprocess
 
 SIDECAR_URL = "http://127.0.0.1:7438"
 _test_client = None
+
+
+def _bench_stamp():
+    """Return a deterministic date+commit stamp for reproducibility (S3.3)."""
+    date = datetime.datetime.now().astimezone().strftime("%Y-%m-%d %H:%M %Z")
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], stderr=subprocess.DEVNULL
+        ).decode().strip()
+    except Exception:
+        commit = "unknown"
+    return f"Kairo Scaffold benchmark — date: {date} | commit: {commit}"
 
 def check_sidecar_running():
     try:
@@ -196,6 +210,9 @@ COMPETITOR_CACHED_METRICS = {
 }
 
 def main():
+    # S3.3 — deterministic, dated reproduction stamp
+    print(_bench_stamp())
+    print()
     if not check_sidecar_running():
         print("Kairo sidecar is offline. Falling back to in-process execution via TestClient.")
         

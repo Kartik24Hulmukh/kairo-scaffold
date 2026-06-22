@@ -1,0 +1,13 @@
+Kairo Scaffold — S3.3 Deterministic, Dated Reproduction
+Date: 2026-06-22
+
+Change: Added _bench_stamp() to bench/run_bench.py.
+  - Prints date (local tz, ISO) + git short commit at start of make bench
+  - Example output: "Kairo Scaffold benchmark — date: 2026-06-22 13:44 UTC | commit: cabf393"
+
+Verification: python3 -c "import run_bench; print(run_bench._bench_stamp())"
+  → "Kairo Scaffold benchmark — date: 2026-06-22 13:44 UTC | commit: cabf393" ✓
+
+Status: PASS (stamp added). Full G3 (reproduces twice on clean machine) still
+  needs a clean-checkout double-run once the sidecar deps are installable.
+  The deterministic stamp is the enabling change.
