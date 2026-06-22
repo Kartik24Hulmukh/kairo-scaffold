@@ -1,0 +1,87 @@
+{
+  "description": "Near-miss QA fixture set — valid questions where the answer IS verbatim in the context, close to unanswerable style but grounded",
+  "version": "1.1",
+  "expected_false_refusal_rate": "<5%",
+  "pairs": [
+    {
+      "id": "nm-001",
+      "question": "What are the payment terms?",
+      "context": "Invoice date: 2024-03-15. Vendor: Acme Solutions LLC. Amount: $1,250.00. Payment terms: Net 30 from invoice date.",
+      "ground_truth_answer": "Net 30 from invoice date",
+      "category": "verbatim_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-002",
+      "question": "Who is the vendor?",
+      "context": "Invoice date: 2024-03-15. Vendor name: Acme Solutions LLC. Invoice amount: $1,250.00.",
+      "ground_truth_answer": "Acme Solutions LLC",
+      "category": "entity_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-003",
+      "question": "What is the total amount due?",
+      "context": "This invoice is for consulting services rendered. Total: $1,250.00. Tax: $0.00. Grand Total: $1,250.00.",
+      "ground_truth_answer": "$1,250.00",
+      "category": "numeric_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-004",
+      "question": "What services were provided?",
+      "context": "Line items: Software architecture consulting (10 hours at $125/hour = $1,250.00). Project: Kairo platform design.",
+      "ground_truth_answer": "Software architecture consulting",
+      "category": "service_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-005",
+      "question": "What is the hourly rate?",
+      "context": "Consulting services: 10 hours at $125 per hour. Total: $1,250.00.",
+      "ground_truth_answer": "$125 per hour",
+      "category": "numeric_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-006",
+      "question": "How many hours were billed?",
+      "context": "Services: Architecture review (4h) + Implementation guidance (6h) = 10 hours total at $125/hr.",
+      "ground_truth_answer": "10 hours total",
+      "category": "numeric_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-007",
+      "question": "What is the document reference number?",
+      "context": "Invoice Number: INV-2024-0042. Purchase Order: PO-8891. Client: Pinnacle Tech Inc.",
+      "ground_truth_answer": "INV-2024-0042",
+      "category": "reference_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-008",
+      "question": "What currency is used?",
+      "context": "All amounts are in US dollars (USD). Total invoiced: $1,250.00.",
+      "ground_truth_answer": "US dollars (USD)",
+      "category": "currency_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-009",
+      "question": "What is the discount amount?",
+      "context": "Subtotal: $1,250.00. Loyalty discount: -$0.00. Tax: $0.00. Total Due: $1,250.00.",
+      "ground_truth_answer": "-$0.00",
+      "category": "numeric_extraction",
+      "must_answer": true
+    },
+    {
+      "id": "nm-010",
+      "question": "What is the client name?",
+      "context": "Bill To: Pinnacle Technology Inc., 123 Innovation Drive, San Francisco CA 94105. Attention: Accounts Payable.",
+      "ground_truth_answer": "Pinnacle Technology Inc.",
+      "category": "entity_extraction",
+      "must_answer": true
+    }
+  ]
+}

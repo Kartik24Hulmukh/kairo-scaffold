@@ -1,0 +1,22 @@
+Globex Corporation
+789 Power Avenue, Capital City
+
+INVOICE
+Invoice Number: INV-10024
+Invoice Date: June 10, 2026
+Due Date: July 10, 2026
+Payment Terms: Net 30
+
+Bill To:
+Wayne Enterprises
+1007 Mountain Drive, Gotham
+
+Description           Qty    Unit Price    Total
+Custom Widgets        5      $500.00       $2500.00
+Installation          1      $450.00       $450.00
+
+Tax: $50.00
+Total Amount Due: $3000.00
+Currency: USD
+
+Payment should be sent to Globex accounts.

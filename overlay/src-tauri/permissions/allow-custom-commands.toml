@@ -1,0 +1,7 @@
+[[permission]]
+identifier = "allow-custom-commands"
+description = "Allows custom commands of the overlay app"
+commands.allow = [
+  "get_documents",
+  "get_page_metadata"
+]

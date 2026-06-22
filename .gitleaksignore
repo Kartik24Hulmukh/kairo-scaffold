@@ -1,0 +1,5 @@
+kernel/sidecar/.kairo/qdrant/.lock
+kernel/sidecar/.kairo/qdrant/lock.db
+.kairo/qdrant/.lock
+.kairo/qdrant/lock.db
+*.lock

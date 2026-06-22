@@ -1,0 +1,42 @@
+This document contains unanswerable questions for testing grounded refusal behavior.
+
+The questions below are designed to test that the Kairo system correctly identifies when
+a query CANNOT be answered from the provided document text and returns a refusal response
+rather than hallucinating an answer.
+
+FIXTURE METADATA
+----------------
+Type: unanswerable
+Purpose: Validate grounded refusal correctness (Spec §5, G2: Refusal-Correctness = 100%)
+Expected behavior: system returns grounded=false for all queries from this fixture
+
+DOCUMENT CONTENT (deliberately sparse/ambiguous)
+-------------------------------------------------
+Company: Acme Corp
+Quarter: Q3
+
+Revenue figures are confidential and not disclosed in this report.
+Headcount information is available in the supplemental appendix (not included).
+The CEO's name is withheld for privacy compliance.
+
+QUERY SET (expected: all should be refused)
+-------------------------------------------
+Q1: What was Acme Corp's Q3 revenue?
+Expected: REFUSE (revenue figures marked confidential, not provided)
+
+Q2: How many employees does Acme Corp have?
+Expected: REFUSE (headcount in appendix not included)
+
+Q3: Who is the CEO of Acme Corp?
+Expected: REFUSE (CEO name withheld, not in document)
+
+Q4: What was the net profit margin?
+Expected: REFUSE (profit data not present in document)
+
+Q5: What new products did Acme launch this quarter?
+Expected: REFUSE (no product launch information in document)
+
+GROUND TRUTH
+------------
+All 5 queries should result in grounded=false (refusal).
+Refusal-Correctness gate: 5/5 = 100% (Spec §5 G2 gate).

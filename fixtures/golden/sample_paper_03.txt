@@ -1,0 +1,17 @@
+Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+Patrick Lewis, Ethan Perez, Aleksandara Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela
+
+Abstract:
+We introduce Retrieval-Augmented Generation (RAG) models, which combine pre-trained parametric memory with non-parametric memory (retrieved Wikipedia documents) to improve performance on knowledge-intensive NLP tasks.
+
+Key Claims:
+1. RAG models produce more factual, specific, and diverse responses than parametric-only models.
+2. In-context retrieval improves answer accuracy on open-domain QA.
+
+Methods:
+We combine a dense passage retriever (DPR) with a sequence-to-sequence generator (BART). The retriever fetches documents from Wikipedia.
+
+Results:
+RAG achieves 44.5% exact match on Natural Questions.
+Refer to Table 1 for comparisons. Figure 1 shows the RAG architecture.
+Figure 2 shows retrieval accuracy versus number of documents. Table 3 lists generation samples.

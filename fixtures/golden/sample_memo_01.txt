@@ -1,0 +1,50 @@
+CLASSIFICATION: SECRET//NOFORN
+
+MEMORANDUM FOR THE RECORD
+
+FROM: Office of the Director, Central Analysis Group (CAG)
+AUTHOR: Dr. Margaret Chen, Senior Analyst
+DATE OF INFORMATION: 15 March 2003
+SUBJECT: Assessment of Weapons Procurement Networks in Eastern Mediterranean Region
+
+REFERENCES:
+(a) CAG Report 2003-0142, "Maritime Interdiction Results Q1 2003"
+(b) DNI Briefing Note 2003-0088, "Proliferation Trends in the Levant"
+(c) SIGINT Summary 2003-0201 (TS//SI//NOFORN)
+
+1. (S//NF) This memorandum summarizes findings from the joint analysis of procurement
+networks operating in the Eastern Mediterranean, with particular focus on port
+activities in Latakia and Tartus, Syria.
+
+2. (S) Key entities identified in this assessment:
+   - PERSON: Viktor Antonovich Petrov, suspected intermediary based in Limassol, Cyprus
+   - ORG: Al-Rashid Trading Company, Damascus, Syria
+   - ORG: Meridian Shipping LLC, registered in Nicosia, Cyprus
+   - LOCATION: Port of Latakia, Syria
+   - LOCATION: Free Trade Zone, Tartus, Syria
+   - EQUIPMENT: Type-63 107mm Multiple Rocket Launchers (qty 24, estimated)
+
+3. (S//NF) Analysis of shipping manifests obtained through HUMINT source CARAVEL-7
+indicates a pattern of transshipments through Limassol to Latakia between January
+and March 2003. End-user certificates appear fraudulent.
+
+4. (C) Recommendations:
+   a. Increase maritime surveillance in the Eastern Mediterranean corridor
+   b. Coordinate with allied SIGINT partners for communications monitoring
+   c. Brief the National Security Council on proliferation risk assessment
+
+HANDLING INSTRUCTIONS: This document must be stored in an approved SCI facility.
+Distribution limited to personnel with SECRET//NOFORN clearance and need-to-know
+for CARAVEL program. No foreign dissemination without originator approval.
+
+DECLASSIFY ON: 20330315 (10-year automatic declassification per E.O. 13526)
+
+PII NOTICE: This document contains the following PII:
+- Name: Viktor Antonovich Petrov (foreign national, intelligence subject)
+- Name: Dr. Margaret Chen (USG employee)
+
+//SIGNED//
+Dr. Margaret Chen
+Senior Analyst, Central Analysis Group
+
+CLASSIFICATION: SECRET//NOFORN

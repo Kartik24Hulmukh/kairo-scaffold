@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Allow NSVisualEffectView and private macOS APIs used by the overlay glass effect. -->
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+    <!-- Needed for transparent window + ignoresMouseEvents in sandboxed builds. -->
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+    <false/>
+    <!-- Network client (to reach the local sidecar on 127.0.0.1:7438). -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <!-- User-selected files: read-only (for opening PDFs from Finder drag). -->
+    <key>com.apple.security.files.user-selected.read-only</key>
+    <true/>
+</dict>
+</plist>

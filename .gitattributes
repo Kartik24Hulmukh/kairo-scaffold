@@ -1,0 +1,38 @@
+# =============================================================================
+# Kairo Scaffold — .gitattributes
+# Normalize line endings: text files use LF on all platforms.
+# =============================================================================
+
+# Auto-detect text files and normalize
+*          text=auto
+
+# Explicit text files — always normalize to LF
+*.py       text eol=lf
+*.rs       text eol=lf
+*.toml     text eol=lf
+*.md       text eol=lf
+*.txt      text eol=lf
+*.json     text eol=lf
+*.yaml     text eol=lf
+*.yml      text eol=lf
+*.html     text eol=lf
+*.css      text eol=lf
+*.ts       text eol=lf
+*.tsx      text eol=lf
+*.js       text eol=lf
+*.jsx      text eol=lf
+Makefile   text eol=lf
+*.sh       text eol=lf
+*.spec     text eol=lf
+
+# Binary files — do NOT modify
+*.pdf      binary
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.wasm     binary
+*.db       binary
+*.lock     binary
+*.docx     binary

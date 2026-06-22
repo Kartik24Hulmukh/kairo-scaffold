@@ -1,0 +1,17 @@
+LoRA: Low-Rank Adaptation of Large Language Models
+Edward J. Hu, Yibin Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen
+
+Abstract:
+We propose Low-Rank Adaptation, or LoRA, which freezes the pre-trained model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture, greatly reducing the number of trainable parameters for downstream tasks.
+
+Key Claims:
+1. LoRA reduces the number of trainable parameters by 10000 times.
+2. Performance is comparable or superior to full fine-tuning.
+
+Methods:
+We parameterize the weight updates by representing them as product of two low-rank matrices. The rank r is set to 4 or 8 in our experiments.
+
+Results:
+LoRA achieves 82.5% on GLUE tasks with r=8. As reported in Table 1, trainable parameters are reduced to 0.12% of the original model.
+Figure 1 illustrates the low-rank adaptation concept. Table 2 details validation results.
+Figure 3 displays training loss curves.

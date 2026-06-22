@@ -1,0 +1,10 @@
+Local-First Software Development
+The local-first software movement prioritizes user ownership of data, offline support, and security. By keeping all documents and models on the user's local machine, tools like Ollama and Qdrant Edge enable robust, offline-capable AI features without the risk of data leakage. Kairo Phantom is built as an open-core MIT licensed tool adhering to these principles.
+
+Key Claims:
+1. Local-first software provides superior privacy and offline capabilities.
+2. Ollama enables fully offline local LLM completions.
+3. Open-core model builds trust with developers and users alike.
+
+The paper focuses on open-core, privacy, technology, and local-first architectures.
+Authored by the OSS Community.

@@ -1,0 +1,39 @@
+CLASSIFICATION: CONFIDENTIAL
+
+INTELLIGENCE MEMORANDUM
+
+FROM: National Geospatial-Intelligence Agency, Maritime Monitoring Division
+AUTHOR: Capt. Sarah Jenkins
+DATE OF INFORMATION: 30 September 2006
+SUBJECT: Maritime Traffic Patterns in the Luzon Strait
+
+REFERENCES:
+(a) NGA Reconnaissance Bulletin 2006-092, "Luzon Surveillance"
+(b) ONI Vessel Tracking Log 2006-11
+
+1. (C) This assessment details recent shipping movements through the Luzon Strait, noting
+unusual patterns of non-commercial vessels.
+
+2. (C) Observed entities:
+   - PERSON: Capt. Sarah Jenkins, lead analyst
+   - ORG: Pacific Maritime Solutions Ltd.
+   - LOCATION: Luzon Strait, Philippines
+   - EQUIPMENT: Vessel tracking transponders (Type-IV, qty 8)
+
+3. (U//FOUO) The majority of traffic remains commercial bulk carriers, but auxiliary
+naval support vessels have been sighted on four occasions.
+
+4. (C) Assessment: Monitoring should be continued to establish seasonal baseline.
+
+HANDLING INSTRUCTIONS: Handle via CONFIDENTIAL channels only. REL TO USA, AUS, JPN.
+
+DECLASSIFY ON: 20310930
+
+PII NOTICE:
+- Name: Capt. Sarah Jenkins (USG military)
+
+//SIGNED//
+Capt. Sarah Jenkins
+NGA Maritime Monitoring Division
+
+CLASSIFICATION: CONFIDENTIAL

@@ -1,0 +1,173 @@
+[
+  {
+    "filename": "sample_contract_01.txt",
+    "questions": [
+      {
+        "query": "This Software License Agreement (\"Agreement\") is made and entered into as of June 1, 2026 (\"Effective Date\"), by and between ACME Corp, a Delaware corporation (\"Licensor\"), and Client Solutions Inc., a California corporation (\"Licensee\").",
+        "answerable": true,
+        "expected_answer_contains": ["ACME Corp", "Client Solutions Inc."]
+      },
+      {
+        "query": "4. Governing Law:\nThis Agreement shall be governed by and construed in accordance with the laws of the State of Delaware.",
+        "answerable": true,
+        "expected_answer_contains": ["Delaware"]
+      },
+      {
+        "query": "What is the average temperature on Mars?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "sample_generic_01.txt",
+    "questions": [
+      {
+        "query": "Topics discussed include technology, privacy, security, and open-core software development.\nThis document was prepared by the Antigravity Team.",
+        "answerable": true,
+        "expected_answer_contains": ["Antigravity Team"]
+      },
+      {
+        "query": "Key Claims:\n1. Every extraction must be grounded or it is blocked.\n2. The system maintains a local SQLite database for provenance tracking.\n3. User privacy is protected because all computations are done locally on-device.",
+        "answerable": true,
+        "expected_answer_contains": ["SQLite"]
+      },
+      {
+        "query": "Who won the 1998 FIFA World Cup?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "sample_invoice_01.txt",
+    "questions": [
+      {
+        "query": "INVOICE\nInvoice Number: INV-2026-001\nInvoice Date: 2026-06-15\nDue Date: 2026-07-15\nPayment Terms: Net 30",
+        "answerable": true,
+        "expected_answer_contains": ["INV-2026-001"]
+      },
+      {
+        "query": "Tax: $0.00\nTotal Amount Due: $1250.00\nCurrency: USD",
+        "answerable": true,
+        "expected_answer_contains": ["$1250.00"]
+      },
+      {
+        "query": "How many bones are in the human body?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "sample_paper_01.txt",
+    "questions": [
+      {
+        "query": "Abstract:\nWe propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable.",
+        "answerable": true,
+        "expected_answer_contains": ["Transformer"]
+      },
+      {
+        "query": "Results:\nOur model achieves 28.4 BLEU on English-to-German translation, improving by over 2.0 BLEU. The training cost was estimated to be 1e20 FLOPs.\nAs shown in Table 1, the training time is significantly reduced. Figure 1 shows the attention visualizations.\nSee Figure 2 for the model architecture. Table 2 outlines the BLEU scores.",
+        "answerable": true,
+        "expected_answer_contains": ["28.4"]
+      },
+      {
+        "query": "What is the recipe for making chocolate chip cookies?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "unanswerable.pdf",
+    "questions": [
+      {
+        "query": "Once upon a time, in a small cave high up in the Misty Mountains, there lived a little red\n dragon named Ignis.\n Ignis was not like the other dragons. While they loved hoarding gold and breathing fire at\n passing knights, Ignis preferred reading books and eating fresh red apples.\n He spent his days searching the valleys for wild apple trees.",
+        "answerable": true,
+        "expected_answer_contains": ["Ignis"]
+      },
+      {
+        "query": "One day, he met a friendly squirrel who showed him a secret orchard full of the sweetest,\n juiciest apples he had ever tasted.\n From that day on, Ignis was the happiest dragon in the mountains.",
+        "answerable": true,
+        "expected_answer_contains": ["books", "apples"]
+      },
+      {
+        "query": "What is the chemical formula of caffeine?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "adversarial/rotated_scan.pdf",
+    "questions": [
+      {
+        "query": "ROTATED SCAN DOCUMENT",
+        "answerable": true,
+        "expected_answer_contains": ["ROTATED"]
+      },
+      {
+        "query": "Rotation Tolerance Level: ALPHA-7",
+        "answerable": true,
+        "expected_answer_contains": ["ALPHA-7"]
+      },
+      {
+        "query": "What is the population of Jupiter?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "adversarial/multi_column.pdf",
+    "questions": [
+      {
+        "query": "Product: KairoEngine v2.0\nLicense: MIT (core)\nStorage: SQLite local-only",
+        "answerable": true,
+        "expected_answer_contains": ["KairoEngine"]
+      },
+      {
+        "query": "Grounded-Answer Rate: 100%\nHallucination Rate: 0%\nRefusal-Correctness: 100%",
+        "answerable": true,
+        "expected_answer_contains": ["100%"]
+      },
+      {
+        "query": "Who is the CEO of this company?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "adversarial/table.pdf",
+    "questions": [
+      {
+        "query": "QUARTERLY FINANCIAL SUMMARY TABLE\nQ4 2026 Net Profit: $640,000, Margin: 39.5%",
+        "answerable": true,
+        "expected_answer_contains": ["640,000"]
+      },
+      {
+        "query": "Best performing quarter: Q4 2026 (Net Profit: $640,000, Margin: 39.5%).",
+        "answerable": true,
+        "expected_answer_contains": ["Q4 2026"]
+      },
+      {
+        "query": "What is the stock ticker symbol for this company?",
+        "answerable": false
+      }
+    ]
+  },
+  {
+    "filename": "adversarial/low_dpi.pdf",
+    "questions": [
+      {
+        "query": "Serial Number: KAIRO-LDI-2026-0042",
+        "answerable": true,
+        "expected_answer_contains": ["KAIRO-LDI-2026-0042"]
+      },
+      {
+        "query": "LOW DPI SCAN SIMULATION DOCUMENT\nDocument Type: Scanned Invoice (Adversarial)\nScan Resolution: 72 DPI (Degraded)",
+        "answerable": true,
+        "expected_answer_contains": ["KAIRO-LDI-2026-0042"]
+      },
+      {
+        "query": "What is the weight of the scanned document in grams?",
+        "answerable": false
+      }
+    ]
+  }
+]

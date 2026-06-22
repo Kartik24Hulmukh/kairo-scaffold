@@ -1,0 +1,10 @@
+Kairo Phantom Project Overview
+Kairo Phantom is a verifiable document intelligence system designed for local-first operations. Its primary purpose is to address AI hallucinations by ensuring that no extraction or answer is presented to the user without a complete provenance chain tracing back to the exact bounding box in the source document.
+
+Key Claims:
+1. Every extraction must be grounded or it is blocked.
+2. The system maintains a local SQLite database for provenance tracking.
+3. User privacy is protected because all computations are done locally on-device.
+
+Topics discussed include technology, privacy, security, and open-core software development.
+This document was prepared by the Antigravity Team.

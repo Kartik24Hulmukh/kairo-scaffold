@@ -1,0 +1,3 @@
+This is a golden/perfect document for testing.
+It has clear text, well-defined coordinates, and clean table layouts.
+Expected extraction should achieve 100% precision.

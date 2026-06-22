@@ -1,0 +1,42 @@
+CLASSIFICATION: SECRET
+
+MEMORANDUM FOR THE RECORD
+
+FROM: National Security Agency, Operations Directorate
+AUTHOR: Dr. John R. Vance
+DATE OF INFORMATION: 12 April 2005
+SUBJECT: Cryptographic Equipment Interception in Eastern Europe
+
+REFERENCES:
+(a) NSA Report 2005-0044, "SIGINT Signal Analysis"
+(b) CIA Intelligence Note 2005-0021
+
+1. (S//NF) This memorandum details the interception and analysis of military-grade cryptographic devices
+operating in the Baltic region, suspected to be transshipped via Tallinn, Estonia.
+
+2. (S) Key entities identified:
+   - PERSON: Grigori Y. Smirnov, procurement agent
+   - ORG: Balt-Crypto Solutions, Tallinn, Estonia
+   - LOCATION: Port of Tallinn, Estonia
+   - EQUIPMENT: K-7 High-Grade Encryption Unit (qty 12)
+
+3. (S//NF) Intelligence indicates that the equipment originated in St. Petersburg and was routed through
+legitimate freight forwarders to bypass export controls.
+
+4. (C) Recommendations:
+   a. Brief Baltic allies on interception signatures
+   b. Monitor suspected financial transfers related to Smirnov
+
+HANDLING INSTRUCTIONS: Handle via NSA channels only. No foreign dissemination without authorization.
+
+DECLASSIFY ON: 20350412
+
+PII NOTICE:
+- Name: Grigori Y. Smirnov (foreign national)
+- Name: Dr. John R. Vance (USG employee)
+
+//SIGNED//
+Dr. John R. Vance
+Operations Directorate, NSA
+
+CLASSIFICATION: SECRET

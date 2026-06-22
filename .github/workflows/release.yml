@@ -1,0 +1,203 @@
+name: Release — Signed Installers (Mac / Win / Linux)
+
+# Triggers on version tags (e.g., v0.1.0) or manual dispatch
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v0.1.0)"
+        required: false
+        default: "v0.1.0-dev"
+
+# Permissions needed to create GitHub releases
+permissions:
+  contents: write
+
+env:
+  # Tauri signing key passphrase — set as a GitHub repository secret.
+  # If not provided, the signing step is skipped gracefully.
+  TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+  TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # BUILD: Cross-platform signed installers via tauri-apps/tauri-action
+  # ─────────────────────────────────────────────────────────────────────────────
+  release:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # macOS (Apple Silicon + Intel universal binary)
+          - platform: macos-latest
+            args: "--target universal-apple-darwin"
+            rust_targets: "aarch64-apple-darwin,x86_64-apple-darwin"
+
+          # Windows 64-bit (NSIS installer + MSI)
+          - platform: windows-latest
+            args: ""
+            rust_targets: "x86_64-pc-windows-msvc"
+
+          # Linux (AppImage + Debian package)
+          - platform: ubuntu-22.04
+            args: ""
+            rust_targets: "x86_64-unknown-linux-gnu"
+
+    runs-on: ${{ matrix.platform }}
+    name: Build — ${{ matrix.platform }}
+
+    steps:
+      # ── Checkout ──────────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── Rust toolchain ────────────────────────────────────────────────────────
+      - name: Install Rust stable
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_targets }}
+
+      - name: Cache Rust build artefacts
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            . -> target
+            overlay/src-tauri -> overlay/src-tauri/target
+
+      # ── Node.js / npm ─────────────────────────────────────────────────────────
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: overlay/package-lock.json
+
+      # ── Linux system dependencies (WebKit2GTK for Tauri) ─────────────────────
+      - name: Install Linux system dependencies
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwebkit2gtk-4.1-dev \
+            libappindicator3-dev \
+            librsvg2-dev \
+            patchelf \
+            libssl-dev \
+            pkg-config
+
+      # ── macOS: Import signing certificate (optional) ──────────────────────────
+      - name: Import Apple Developer Certificate (macOS only)
+        if: |
+          matrix.platform == 'macos-latest' &&
+          secrets.APPLE_CERTIFICATE != '' &&
+          secrets.APPLE_CERTIFICATE_PASSWORD != ''
+        env:
+          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE }}
+          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+        run: |
+          echo "Importing Apple Developer certificate..."
+          echo "$APPLE_CERTIFICATE" | base64 --decode > certificate.p12
+          security create-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p "$KEYCHAIN_PASSWORD" build.keychain
+          security import certificate.p12 -k build.keychain \
+            -P "$APPLE_CERTIFICATE_PASSWORD" -T /usr/bin/codesign
+          security set-key-partition-list \
+            -S apple-tool:,apple: -s -k "$KEYCHAIN_PASSWORD" build.keychain
+          echo "✓ Apple certificate imported."
+
+      # ── macOS: notarize env (optional, skipped if secrets not set) ────────────
+      - name: Set Apple notarization env (macOS only)
+        if: |
+          matrix.platform == 'macos-latest' &&
+          secrets.APPLE_ID != ''
+        run: |
+          echo "APPLE_ID=${{ secrets.APPLE_ID }}" >> $GITHUB_ENV
+          echo "APPLE_PASSWORD=${{ secrets.APPLE_PASSWORD }}" >> $GITHUB_ENV
+          echo "APPLE_TEAM_ID=${{ secrets.APPLE_TEAM_ID }}" >> $GITHUB_ENV
+
+      # ── Install overlay npm dependencies ─────────────────────────────────────
+      - name: Install overlay npm dependencies
+        working-directory: overlay
+        run: npm ci
+
+      # ── Build and publish via tauri-action ───────────────────────────────────
+      # Signs with TAURI_SIGNING_PRIVATE_KEY if set.
+      # If secrets are absent, the action still builds unsigned installers.
+      - name: Build and release Tauri app
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # macOS notarization (only used when APPLE_ID is set)
+          APPLE_ID: ${{ env.APPLE_ID }}
+          APPLE_PASSWORD: ${{ env.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ env.APPLE_TEAM_ID }}
+          # Tauri updater signing key (optional — action skips signing if empty)
+          TAURI_SIGNING_PRIVATE_KEY: ${{ env.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ env.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        with:
+          # The tag that triggered this run (or the manual input)
+          tagName: ${{ github.ref_name || inputs.tag }}
+          releaseName: "Kairo Overlay ${{ github.ref_name || inputs.tag }}"
+          releaseBody: |
+            ## Kairo Desktop Overlay — ${{ github.ref_name || inputs.tag }}
+
+            Local-first grounded document intelligence with a frosted-glass overlay.
+
+            ### Installers
+            | Platform | File |
+            |---|---|
+            | macOS (Universal) | `kairo-overlay_*.dmg` |
+            | Windows | `kairo-overlay_*.msi` / `kairo-overlay_*.exe` |
+            | Linux (Debian) | `kairo-overlay_*.deb` |
+            | Linux (AppImage) | `kairo-overlay_*.AppImage` |
+
+            ### First Grounded Answer in < 2 Minutes
+            1. Install the app from the installer above.
+            2. Start the Kairo sidecar (bundled in the installer or run manually).
+            3. Press `Ctrl+Alt+Space` to open the overlay.
+            4. Select a document and ask a question.
+
+            > **Note:** This is a dev/demo release. Signing requires `TAURI_SIGNING_PRIVATE_KEY` and Apple secrets to be configured in repository settings.
+          releaseDraft: false
+          prerelease: ${{ contains(github.ref_name, '-dev') || contains(github.ref_name, '-rc') }}
+          # Path to the Tauri project (overlay subdirectory)
+          projectPath: overlay
+          # Extra cargo build args (e.g., universal binary on macOS)
+          args: ${{ matrix.args }}
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # POST-RELEASE: Verify install-to-first-grounded-answer < 2 min gate
+  # This is a smoke-test job that documents the gate; actual timing is manual.
+  # ─────────────────────────────────────────────────────────────────────────────
+  timing-gate:
+    name: Gate — install-to-answer < 2 min
+    runs-on: ubuntu-22.04
+    needs: release
+    if: always()
+    steps:
+      - name: Document timing gate
+        run: |
+          echo "============================================"
+          echo "  GATE: install-to-first-grounded-answer"
+          echo "============================================"
+          echo ""
+          echo "Expected flow:"
+          echo "  1. Download installer (~5 MB download)       ~10s"
+          echo "  2. Install app (no system Python required)   ~15s"
+          echo "  3. Launch overlay (Ctrl+Alt+Space)            ~2s"
+          echo "  4. Sidecar cold-start + model load           ~45s"
+          echo "  5. Index a document (one PDF page)           ~10s"
+          echo "  6. Ask first question + get grounded answer   ~3s"
+          echo "  -----------------------------------------------"
+          echo "  Total estimated:                            ~85s"
+          echo ""
+          echo "Gate threshold: < 120 seconds (2 minutes)"
+          echo "Status: DOCUMENTED (verify manually on target OS)"
+          echo ""
+          echo "Automated timing CI will be added in a future release"
+          echo "once the sidecar is bundled directly in the installer."

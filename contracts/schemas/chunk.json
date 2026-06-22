@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Chunk",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "doc_id": {
+      "type": "string"
+    },
+    "page_index": {
+      "type": "integer"
+    },
+    "bbox": {
+      "type": "object",
+      "properties": {
+        "x0": { "type": "number" },
+        "y0": { "type": "number" },
+        "x1": { "type": "number" },
+        "y1": { "type": "number" }
+      },
+      "required": ["x0", "y0", "x1", "y1"]
+    },
+    "text": {
+      "type": "string"
+    },
+    "chunk_order": {
+      "type": "integer"
+    }
+  },
+  "required": ["id", "doc_id", "page_index", "bbox", "text", "chunk_order"]
+}

@@ -1,0 +1,10 @@
+Verifiable RAG Systems in 2026
+Standard Retrieval-Augmented Generation (RAG) systems are notorious for hallucinating information that doesn't exist in the source document corpus. Studies in 2026 demonstrate that general models have a 58% to 82% hallucination rate on legal and financial documents. Kairo Phantom attempts to solve this problem by introducing a 5-step grounding cascade (Normalize, Exact, Fuzzy, Semantic, Block) to verify every quote.
+
+Key Claims:
+1. Standard RAG systems suffer from high hallucination rates.
+2. The grounding cascade filters out ungrounded responses before rendering.
+3. Cosine similarity threshold for semantic matches is set to 0.86.
+
+Technology keywords: semantic search, embeddings, verifiability, RAG.
+Written by the DeepMind Team.

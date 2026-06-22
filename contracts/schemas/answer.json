@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Answer",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "query": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "grounded": {
+      "type": "boolean"
+    },
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chunk_id": { "type": "string" },
+          "page": { "type": "integer" },
+          "bbox": {
+            "type": "object",
+            "properties": {
+              "x0": { "type": "number" },
+              "y0": { "type": "number" },
+              "x1": { "type": "number" },
+              "y1": { "type": "number" }
+            },
+            "required": ["x0", "y0", "x1", "y1"]
+          },
+          "char_start": { "type": "integer" },
+          "char_end": { "type": "integer" }
+        },
+        "required": ["chunk_id", "page", "bbox", "char_start", "char_end"]
+      }
+    }
+  },
+  "required": ["id", "query", "text", "grounded", "citations"]
+}

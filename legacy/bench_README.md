@@ -1,0 +1,1 @@
+# Grounding Benchmark Harness Stub

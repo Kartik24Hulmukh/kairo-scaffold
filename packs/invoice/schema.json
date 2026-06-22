@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Invoice Pack Schema",
+  "type": "object",
+  "properties": {
+    "vendor_name": {
+      "type": "string"
+    },
+    "invoice_number": {
+      "type": "string"
+    },
+    "invoice_date": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string"
+    },
+    "total_amount": {
+      "type": "string"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "line_items": {
+      "type": "string"
+    },
+    "tax_amount": {
+      "type": "string"
+    },
+    "payment_terms": {
+      "type": "string"
+    }
+  },
+  "required": ["vendor_name", "total_amount"]
+}

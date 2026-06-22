@@ -1,0 +1,63 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R
+   /MediaBox [0 0 612 792]
+   /Contents 4 0 R
+   /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 303 >>
+stream
+BT
+/F1 12 Tf
+72 720 Td
+(INVOICE) Tj
+0 -14 Td
+(Invoice Number: INV-2024-001) Tj
+0 -14 Td
+(Date: January 15, 2024) Tj
+0 -14 Td
+(Bill To: Acme Corporation) Tj
+0 -14 Td
+(Description: Software License) Tj
+0 -14 Td
+(Amount: $5,000.00) Tj
+0 -14 Td
+(Payment Due: February 14, 2024) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<<
+  /Title (Invoice INV-2024-001)
+  /Subject (Invoice)
+  /Author (Kairo Inc)
+  /Keywords (invoice payment)
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000250 00000 n 
+0000000604 00000 n 
+0000000674 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R /Info 6 0 R >>
+startxref
+800
+%%EOF

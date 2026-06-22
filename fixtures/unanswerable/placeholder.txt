@@ -1,0 +1,3 @@
+This document does not contain answers to the extraction schema.
+It is used to test the refusal mechanism (grounding status = BLOCKED).
+Under SPEC.md §S5, the model should refuse 100% of these queries since no grounded sources are present.

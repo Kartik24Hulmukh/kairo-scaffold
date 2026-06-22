@@ -1,0 +1,17 @@
+Attention Is All You Need
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin
+
+Abstract:
+We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable.
+
+Key Claims:
+1. The Transformer model outperforms recurrent or convolutional models in translation quality.
+2. Training requires significantly less time than traditional architectures.
+
+Methods:
+We used the Transformer architecture with multi-head self-attention. Self-attention layers link all positions in a constant number of sequentially executed operations.
+
+Results:
+Our model achieves 28.4 BLEU on English-to-German translation, improving by over 2.0 BLEU. The training cost was estimated to be 1e20 FLOPs.
+As shown in Table 1, the training time is significantly reduced. Figure 1 shows the attention visualizations.
+See Figure 2 for the model architecture. Table 2 outlines the BLEU scores.

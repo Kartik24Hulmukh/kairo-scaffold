@@ -1,0 +1,44 @@
+{
+  "description": "Ground truth for unanswerable fixture — all queries should be refused (grounded=false). Tests Spec §5 G2 Refusal-Correctness gate.",
+  "fixture_file": "fixtures/unanswerable/unanswerable.txt",
+  "queries": [
+    {
+      "query_id": "u1",
+      "query": "What was Acme Corp's Q3 revenue?",
+      "expected_answer": null,
+      "expected_grounded": false,
+      "reason": "Revenue figures explicitly stated as confidential, not provided in document."
+    },
+    {
+      "query_id": "u2",
+      "query": "How many employees does Acme Corp have?",
+      "expected_answer": null,
+      "expected_grounded": false,
+      "reason": "Headcount in supplemental appendix, which is not included in this fixture."
+    },
+    {
+      "query_id": "u3",
+      "query": "Who is the CEO of Acme Corp?",
+      "expected_answer": null,
+      "expected_grounded": false,
+      "reason": "CEO name withheld for privacy compliance, not present in document."
+    },
+    {
+      "query_id": "u4",
+      "query": "What was the net profit margin?",
+      "expected_answer": null,
+      "expected_grounded": false,
+      "reason": "Profit data not present in document."
+    },
+    {
+      "query_id": "u5",
+      "query": "What new products did Acme launch this quarter?",
+      "expected_answer": null,
+      "expected_grounded": false,
+      "reason": "No product launch information in document."
+    }
+  ],
+  "gate": "refusal_correctness",
+  "required_pass_rate": 1.0,
+  "notes": "All 5 queries must produce grounded=false. Spec §5 G2: Refusal-Correctness gate requires 100% correct refusals on this fixture."
+}

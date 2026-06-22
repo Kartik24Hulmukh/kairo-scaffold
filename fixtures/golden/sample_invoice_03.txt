@@ -1,0 +1,21 @@
+Initech LLC
+4120 Freemont Ave, Austin, TX
+
+INVOICE
+Invoice Number: INV-998877
+Invoice Date: 12 June 2026
+Due Date: 12 June 2026
+Payment Terms: Due on Receipt
+
+Bill To:
+Intertrode Corp
+900 Executive Dr, Houston, TX
+
+Description           Qty    Unit Price    Total
+Software Licenses     100    $40.00        $4000.00
+
+Tax: $320.00
+Total Amount Due: $4320.00
+Currency: USD
+
+Payment is due immediately. Thank you.

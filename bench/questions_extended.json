@@ -1,0 +1,173 @@
+[
+  {
+    "question": "What state governs this Software License Agreement?",
+    "expected_answer": "State of Delaware",
+    "context_chunks": [
+      "This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware."
+    ],
+    "model_answer": "The agreement is governed by the laws of the State of Delaware.",
+    "citations": [
+      "laws of the State of Delaware"
+    ]
+  },
+  {
+    "question": "Who are the parties entering into this agreement?",
+    "expected_answer": "ACME Corp and Client Solutions Inc.",
+    "context_chunks": [
+      "This Software License Agreement (\"Agreement\") is made and entered into by and between ACME Corp, a Delaware corporation (\"Licensor\"), and Client Solutions Inc., a California corporation (\"Licensee\")."
+    ],
+    "model_answer": "This Software License Agreement is made and entered into by ACME Corp and Client Solutions Inc.",
+    "citations": [
+      "between ACME Corp",
+      "and Client Solutions Inc."
+    ]
+  },
+  {
+    "question": "Which team prepared this document?",
+    "expected_answer": "Antigravity Team",
+    "context_chunks": [
+      "This document was prepared by the Antigravity Team. Topics discussed include technology, privacy, security, and open-core software development."
+    ],
+    "model_answer": "This document was prepared by the Antigravity Team.",
+    "citations": [
+      "prepared by the Antigravity Team"
+    ]
+  },
+  {
+    "question": "What is claimed about system computations?",
+    "expected_answer": "all computations are done locally on-device",
+    "context_chunks": [
+      "User privacy is protected because all computations are done locally on-device. Every extraction must be grounded or it is blocked."
+    ],
+    "model_answer": "User privacy is protected because all computations are done locally on-device.",
+    "citations": [
+      "computations are done locally on-device"
+    ]
+  },
+  {
+    "question": "What is the invoice number?",
+    "expected_answer": "INV-2026-001",
+    "context_chunks": [
+      "Invoice Number: INV-2026-001\nInvoice Date: 2026-06-15\nDue Date: 2026-07-15"
+    ],
+    "model_answer": "INV-2026-001",
+    "citations": [
+      "Invoice Number: INV-2026-001"
+    ]
+  },
+  {
+    "question": "What is the total amount due?",
+    "expected_answer": "$1250.00",
+    "context_chunks": [
+      "Tax: $0.00\nTotal Amount Due: $1250.00\nCurrency: USD"
+    ],
+    "model_answer": "Total Amount Due: $1250.00",
+    "citations": [
+      "Total Amount Due: $1250.00"
+    ]
+  },
+  {
+    "question": "What is the BLEU score achieved on English-to-German translation?",
+    "expected_answer": "28.4 BLEU",
+    "context_chunks": [
+      "Our model achieves 28.4 BLEU on English-to-German translation, improving by over 2.0 BLEU. The training cost was estimated to be 1e20 FLOPs."
+    ],
+    "model_answer": "Our model achieves 28.4 BLEU on English-to-German translation.",
+    "citations": [
+      "achieves 28.4 BLEU on English-to-German"
+    ]
+  },
+  {
+    "question": "What architecture is the proposed model based on?",
+    "expected_answer": "attention mechanisms",
+    "context_chunks": [
+      "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely."
+    ],
+    "model_answer": "The proposed network architecture is based solely on attention mechanisms.",
+    "citations": [
+      "based solely on attention mechanisms"
+    ]
+  },
+  {
+    "question": "What is the due date of invoice INV-2026-001?",
+    "expected_answer": "2026-07-15",
+    "context_chunks": [
+      "Invoice Date: 2026-06-15\nDue Date: 2026-07-15\nPayment Terms: Net 30"
+    ],
+    "model_answer": "The due date is 2026-07-15.",
+    "citations": [
+      "Due Date: 2026-07-15"
+    ]
+  },
+  {
+    "question": "What are the payment terms?",
+    "expected_answer": "Net 30",
+    "context_chunks": [
+      "Invoice Date: 2026-06-15\nDue Date: 2026-07-15\nPayment Terms: Net 30"
+    ],
+    "model_answer": "The payment terms are Net 30.",
+    "citations": [
+      "Payment Terms: Net 30"
+    ]
+  },
+  {
+    "question": "What was the estimated training cost in FLOPs?",
+    "expected_answer": "1e20 FLOPs",
+    "context_chunks": [
+      "Our model achieves 28.4 BLEU on English-to-German translation, improving by over 2.0 BLEU. The training cost was estimated to be 1e20 FLOPs."
+    ],
+    "model_answer": "The training cost was estimated to be 1e20 FLOPs.",
+    "citations": [
+      "estimated to be 1e20 FLOPs"
+    ]
+  },
+  {
+    "question": "What is the effective date of the agreement?",
+    "expected_answer": "June 1, 2026",
+    "context_chunks": [
+      "This Software License Agreement (\"Agreement\") is made and entered into as of June 1, 2026 (\"Effective Date\")"
+    ],
+    "model_answer": "This Software License Agreement is made as of June 1, 2026.",
+    "citations": [
+      "as of June 1, 2026"
+    ]
+  },
+  {
+    "question": "What topics are discussed in the generic document?",
+    "expected_answer": "technology, privacy, security, and open-core software development",
+    "context_chunks": [
+      "Topics discussed include technology, privacy, security, and open-core software development."
+    ],
+    "model_answer": "Topics discussed include technology, privacy, security, and open-core software development.",
+    "citations": [
+      "include technology, privacy, security, and open-core"
+    ]
+  },
+  {
+    "question": "What is the average temperature on Mars?",
+    "expected_answer": "",
+    "context_chunks": [
+      "This document was prepared by the Antigravity Team. Topics discussed include technology."
+    ],
+    "model_answer": "I cannot find any information about Mars in the provided text.",
+    "citations": []
+  },
+  {
+    "question": "Who won the 1998 FIFA World Cup?",
+    "expected_answer": "",
+    "context_chunks": [
+      "This Software License Agreement is governed by the laws of Delaware."
+    ],
+    "model_answer": "I do not know who won the 1998 FIFA World Cup as it is not mentioned in the context.",
+    "citations": []
+  },
+  {
+    "question": "What is the recipe for making chocolate chip cookies?",
+    "expected_answer": "",
+    "context_chunks": [
+      "Invoice Number: INV-2026-001\nInvoice Date: 2026-06-15"
+    ],
+    "model_answer": "The provided document does not mention the recipe for chocolate chip cookies.",
+    "citations": []
+  }
+]

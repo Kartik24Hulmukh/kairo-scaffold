@@ -1,0 +1,46 @@
+{
+  "description": "Kairo acceptance gauntlet — adversarial document fixtures",
+  "version": "1.2",
+  "fixtures": [
+    {
+      "id": "rotated-scan",
+      "file": "fixtures/adversarial/rotated_scan.pdf",
+      "type": "rotated",
+      "description": "Text rotated 90 degrees — tests layout extraction robustness",
+      "ground_truth": "ALPHA-7",
+      "expected_result": "pass"
+    },
+    {
+      "id": "multi-column",
+      "file": "fixtures/adversarial/multi_column.pdf",
+      "type": "multi_column",
+      "description": "Two-column layout — reading-order must be preserved",
+      "ground_truth": "COLUMN A",
+      "expected_result": "pass"
+    },
+    {
+      "id": "dense-table",
+      "file": "fixtures/adversarial/table.pdf",
+      "type": "dense_table",
+      "description": "Dense tabular grid — OCR alignment stress test",
+      "ground_truth": "QUARTERLY FINANCIAL",
+      "expected_result": "pass"
+    },
+    {
+      "id": "low-dpi",
+      "file": "fixtures/adversarial/low_dpi.pdf",
+      "type": "low_dpi",
+      "description": "Low resolution scan (72 DPI) — OCR noise tolerance test",
+      "ground_truth": "KAIRO-LDI-2026-0042",
+      "expected_result": "pass"
+    },
+    {
+      "id": "non-english",
+      "file": "fixtures/adversarial/non_english.pdf",
+      "type": "non_english",
+      "description": "Spanish/French text with ground-truth token — unicode normalization test",
+      "ground_truth": "ESPANOL",
+      "expected_result": "pass"
+    }
+  ]
+}

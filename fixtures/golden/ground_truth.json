@@ -1,0 +1,99 @@
+{
+  "fixtures": [
+    {
+      "file": "sample_contract_01.txt",
+      "expected_pages": 1,
+      "expected_chunks": 7
+    },
+    {
+      "file": "sample_contract_02.txt",
+      "expected_pages": 1,
+      "expected_chunks": 6
+    },
+    {
+      "file": "sample_contract_03.txt",
+      "expected_pages": 1,
+      "expected_chunks": 6
+    },
+    {
+      "file": "sample_generic_01.txt",
+      "expected_pages": 1,
+      "expected_chunks": 3
+    },
+    {
+      "file": "sample_generic_02.txt",
+      "expected_pages": 1,
+      "expected_chunks": 3
+    },
+    {
+      "file": "sample_generic_03.txt",
+      "expected_pages": 1,
+      "expected_chunks": 3
+    },
+    {
+      "file": "sample_invoice_01.txt",
+      "expected_pages": 1,
+      "expected_chunks": 6
+    },
+    {
+      "file": "sample_invoice_02.txt",
+      "expected_pages": 1,
+      "expected_chunks": 6
+    },
+    {
+      "file": "sample_invoice_03.txt",
+      "expected_pages": 1,
+      "expected_chunks": 6
+    },
+    {
+      "file": "sample_memo_01.txt",
+      "expected_pages": 1,
+      "expected_chunks": 13
+    },
+    {
+      "file": "sample_memo_02.txt",
+      "expected_pages": 1,
+      "expected_chunks": 13
+    },
+    {
+      "file": "sample_memo_03.txt",
+      "expected_pages": 1,
+      "expected_chunks": 13
+    },
+    {
+      "file": "sample_memo_04.txt",
+      "expected_pages": 1,
+      "expected_chunks": 13
+    },
+    {
+      "file": "sample_memo_05.txt",
+      "expected_pages": 1,
+      "expected_chunks": 13
+    },
+    {
+      "file": "sample_paper_01.txt",
+      "expected_pages": 1,
+      "expected_chunks": 5
+    },
+    {
+      "file": "sample_paper_02.txt",
+      "expected_pages": 1,
+      "expected_chunks": 5
+    },
+    {
+      "file": "sample_paper_03.txt",
+      "expected_pages": 1,
+      "expected_chunks": 5
+    },
+    {
+      "file": "test.pdf",
+      "expected_pages": 1,
+      "expected_chunks": 2
+    },
+    {
+      "file": "test_track.docx",
+      "expected_pages": 1,
+      "expected_chunks": 0
+    }
+  ]
+}

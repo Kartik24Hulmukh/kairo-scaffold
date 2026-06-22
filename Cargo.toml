@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = [
+    "kernel/core",
+    "cli",
+    "bench",
+    "overlay/src-tauri",
+    "web-demo/src-wasm",
+]
+
+[patch.crates-io]
+rusqlite = { path = "C:/Users/praja/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rusqlite-0.32.1" }
+

@@ -1,0 +1,8 @@
+This is an adversarial document with tricky formatting.
+It contains:
+- low DPI scans
+- multi-column layouts
+- rotated pages
+- noisy backgrounds
+- overlapping text boxes
+It is designed to stress test OCR fallback and visual-grounding cascading.

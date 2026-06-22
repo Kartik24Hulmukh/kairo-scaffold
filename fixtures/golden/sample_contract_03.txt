@@ -1,0 +1,15 @@
+NON-DISCLOSURE AGREEMENT
+
+This Non-Disclosure Agreement is entered into on 12 June 2026, by and between Initech LLC ("Disclosing Party") and Intertrode Corp ("Receiving Party").
+
+1. Obligations:
+Receiving Party shall use the information solely for evaluation. Receiving Party shall protect information from unauthorized disclosure.
+
+2. Confidentiality:
+Receiving Party agrees to keep all Disclosing Party technical data strictly confidential.
+
+3. Term and Termination:
+This Agreement commenses on the effective date and shall terminate on 12 June 2028.
+
+4. Governing Law:
+This Agreement is governed by the laws of the State of Texas.

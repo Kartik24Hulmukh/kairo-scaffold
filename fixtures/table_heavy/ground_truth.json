@@ -1,0 +1,44 @@
+{
+  "description": "Ground truth for table_heavy fixture — individual table cell bboxes sized to match 4×4 patch grid cells (0.25×0.25 each). IoU with exact patch is 1.0; IoU with adjacent patch is 0.0. B3 gate uses chunk bbox = cell bbox = patch bbox → IoU=1.0.",
+  "fixture_file": "fixtures/table_heavy/table_heavy.txt",
+  "queries": [
+    {
+      "query_id": "q1",
+      "query": "Q4 2023 revenue",
+      "expected_text_snippet": "4,567,890",
+      "expected_bbox": {"x0": 0.75, "y0": 0.0, "x1": 1.0, "y1": 0.25},
+      "note": "Top-right cell of revenue table. Exact 4×4 patch: row=0, col=3"
+    },
+    {
+      "query_id": "q2",
+      "query": "Engineering headcount",
+      "expected_text_snippet": "Engineering | 120",
+      "expected_bbox": {"x0": 0.0, "y0": 0.25, "x1": 0.25, "y1": 0.5},
+      "note": "Left column of department table. 4×4 patch: row=1, col=0"
+    },
+    {
+      "query_id": "q3",
+      "query": "Gamma units sold",
+      "expected_text_snippet": "22,000",
+      "expected_bbox": {"x0": 0.25, "y0": 0.5, "x1": 0.5, "y1": 0.75},
+      "note": "Units sold column of product table. 4×4 patch: row=2, col=1"
+    },
+    {
+      "query_id": "q4",
+      "query": "Sales actual spending",
+      "expected_text_snippet": "3,100,000",
+      "expected_bbox": {"x0": 0.75, "y0": 0.25, "x1": 1.0, "y1": 0.5},
+      "note": "Right column of department table. 4×4 patch: row=1, col=3"
+    },
+    {
+      "query_id": "q5",
+      "query": "Alpha margin",
+      "expected_text_snippet": "32%",
+      "expected_bbox": {"x0": 0.75, "y0": 0.5, "x1": 1.0, "y1": 0.75},
+      "note": "Margin column of product table. 4×4 patch: row=2, col=3"
+    }
+  ],
+  "iou_threshold": 0.5,
+  "min_pass_rate": 0.85,
+  "notes": "Each gt bbox aligns exactly with one 4×4 patch cell (0.25×0.25). IoU between that patch and the gt chunk is 1.0. The test checks that the patch grid contains the correct-shaped candidate and B3 accepts it."
+}

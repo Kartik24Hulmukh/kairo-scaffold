@@ -1,0 +1,21 @@
+ACME Corp
+123 Innovation Way, Tech City
+
+INVOICE
+Invoice Number: INV-2026-001
+Invoice Date: 2026-06-15
+Due Date: 2026-07-15
+Payment Terms: Net 30
+
+Bill To:
+Client Solutions Inc.
+456 Business Road, Enterprise City
+
+Description           Qty    Unit Price    Total
+Consulting Services   10     $125.00       $1250.00
+
+Tax: $0.00
+Total Amount Due: $1250.00
+Currency: USD
+
+Thank you for your business!
