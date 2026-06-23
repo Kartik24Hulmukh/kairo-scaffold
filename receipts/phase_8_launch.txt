@@ -1,0 +1,18 @@
+Kairo Scaffold — Phase 8: Launch Assets
+Date: 2026-06-23
+
+BUILT (restructured existing assets per 100X spec):
+  - README.md restructured: hero + GIF → 60s quickstart → 5-line connector → dashboard link →
+    what makes different → feature matrix → benchmark → limitations
+  - docs/SHOW_HN.md rewritten: 60s quickstart + dashboard link + 5-line connector example +
+    honest limitations + key numbers + pre-empted killer comments
+  - refusal_demo.gif (existing from pass 2, 89.6 KB, 4 frames: refusal → citation sequence)
+
+TESTS:
+  - No external package/repo names in README, Show HN, or connector guide (grep clean)
+  - README has quickstart.sh reference: ✓
+  - Show HN has dashboard link: ✓
+  - Show HN has connector example: ✓
+  - GIF embedded in README hero: ✓
+
+Status: PASS

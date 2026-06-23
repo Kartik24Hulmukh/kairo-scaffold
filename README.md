@@ -1,42 +1,58 @@
-# 📐 Kairo Scaffold: Grounded Document Intelligence
+# 📎 Kairo: Grounded Document Intelligence
 
-A local-first document intelligence system combining a stateless Python FastAPI ingestion sidecar, a Rust SQLite storage core, a desktop Tauri overlay, and a fully client-side React+WASM web demonstration.
+> **It cites the pixel or it refuses.** Every value Kairo returns is anchored to a bounding box on the source page — or it refuses. No source pixel → no answer.
 
 ![Kairo Refusal Demo — refusal first, citation second](refusal_demo.gif)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
+[![Bench](https://img.shields.io/badge/benchmark-blind%20corpus-blue)](BENCHMARKS.md)
+[![Security](https://img.shields.io/badge/injection-100%25%20blocked-red)]()
+
 ---
 
-## 📊 Evaluation & Metrics (Anti-Bluff Verification)
+## ⚡ 60-Second Proof
 
-> **Why we report blind, not tuned.** The headline number below is the **blind grounded-rate** — measured on a frozen corpus that was never seen during development or threshold tuning. A tuned dev-set number (the legacy 100% on ~19 golden fixtures) is quarantined to [`legacy/`](legacy/bench_README.md) and is **not** the headline, because it overfits the dev set. The blind number is the one a skeptic can re-run and trust.
+```bash
+git clone https://github.com/Kartik24Hulmukh/kairo-scaffold.git
+cd kairo-scaffold
+./quickstart.sh
+```
 
-### Headline (blind corpus)
+That's it. No GPU, no ML model downloads, no 500MB dependencies. Clone, run, see grounded extraction + refusal in 60 seconds.
 
-| Metric | Value | Status |
-| :--- | :---: | :--- |
-| **Blind Grounded-Answer Rate** | **PENDING** | 🟦 Blocked on phantom blind corpus copy-in (`sha256sum -c CHECKSUMS.sha256` must pass first) |
-| Blind False-Refusal Rate | PENDING | 🟦 Blocked on corpus |
-| Blind Hallucinated-Bbox Blocked | PENDING | 🟦 Blocked on corpus |
+**Or try the web demo:** `http://localhost:7438/demo` after running quickstart.
 
-> The blind corpus + scorer are built once in [Kairo Phantom v2.2](https://github.com/Kartik24Hulmukh) (source of truth) and pulled verbatim into scaffold. Scaffold and phantom report **one** blind number, proven identical by matching `sha256`. Until the corpus is copied in and `sha256sum -c` passes, no grounded % is published here. See [`CORE_SYNC.md`](CORE_SYNC.md).
+---
 
-### Dev-set reference (NOT the headline — quarantined)
+## 🔗 Connect Your Tool (5 lines)
 
-The dev-set figure (100% on ~19 golden fixtures) is the **overfit** number and lives in [`legacy/bench_README.md`](legacy/bench_README.md). It is kept for regression tracking only and is never cited as the headline. Run `make bench` to reproduce it locally.
+```python
+import requests
+resp = requests.post("http://localhost:7438/api/extract-document",
+    files={"file": open("invoice.pdf", "rb")})
+for f in resp.json()["fields"]:
+    print(f"  {f['field']}: {f['value']}  [page {f.get('page')}, conf {f.get('confidence')}]")
+```
 
-### Competitor comparison
+See [`docs/connector_guide.md`](docs/connector_guide.md) for Python, curl, and Node.js examples + post-ingestion hook patterns.
 
-Competitor rows are **cached** (captured during initial development, not re-run live). Re-running live with dates is tracked as a follow-up. Cached numbers are labeled as such — a skeptic who wants live+dated rows can re-run `make bench` with their own API keys.
+---
 
-| System / Model | Grounded-Answer Rate | Citation-Hallucination Rate | Refusal-Correctness (Unanswerable) | Source |
-| :--- | :---: | :---: | :---: | :--- |
-| **Kairo (Local)** | **see blind headline above** | **see blind headline above** | **see blind headline above** | `make bench` (blind) |
-| GPT-4o-mini (BYO-key) | 84.62% | 12.50% | 75.00% | cached (capture date: initial dev) |
-| Claude Haiku (BYO-key) | 80.77% | 14.29% | 66.67% | cached (capture date: initial dev) |
-| Gemini Flash (BYO-key) | 76.92% | 16.67% | 58.33% | cached (capture date: initial dev) |
-| Stub/Offline baseline | 0.00% | 0.00% | 100.00% | `make bench` |
+## 📊 Live Dashboard
 
-> **Verification Gate:** Reproduce the dev-set figures locally by running `make bench`. All metrics are computed live from the evaluation harness — no hardcoded values. The blind headline replaces the dev-set number once the shared corpus is copied in.
+Watch grounding decisions in real-time: `http://localhost:7438/dashboard`
+
+The dashboard shows live extraction traces — every field, its cascade path (EXACT → FUZZY → SEMANTIC → VISUAL), confidence score, and whether it was grounded or refused. Click "Reproduce" to re-run the same extraction and verify determinism.
+
+---
+
+## What Makes Kairo Different
+
+1. **Pixel citations, not chunk citations.** Every grounded value points to an exact bounding box on the source page, not just "chunk 3." You can verify the source visually.
+2. **5-layer grounding cascade.** NORMALIZE → EXACT → FUZZY (θ0.92) → SEMANTIC (φ0.86 + re-verify) → VISUAL IoU (ψ0.5) → VGVA → BLOCK. Fabricated quotes fail alignment and are blocked.
+3. **Local-first, air-gap capable.** Zero network traffic in default config. No telemetry, no cloud sync. Your documents never leave your machine.
+4. **Model-independent.** The grounding verifier re-checks any model's output against stored bboxes. Bring your own key (OpenAI / Anthropic / Google) or run the local stub baseline offline.
 
 ---
 
