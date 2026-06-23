@@ -1,0 +1,23 @@
+Kairo Scaffold — Phase 3: Live Public Dashboard
+Date: 2026-06-23
+
+SYNCED (from phantom @ f127d68 via CORE_SYNC):
+  - kairo/observability/trace.py (351 lines — CascadeSpan, GroundingTrace, record_trace, get_traces, get_trace_stats, traced_cascade, instrument_fastapi)
+  - kairo/observability/dashboard.html (89 lines — stats panel, trace feed, waterfall)
+  - kairo/observability/__init__.py
+  - kairo/core/classifier.py (87 lines — auto type detection, pulled for Phase 4)
+
+BUILT (scaffold-specific):
+  - /dashboard route added to kernel/sidecar/app.py (serves phantom dashboard.html)
+  - /api/traces route added (returns live traces or stub fallback)
+  - Dashboard renamed "Kairo Phantom" → "Kairo" (no external attribution)
+
+CHECKSUMS: CHECKSUMS.sha256 not present in phantom master at this commit (pathspec error). 
+  Files pulled individually and verified present. Marked SYNC-PENDING for full checksum verification.
+
+TESTS:
+  - Routes verified: /dashboard (GET), /api/traces (GET)
+  - No "Phantom" string in dashboard.html (renamed)
+  - Stub fallback active when trace module not fully integrated
+
+Status: PASS (SYNC-PENDING: full CHECKSUMS.sha256 verification)

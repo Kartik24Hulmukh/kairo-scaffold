@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairo — Grounding Trace Dashboard</title>
+<style>
+body{font-family:-apple-system,sans-serif;max-width:1200px;margin:0 auto;padding:20px;background:#0d1117;color:#c9d1d9}
+h1{color:#58a6ff;border-bottom:2px solid #30363d;padding-bottom:10px}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:16px 0}
+.stat-card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px}
+.stat-label{color:#8b949e;font-size:12px;text-transform:uppercase}
+.stat-value{color:#58a6ff;font-size:24px;font-weight:bold;margin-top:4px}
+.stat-value.green{color:#3fb950}.stat-value.red{color:#f85149}.stat-value.yellow{color:#d29922}
+#trace-feed{background:#161b22;border:1px solid #30363d;border-radius:8px;overflow:hidden}
+.trace-row{padding:10px 16px;border-bottom:1px solid #21262d;cursor:pointer;display:flex;gap:12px;align-items:center}
+.trace-row:hover{background:#1c2128}
+.trace-field{color:#79c0ff;font-weight:600;min-width:120px}
+.trace-doc{color:#8b949e;font-size:13px;min-width:100px}
+.trace-method{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.method-exact{background:#1a7f37;color:#fff}.method-fuzzy{background:#4d52b0;color:#fff}
+.method-semantic{background:#8957e5;color:#fff}.method-visual{background:#1f6feb;color:#fff}
+.method-block{background:#da3633;color:#fff}
+.trace-confidence{color:#d29922;min-width:60px}
+.trace-time{color:#8b949e;font-size:12px;margin-left:auto}
+.badge{padding:2px 8px;border-radius:4px;font-size:11px;font-weight:600}
+.badge-grounded{background:#1a7f37;color:#fff}.badge-refused{background:#da3633;color:#fff}
+#waterfall{display:none;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;margin-top:16px}
+.waterfall-step{display:flex;gap:12px;padding:8px 0;border-bottom:1px solid #21262d}
+.waterfall-layer{color:#79c0ff;font-weight:600;min-width:100px}
+.waterfall-decision{min-width:80px}
+.waterfall-confidence{color:#d29922;min-width:80px}
+.waterfall-time{color:#8b949e;font-size:12px;margin-left:auto}
+</style>
+</head>
+<body>
+<h1>Kairo — Grounding Trace Dashboard</h1>
+<div class="stats" id="stats-panel"></div>
+<div id="trace-feed"></div>
+<div id="waterfall"></div>
+<script>
+async function fetchStats(){
+  try{
+    const r=await fetch('/api/traces/stats');const d=await r.json();
+    const el=document.getElementById('stats-panel');
+    const cls=v=>v>=95?'green':v>=50?'yellow':'red';
+    el.innerHTML=[
+      ['Total Traces',d.total_traces,''],
+      ['Grounded %',d.grounded_pct+'%',cls(d.grounded_pct)],
+      ['Refused %',d.refused_pct+'%',cls(100-d.refused_pct)],
+      ['Blocked %',d.blocked_pct+'','red'],
+      ['Avg Cascade Depth',d.avg_cascade_depth,''],
+      ['Avg Latency (ms)',d.avg_latency_ms,''],
+    ].map(([l,v,c])=>`<div class="stat-card"><div class="stat-label">${l}</div><div class="stat-value ${c||''}">${v}</div></div>`).join('');
+  }catch(e){console.error(e)}
+}
+async function fetchTraces(){
+  try{
+    const r=await fetch('/api/traces?limit=50');const traces=await r.json();
+    const el=document.getElementById('trace-feed');
+    el.innerHTML=traces.map(t=>{
+      const mc=t.final_method.toLowerCase();
+      const dc=t.final_decision;
+      return `<div class="trace-row" onclick="showWaterfall(${JSON.stringify(t).replace(/"/g,'&quot;')})">
+        <span class="trace-field">${t.field}</span>
+        <span class="trace-doc">${t.doc_id}</span>
+        <span class="trace-method method-${mc}">${t.final_method}</span>
+        <span class="badge badge-${dc}">${dc}</span>
+        <span class="trace-confidence">${(t.final_confidence*100).toFixed(0)}%</span>
+        <span class="trace-time">${t.total_wall_time_ms}ms</span>
+      </div>`;
+    }).join('');
+  }catch(e){console.error(e)}
+}
+function showWaterfall(t){
+  const el=document.getElementById('waterfall');
+  el.style.display='block';
+  el.innerHTML='<h3 style="color:#58a6ff">Cascade Waterfall: '+t.field+' on '+t.doc_id+'</h3>'+
+    t.spans.map(s=>`<div class="waterfall-step">
+      <span class="waterfall-layer">${s.layer}</span>
+      <span class="waterfall-decision"><span class="badge badge-${s.decision==='grounded'?'grounded':'refused'}">${s.decision}</span></span>
+      <span class="waterfall-confidence">${(s.confidence*100).toFixed(0)}%</span>
+      <span class="waterfall-time">${s.wall_time_ms}ms</span>
+    </div>`).join('');
+}
+fetchStats();fetchTraces();
+setInterval(()=>{fetchStats();fetchTraces();},2000);
+</script>
+</body>
+</html>
