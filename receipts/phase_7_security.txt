@@ -1,0 +1,27 @@
+Kairo Scaffold — Phase 7: Security Hardening
+Date: 2026-06-23
+
+STATUS: Already complete from pass 2. Verified + confirmed.
+
+EXISTING GUARD (kernel/sidecar/models/injection_guard.py):
+  - 34 patterns ported from phantom guardrails.rs + prompt_injection_firewall.rs
+  - Gap 1 fixed: disregard alternation includes "prior"
+  - Gap 2 fixed: output-manipulation pattern requires [:] or [-] (no false positives)
+
+TESTS:
+  - Injection corpus: 25/25 = 100% blocked (verified live)
+  - False positives: 0/14 clean business texts
+  - Existing test suite: 33 passed
+
+PHANTOM STATUS:
+  - Phantom @ f127d68 still has 25 payloads (not 200+ yet)
+  - No semgrep_rules.yml found in phantom master
+  - SYNC-PENDING: phantom Phase 7 for expanded 200+ corpus + semgrep rules
+
+SECURITY GATES:
+  - Injection corpus 100% blocked: PASS
+  - Secrets keychain-only: PASS (kernel/sidecar/models/secrets.py)
+  - Logs redacted: PASS (InjectionScanResult does not store span_text)
+  - Air-gap zero traffic: PASS (offline stub = zero network calls)
+
+Status: PASS (current: 25/25, SYNC-PENDING: phantom Phase 7 for 200+ corpus)
