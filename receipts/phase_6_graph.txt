@@ -1,0 +1,20 @@
+Kairo Scaffold — Phase 6: Knowledge Graph Demo
+Date: 2026-06-23
+
+SYNCED (from phantom @ f127d68 via CORE_SYNC):
+  - kairo/graph/__init__.py (module placeholder — phantom's graph module is minimal)
+  - kairo-sidecar/graphify-out/graph.html (306 lines — vis-network interactive graph)
+
+BUILT (scaffold-specific):
+  - scaffold/web/graph.html (6.7 KB — force-directed graph with sample data from 3 docs)
+    Features: 11 nodes (entities + values + doc nodes), 8 edges, click node → source bbox,
+    upload area for "build YOUR graph" (stub), node list sidebar
+  - /graph route added to kernel/sidecar/app.py
+
+TESTS:
+  - Route verified: /graph (GET)
+  - Graph HTML loads with vis-network library
+  - Sample data: 3 docs → 8 entities → 8 edges
+  - Click node → shows field, value, page, bbox citation
+
+Status: PASS

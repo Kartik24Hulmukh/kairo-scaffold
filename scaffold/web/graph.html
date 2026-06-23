@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairo — Knowledge Graph Demo</title>
+<script src="https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, sans-serif; display: flex; height: 100vh; overflow: hidden; }
+  #graph { flex: 1; }
+  #sidebar { width: 300px; background: #161b22; border-left: 1px solid #30363d; display: flex; flex-direction: column; overflow: hidden; }
+  .header { padding: 16px; border-bottom: 1px solid #30363d; }
+  .header h1 { font-size: 18px; color: #56d364; }
+  .header p { font-size: 12px; color: #8b949e; margin-top: 4px; }
+  #info-panel { padding: 16px; border-bottom: 1px solid #30363d; min-height: 120px; }
+  #info-panel h3 { font-size: 14px; color: #79c0ff; margin-bottom: 8px; }
+  #info-panel .field { font-size: 13px; margin-bottom: 4px; }
+  #info-panel .label { color: #8b949e; }
+  #info-panel .value { color: #c9d1d9; }
+  #info-panel .bbox { color: #56d364; font-size: 12px; cursor: pointer; }
+  #node-list { flex: 1; overflow-y: auto; padding: 8px; }
+  .node-item { padding: 8px 12px; cursor: pointer; border-radius: 6px; font-size: 13px; }
+  .node-item:hover { background: #21262d; }
+  .node-item.active { background: #1f6feb33; }
+  .node-type { font-size: 11px; color: #8b949e; }
+  .upload-area { padding: 12px; border-top: 1px solid #30363d; }
+  .upload-area p { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+  .upload-area input { width: 100%; font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="sidebar">
+  <div class="header">
+    <h1>📎 Knowledge Graph</h1>
+    <p>Entities extracted from grounded documents. Click a node to see its source bbox.</p>
+  </div>
+  <div id="info-panel">
+    <h3>Select a node</h3>
+    <div class="field"><span class="label">Click a node in the graph to see extraction details + source citation.</span></div>
+  </div>
+  <div id="node-list"></div>
+  <div class="upload-area">
+    <p>Build YOUR graph (upload up to 20 docs):</p>
+    <input type="file" id="graph-upload" multiple accept=".pdf,.txt">
+  </div>
+</div>
+<script>
+// Sample graph data from 3 sample docs (invoice, contract, paper)
+const SAMPLE_GRAPH = {
+  nodes: [
+    {id: 1, label: "ACME Corp", group: "entity", title: "vendor_name from invoice", doc: "invoice_sample", field: "vendor_name", value: "ACME Corp", page: 1, bbox: [0.05, 0.02, 0.40, 0.04]},
+    {id: 2, label: "INV-2026-001", group: "entity", title: "invoice_number from invoice", doc: "invoice_sample", field: "invoice_number", value: "INV-2026-001", page: 1, bbox: [0.05, 0.08, 0.30, 0.03]},
+    {id: 3, label: "$1,250.00", group: "value", title: "total_amount from invoice", doc: "invoice_sample", field: "total_amount", value: "$1250.00", page: 1, bbox: [0.35, 0.85, 0.55, 0.04]},
+    {id: 4, label: "TechFlow Solutions", group: "entity", title: "party_a from contract", doc: "contract_sample", field: "party_a", value: "TechFlow Solutions Ltd", page: 1, bbox: [0.05, 0.05, 0.50, 0.03]},
+    {id: 5, label: "Client Solutions", group: "entity", title: "party_b from contract", doc: "contract_sample", field: "party_b", value: "Client Solutions Inc", page: 1, bbox: [0.05, 0.08, 0.45, 0.03]},
+    {id: 6, label: "2024-01-15", group: "value", title: "effective_date from contract", doc: "contract_sample", field: "effective_date", value: "2024-01-15", page: 1, bbox: [0.05, 0.12, 0.25, 0.03]},
+    {id: 7, label: "Attention Is All You Need", group: "entity", title: "title from paper", doc: "paper_sample", field: "title", value: "Attention Is All You Need", page: 1, bbox: [0.10, 0.02, 0.80, 0.05]},
+    {id: 8, label: "Vaswani et al.", group: "entity", title: "authors from paper", doc: "paper_sample", field: "authors", value: "Vaswani et al.", page: 1, bbox: [0.15, 0.08, 0.70, 0.03]},
+    {id: 9, label: "Invoice", group: "doc", title: "invoice_sample.txt"},
+    {id: 10, label: "Contract", group: "doc", title: "contract_sample.txt"},
+    {id: 11, label: "Paper", group: "doc", title: "paper_sample.txt"},
+  ],
+  edges: [
+    {from: 9, to: 1}, {from: 9, to: 2}, {from: 9, to: 3},
+    {from: 10, to: 4}, {from: 10, to: 5}, {from: 10, to: 6},
+    {from: 11, to: 7}, {from: 11, to: 8},
+  ]
+};
+
+const colors = {entity: "#58a6ff", value: "#56d364", doc: "#d29922"};
+const nodes = new vis.DataSet(SAMPLE_GRAPH.nodes.map(n => ({...n, color: colors[n.group] || "#8b949e", font: {color: "#c9d1d9", size: 13}})));
+const edges = new vis.DataSet(SAMPLE_GRAPH.edges);
+const network = new vis.Network(document.getElementById("graph"), {nodes, edges}, {
+  nodes: {shape: "dot", size: 16, borderWidth: 2},
+  edges: {color: "#30363d", width: 1.5},
+  physics: {stabilization: true, barnesHut: {gravitationalConstant: -3000}},
+  interaction: {hover: true}
+});
+
+network.on("click", function(params) {
+  if (params.nodes.length > 0) {
+    const node = nodes.get(params.nodes[0]);
+    const panel = document.getElementById("info-panel");
+    if (node.field) {
+      panel.innerHTML = `<h3>${node.field}</h3>
+        <div class="field"><span class="label">Value: </span><span class="value">${node.value}</span></div>
+        <div class="field"><span class="label">Document: </span><span class="value">${node.doc}</span></div>
+        <div class="field"><span class="label">Page: </span><span class="value">${node.page}</span></div>
+        <div class="field"><span class="label">Bbox: </span><span class="bbox" onclick="alert('Source: ' + JSON.stringify({page: ${node.page}, bbox: [${node.bbox}]}))">[${node.bbox.join(", ")}] 📎</span></div>`;
+    } else {
+      panel.innerHTML = `<h3>${node.label}</h3><div class="field"><span class="label">Document node — connected entities are grounded extractions.</span></div>`;
+    }
+    document.querySelectorAll(".node-item").forEach(el => el.classList.remove("active"));
+  }
+});
+
+// Populate node list
+const nodeList = document.getElementById("node-list");
+SAMPLE_GRAPH.nodes.filter(n => n.field).forEach(n => {
+  const div = document.createElement("div");
+  div.className = "node-item";
+  div.innerHTML = `${n.label} <span class="node-type">(${n.field})</span>`;
+  div.onclick = () => network.selectNodes([n.id]);
+  nodeList.appendChild(div);
+});
+
+// Upload handler (stub — would call /api/extract-document for each file)
+document.getElementById("graph-upload").addEventListener("change", function(e) {
+  const files = e.target.files;
+  if (files.length > 0) {
+    alert("Upload " + files.length + " files. Graph building requires sidecar — connect to build YOUR graph from uploaded docs.");
+  }
+});
+</script>
+</body>
+</html>

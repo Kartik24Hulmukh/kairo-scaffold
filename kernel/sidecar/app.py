@@ -338,6 +338,16 @@ async def api_compression_stats():
             "note": "Compression module pulled from phantom. Run extractions to populate stats."
         }
 
+@app.get("/graph", response_class=HTMLResponse)
+async def serve_graph():
+    """Serve the knowledge graph demo (scaffold/web/graph.html)."""
+    graph_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "scaffold", "web", "graph.html")
+    if os.path.exists(graph_path):
+        return FileResponse(graph_path, media_type="text/html")
+    return HTMLResponse("<h1>Graph demo not found</h1>", status_code=404)
+
+
+
 
 
 
