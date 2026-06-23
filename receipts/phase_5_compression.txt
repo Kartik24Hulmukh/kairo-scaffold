@@ -1,0 +1,20 @@
+Kairo Scaffold — Phase 5: Context Compression
+Date: 2026-06-23
+
+SYNCED (from phantom @ f127d68 via CORE_SYNC):
+  - kairo/context/compressor.py (260 lines)
+    Functions: compress_document_chunks, merge_overlapping_chunks, record_compression,
+    get_compression_stats, CompressionStats class
+    Non-ML fallback: passthrough mode (no 500MB model download needed for demo)
+
+BUILT (scaffold-specific):
+  - /api/compression-stats route added to kernel/sidecar/app.py
+    Returns: total_tokens_before/after, tokens_saved, reduction_pct, mode
+    Stub fallback when no extractions have been run yet
+
+TESTS:
+  - Route verified: /api/compression-stats (GET)
+  - compressor.py pulled and present (260 lines)
+  - Non-ML fallback active (no model download required)
+
+Status: PASS

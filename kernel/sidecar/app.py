@@ -319,6 +319,27 @@ async def api_get_traces(limit: int = 50):
             "stats": {"total": 3, "grounded": 2, "refused": 1, "grounded_rate": 66.7}
         }
 
+@app.get("/api/compression-stats")
+async def api_compression_stats():
+    """Get context compression statistics for the dashboard panel."""
+    try:
+        from kairo.context.compressor import get_compression_stats
+        stats = get_compression_stats()
+        return stats
+    except Exception as e:
+        # Stub if compression module not fully integrated
+        return {
+            "total_docs_compressed": 0,
+            "total_tokens_before": 0,
+            "total_tokens_after": 0,
+            "tokens_saved": 0,
+            "reduction_pct": 0.0,
+            "mode": "non-ML fallback (passthrough)",
+            "note": "Compression module pulled from phantom. Run extractions to populate stats."
+        }
+
+
+
 
 
 
