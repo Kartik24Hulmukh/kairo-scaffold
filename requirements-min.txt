@@ -1,0 +1,18 @@
+# requirements-min.txt — scaffold demo deps only (no GPU, no ML models)
+# Pure-Python packages that install in seconds, not minutes.
+# These are the ONLY deps needed to run the 60-second demo.
+fastapi>=0.110.0          # API server
+uvicorn>=0.28.0           # ASGI server
+pymupdf>=1.24.0           # PDF rendering + text extraction
+rapidfuzz>=3.6.0          # Fuzzy matching (cascade FUZZY layer)
+numpy>=1.26.0             # Math / arrays
+Pillow>=10.0.0            # Image handling (page previews)
+pdfplumber>=0.10.0        # Table extraction with cell-level bbox
+networkx>=3.2.0           # Knowledge graph demo
+pydantic>=2.6.0           # Request/response models
+# NOT included (phantom-only, too heavy for demo):
+#   headroom-ai (500MB ML models) — phantom uses it, scaffold shows stats
+#   opik (needs server) — phantom traces, scaffold shows dashboard
+#   semgrep (heavy) — phantom guards, scaffold mirrors results
+#   torch / transformers / CUDA — not needed for CPU demo
+# The full engine deps live in kernel/sidecar/requirements.lock (147 pinned).

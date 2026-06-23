@@ -1,0 +1,16 @@
+Kairo Scaffold — Phase 1: One-Command Quickstart
+Date: 2026-06-23
+
+BUILT:
+  - requirements-min.txt (10 pure-Python deps, no GPU/ML)
+  - quickstart.sh (one-command 60s demo: venv + install + 3 extraction demos)
+  - samples/invoice_sample.txt, samples/contract_sample.txt, samples/paper_sample.txt
+
+TESTS:
+  - bash -n quickstart.sh → Syntax OK
+  - pip dry-run requirements-min.txt → all deps resolvable
+  - 3 sample docs present (invoice, contract, paper)
+
+SYNCED: N/A (scaffold-only, no phantom sync needed)
+
+Status: PASS
