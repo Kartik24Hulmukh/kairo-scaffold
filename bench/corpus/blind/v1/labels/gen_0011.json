@@ -1,0 +1,90 @@
+{
+  "doc_id": "gen_0011",
+  "pack": "generic",
+  "tier": "T2",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "summary",
+      "value": "This security audit identified 7 vulnerabilities across the organization's IT infrastructure.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.03333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": [
+        "2 critical vulnerabilities require immediate patching",
+        "Network segmentation needs improvement in 5 zones",
+        "Access control policies are outdated for 18% of systems"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "entities",
+      "value": [
+        "Security Operations Team",
+        "IT Infrastructure"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "topics",
+      "value": [
+        "security",
+        "data",
+        "technology"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

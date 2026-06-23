@@ -1,7 +1,7 @@
 {
   "doc_id": "con_0003",
   "pack": "contract",
-  "tier": "T2",
+  "tier": "T3",
   "page_dims": [
     {
       "page": 1,
@@ -12,7 +12,10 @@
   "extractions": [
     {
       "field": "parties",
-      "value": "['BlueOcean Ventures LP', 'GreenField Capital Ltd']",
+      "value": [
+        "BlueOcean Ventures LP",
+        "GreenField Capital Ltd"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -28,15 +31,15 @@
     },
     {
       "field": "effective_date",
-      "value": "2024-02-01",
+      "value": "2024-06-18",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.03333333333333333,
+          0.25,
           1.0,
-          0.01666666666666667
+          0.033333333333333326
         ]
       },
       "accept_variants": [],
@@ -44,15 +47,15 @@
     },
     {
       "field": "termination_date",
-      "value": "2034-01-31",
+      "value": "2025-03-05",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.25,
+          1.0,
+          0.033333333333333326
         ]
       },
       "accept_variants": [],
@@ -60,15 +63,18 @@
     },
     {
       "field": "obligations",
-      "value": "['Each partner shall contribute capital within 60 days of signing.', 'BlueOcean shall contribute $5,000,000.', 'GreenField shall contribute $3,000,000.']",
+      "value": [
+        "BlueOcean Ventures LP shall deliver professional services as described in Schedule A.",
+        "GreenField Capital Ltd shall remit payment within 90 days of receipt of each invoice."
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.18333333333333332,
+          0.15,
           1.0,
-          0.033333333333333354
+          0.033333333333333326
         ]
       },
       "accept_variants": [],
@@ -76,7 +82,7 @@
     },
     {
       "field": "governing_law",
-      "value": "Ireland",
+      "value": "Delaware",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -84,7 +90,7 @@
           0.0,
           0.06666666666666667,
           1.0,
-          0.05
+          0.06666666666666667
         ]
       },
       "accept_variants": [],
@@ -92,15 +98,15 @@
     },
     {
       "field": "payment_terms",
-      "value": "within 60 days",
+      "value": "within 90 days",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.18333333333333332,
+          0.15,
           1.0,
-          0.033333333333333354
+          0.033333333333333326
         ]
       },
       "accept_variants": [],
@@ -108,13 +114,13 @@
     },
     {
       "field": "confidentiality_clause",
-      "value": "All financial data, investor information, and proprietary strategies disclosed between partners are deemed strictly confidential.",
+      "value": "Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.23333333333333334,
+          0.2,
           1.0,
           0.033333333333333326
         ]

@@ -1,0 +1,178 @@
+{
+  "doc_id": "inv_0030",
+  "pack": "invoice",
+  "tier": "T3",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "vendor_name",
+      "value": "Tel Aviv Tech Ltd",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.1
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_number",
+      "value": "INV-2024-0030",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.1
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_date",
+      "value": "2024-09-08",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.1
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "due_date",
+      "value": "2024-02-15",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.1
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "total_amount",
+      "value": 205519.56,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.2,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "currency",
+      "value": "ILS",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.1
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "line_items",
+      "value": [
+        {
+          "description": "Training Workshop",
+          "quantity": 15,
+          "unit_price": 3354.51,
+          "total": 50317.65
+        },
+        {
+          "description": "Security Audit",
+          "quantity": 20,
+          "unit_price": 1620.62,
+          "total": 32412.4
+        },
+        {
+          "description": "Training Workshop",
+          "quantity": 20,
+          "unit_price": 4084.28,
+          "total": 81685.6
+        }
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "tax_amount",
+      "value": 41103.91,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.2,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "2/10 Net 30",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.1
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

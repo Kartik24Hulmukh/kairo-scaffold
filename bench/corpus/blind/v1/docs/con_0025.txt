@@ -1,0 +1,22 @@
+MASTER SERVICE AGREEMENT
+
+Effective Date: 2024-01-03
+
+The parties to this agreement are:
+1. Quantum Research Labs, a limited partnership registered in the Cayman Islands
+2. Photon Dynamics, a company incorporated in Netherlands
+
+1. SCOPE OF SERVICES
+Quantum Research Labs shall deliver professional services as described in Schedule A. Photon Dynamics shall remit payment within 45 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-01-03 and shall remain in effect until 2027-04-13, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Netherlands.
+
+5. TERMINATION
+Either party may terminate this Agreement with 90 days written notice.

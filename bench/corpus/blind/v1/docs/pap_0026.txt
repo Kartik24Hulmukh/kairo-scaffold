@@ -1,0 +1,18 @@
+CodeLlama: Open Foundation Models for Code
+
+Baptiste Roziere
+
+Abstract
+We present a novel approach to codellama. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Contributions:
+- Our method achieves state-of-the-art results on ImageNet.
+- We introduce a new architecture that reduces training time by 51%.
+- Our approach generalizes to unseen domains without additional training.
+
+Methodology
+We use a transformer-based architecture with 8 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 1.07 and sFID 4.84. The precision score is 0.34.
+See Figure 1 for sample outputs and Table 4 for quantitative comparisons.

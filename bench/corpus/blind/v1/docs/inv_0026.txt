@@ -1,0 +1,14 @@
+Copenhagen IT ApS
+INV# INV-2024-0026
+Invoice Date: 2024-10-19
+Due Date: 2024-05-13
+Currency: DKK
+Terms: Due on Receipt
+
+Description                    Qty     Rate (DKK)    Amount (DKK)
+API Gateway Setup                 10        1470.22      14702.20
+Data Migration Service            19        3052.97      58006.43
+
+Sub-Total:                                             72708.63
+Tax (25.00%):                                          18177.16
+Total Amount Due:                                      90885.79

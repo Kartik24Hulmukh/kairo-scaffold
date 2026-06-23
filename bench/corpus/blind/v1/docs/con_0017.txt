@@ -1,0 +1,21 @@
+LICENSE AGREEMENT
+
+This License Agreement is dated as of the 22th day of July, 2024, by and between:
+Steel Forge Industries, a limited liability company organized under the laws of the State of Switzerland (hereinafter "Provider"),
+and
+Iron Works Manufacturing, a corporation incorporated in Switzerland (hereinafter "Client").
+
+1. SCOPE OF SERVICES
+Steel Forge Industries shall deliver professional services as described in Schedule A. Iron Works Manufacturing shall remit payment within 60 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-07-22 and shall remain in effect until 2027-02-17, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Switzerland.
+
+5. TERMINATION
+Either party may terminate this Agreement with 60 days written notice.

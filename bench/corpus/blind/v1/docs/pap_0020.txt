@@ -1,0 +1,18 @@
+Chinchilla: Training Compute-Optimal LLMs
+
+Jordan Hoffmann
+
+Abstract
+We present a novel approach to chinchilla. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Main Results:
+1. Our model achieves FID 2.93 on the primary benchmark.
+2. Performance improves with scale following a power law.
+3. The proposed method outperforms all baselines by a significant margin.
+
+Methodology
+We use a transformer-based architecture with 20 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 4.97 and sFID 4.61. The precision score is 0.46.
+See Figure 1 for sample outputs and Table 2 for quantitative comparisons.

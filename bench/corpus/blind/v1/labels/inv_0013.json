@@ -1,0 +1,178 @@
+{
+  "doc_id": "inv_0013",
+  "pack": "invoice",
+  "tier": "T1",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "vendor_name",
+      "value": "Seoul Systems Co",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_number",
+      "value": "INV-2024-0013",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_date",
+      "value": "2024-04-07",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "due_date",
+      "value": "2024-09-15",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "total_amount",
+      "value": 118199.38,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.21666666666666667,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "currency",
+      "value": "KRW",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "line_items",
+      "value": [
+        {
+          "description": "Security Audit",
+          "quantity": 14,
+          "unit_price": 958.27,
+          "total": 13415.78
+        },
+        {
+          "description": "Monthly Maintenance",
+          "quantity": 8,
+          "unit_price": 4378.71,
+          "total": 35029.68
+        },
+        {
+          "description": "Training Workshop",
+          "quantity": 15,
+          "unit_price": 4049.71,
+          "total": 60745.65
+        }
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "tax_amount",
+      "value": 9008.27,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.21666666666666667,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "Net 30",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

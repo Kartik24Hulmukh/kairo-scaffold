@@ -1,0 +1,16 @@
+Lisbon Cloud Lda
+INVOICE
+Invoice Number: INV-2024-0027
+Invoice Date: 2024-11-07
+Due Date: 2024-09-16
+Currency: EUR
+Terms: Net 30
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Network Optimization               3        1454.74       4364.22
+Software License (Annual)         20        1709.18      34183.60
+Software License (Annual)         10        1161.97      11619.70
+
+Sub-Total:                                             50167.52
+Tax (9.00%):                                           4515.08
+Total Amount Due:                                      54682.60

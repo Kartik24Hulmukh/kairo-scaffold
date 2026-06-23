@@ -1,0 +1,17 @@
+Dubai Tech FZ-LLC
+RECEIPT / INVOICE
+Receipt No: INV-2024-0017
+Date Issued: 2024-11-19
+Due: 2024-10-17
+Currency: AED
+Terms: Due on Receipt
+
+Description                    Qty     Rate (AED)    Amount (AED)
+Database Tuning                    9        1061.08       9549.72
+API Gateway Setup                 11        1231.50      13546.50
+Premium Support Package            5        3374.87      16874.35
+Monthly Maintenance               15        1615.08      24226.20
+
+Sub-Total:                                             64196.77
+Tax (8.25%):                                           5296.23
+Total Amount Due:                                      69493.00

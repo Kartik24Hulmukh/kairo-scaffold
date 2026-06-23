@@ -1,0 +1,22 @@
+EMPLOYMENT AGREEMENT
+
+Effective Date: 2024-10-12
+
+The parties to this agreement are:
+1. Nexus Software Group, a limited partnership registered in the Cayman Islands
+2. Vertex Capital, a company incorporated in Illinois
+
+1. SCOPE OF SERVICES
+Nexus Software Group shall deliver professional services as described in Schedule A. Vertex Capital shall remit payment within 90 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-10-12 and shall remain in effect until 2029-09-17, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Illinois.
+
+5. TERMINATION
+Either party may terminate this Agreement with 60 days written notice.

@@ -1,0 +1,178 @@
+{
+  "doc_id": "inv_0010",
+  "pack": "invoice",
+  "tier": "T1",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "vendor_name",
+      "value": "Sydney Data Pty",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "invoice_number",
+      "value": "INV-2024-0010",
+      "answerable": false,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": "Invoice number not present in document text (bordered invoice format). Refusal is correct per Kairo's no-source-pixel policy."
+    },
+    {
+      "field": "invoice_date",
+      "value": "2024-09-28",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "due_date",
+      "value": "2024-10-14",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "total_amount",
+      "value": 149838.72,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.21666666666666667,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "currency",
+      "value": "AUD",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "line_items",
+      "value": [
+        {
+          "description": "Database Tuning",
+          "quantity": 18,
+          "unit_price": 3788.56,
+          "total": 68194.08
+        },
+        {
+          "description": "API Gateway Setup",
+          "quantity": 7,
+          "unit_price": 3579.1,
+          "total": 25053.7
+        },
+        {
+          "description": "Training Workshop",
+          "quantity": 12,
+          "unit_price": 2218.6,
+          "total": 26623.2
+        }
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "tax_amount",
+      "value": 29967.74,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.21666666666666667,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "Net 30",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

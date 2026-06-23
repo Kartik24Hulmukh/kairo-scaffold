@@ -1,0 +1,18 @@
+==================================================
+         Madrid Cloud SL
+==================================================
+Invoice Date: 2024-06-19
+Due Date: 2024-09-05
+Currency: EUR
+Terms: Net 45
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Data Migration Service             5         257.05       1285.25
+Software License (Annual)          2        4499.68       8999.36
+Data Migration Service             8        3351.32      26810.56
+API Gateway Setup                 18        4426.47      79676.46
+Software License (Annual)         20        3759.91      75198.20
+
+Sub-Total:                                            191969.83
+Tax (7.00%):                                          13437.89
+Total Amount Due:                                     205407.72

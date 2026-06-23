@@ -1,0 +1,160 @@
+{
+  "doc_id": "pap_0018",
+  "pack": "paper",
+  "tier": "T3",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "title",
+      "value": "LaMDA: Language Models for Dialog Applications",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.0,
+          1.0,
+          0.016666666666666666
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "authors",
+      "value": [
+        "Romal Thoppil",
+        "Daniel De Freitas"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.01666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "abstract_summary",
+      "value": "We present a novel approach to lamda. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.03333333333333334
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": [
+        "Our model achieves FID 3.05 on the primary benchmark.",
+        "Performance improves with scale following a power law.",
+        "The proposed method outperforms all baselines by a significant margin."
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.11666666666666667,
+          1.0,
+          0.06666666666666665
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "methods",
+      "value": [
+        "We use a transformer-based architecture with 9 layers and attention mechanisms."
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.2,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "reported_numbers",
+      "value": [
+        "1.42",
+        "2.97",
+        "0.92"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "figure_references",
+      "value": [
+        "Figure 4"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "table_references",
+      "value": [
+        "Table 4"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.04999999999999999
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

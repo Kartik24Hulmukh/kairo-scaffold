@@ -1,0 +1,16 @@
+==================================================
+         Toronto Networks Inc
+==================================================
+Invoice Date: 2024-04-03
+Due Date: 2024-06-01
+Currency: CAD
+Terms: Due on Receipt
+
+Description                    Qty     Rate (CAD)    Amount (CAD)
+Monthly Maintenance               19        1140.08      21661.52
+Cloud Infrastructure Setup         2        1183.26       2366.52
+Software License (Annual)         11         400.74       4408.14
+
+Sub-Total:                                             28436.18
+Tax (20.00%):                                           5687.24
+Total Amount Due:                                      34123.42

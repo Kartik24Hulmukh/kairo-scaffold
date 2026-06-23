@@ -1,0 +1,15 @@
+From: Sao Paulo Cloud Ltda
+FAKTURA / INVOICE
+Fakturanr: INV-2024-0009
+Fakturadatum: 2024-01-08
+Förfallodatum: 2024-10-03
+Valuta: BRL
+Betalningsvillkor: Net 45
+
+Description                    Qty     Rate (BRL)    Amount (BRL)
+Training Workshop                 16        4089.32      65429.12
+Security Audit                     5         685.54       3427.70
+
+Sub-Total:                                             68856.82
+Tax (24.00%):                                          16525.64
+Total Amount Due:                                      85382.46

@@ -1,0 +1,15 @@
+Athens Digital AE
+INVOICE
+Invoice Number: INV-2024-0029
+Invoice Date: 2024-04-05
+Due Date: 2024-11-23
+Currency: EUR
+Terms: Due on Receipt
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Software License (Annual)          4        3903.18      15612.72
+Database Tuning                    6        4030.34      24182.04
+
+Sub-Total:                                             39794.76
+Tax (24.00%):                                           9550.74
+Total Amount Due:                                      49345.50

@@ -1,0 +1,40 @@
+kernel/tests/test_near_miss_refusal.py::TestNearMissAnswersGrounded::test_specific_near_miss_pair_passes[nm-001-Net 30 from invoice date-Invoice date: 2024-03-15. Vendor: Acme Solutions LLC. Amount: $1,250.00. Payment terms: Net 30 from invoice date.] PASSED [ 91%]
+kernel/tests/test_near_miss_refusal.py::TestNearMissAnswersGrounded::test_specific_near_miss_pair_passes[nm-002-Acme Solutions LLC-Invoice date: 2024-03-15. Vendor name: Acme Solutions LLC. Invoice amount: $1,250.00.] PASSED [ 92%]
+kernel/tests/test_near_miss_refusal.py::TestNearMissAnswersGrounded::test_specific_near_miss_pair_passes[nm-005-$125 per hour-Consulting services: 10 hours at $125 per hour. Total: $1,250.00.] PASSED [ 93%]
+kernel/tests/test_near_miss_refusal.py::TestNearMissAnswersGrounded::test_specific_near_miss_pair_passes[nm-010-Pinnacle Technology Inc.-Bill To: Pinnacle Technology Inc., 123 Innovation Drive, San Francisco CA 94105.] PASSED [ 94%]
+kernel/tests/test_near_miss_refusal.py::TestNearMissAnswersGrounded::test_near_miss_pass_rate_gte_95pct PASSED [ 95%]
+kernel/tests/test_near_miss_refusal.py::TestUnanswerableRefusalPreserved::test_empty_context_returns_unverified PASSED [ 96%]
+kernel/tests/test_near_miss_refusal.py::TestUnanswerableRefusalPreserved::test_true_refusal_rate_is_100pct PASSED [ 97%]
+kernel/tests/test_near_miss_refusal.py::TestThresholdTuning::test_vgva_default_threshold_within_range PASSED [ 98%]
+kernel/tests/test_near_miss_refusal.py::TestThresholdTuning::test_lower_threshold_reduces_false_refusals PASSED [100%]
+
+=================================== FAILURES ===================================
+_____ TestAdversarialCorpus.test_injected_ask_produces_no_behavior_change ______
+
+self = <test_injection_guard.TestAdversarialCorpus object at 0x7f124ba51400>
+
+    def test_injected_ask_produces_no_behavior_change(self):
+        """The /ask endpoint with an injected doc must return grounded=False or
+        legitimate extracted content — NEVER the injected directive."""
+>       from fastapi.testclient import TestClient
+E       ModuleNotFoundError: No module named 'fastapi'
+
+kernel/tests/test_injection_guard.py:463: ModuleNotFoundError
+____ TestAdversarialCorpus.test_grounding_verifier_blocks_injected_answers _____
+
+self = <test_injection_guard.TestAdversarialCorpus object at 0x7f124ba50fe0>
+
+    def test_grounding_verifier_blocks_injected_answers(self):
+        """Verify that the grounding verifier rejects any answer that has no real bbox.
+    
+        This is the third line of defense: even if an injection bypasses the
+        injection guard, the answer has no real bbox anchor and is blocked.
+        """
+>       from fastapi.testclient import TestClient
+E       ModuleNotFoundError: No module named 'fastapi'
+
+kernel/tests/test_injection_guard.py:527: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED kernel/tests/test_injection_guard.py::TestAdversarialCorpus::test_injected_ask_produces_no_behavior_change
+FAILED kernel/tests/test_injection_guard.py::TestAdversarialCorpus::test_grounding_verifier_blocks_injected_answers
+========================= 2 failed, 89 passed in 0.25s =========================

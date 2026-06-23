@@ -1,0 +1,21 @@
+LICENSE AGREEMENT
+
+This License Agreement is dated as of the 20th day of May, 2024, by and between:
+BlueOcean Ventures LP, a limited liability company organized under the laws of the State of England (hereinafter "Provider"),
+and
+GreenField Capital Ltd, a corporation incorporated in England (hereinafter "Client").
+
+1. SCOPE OF SERVICES
+BlueOcean Ventures LP shall deliver professional services as described in Schedule A. GreenField Capital Ltd shall remit payment within 45 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-05-20 and shall remain in effect until 2027-09-01, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of England.
+
+5. TERMINATION
+Either party may terminate this Agreement with 30 days written notice.

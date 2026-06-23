@@ -1,0 +1,16 @@
+Singapore Data Pte
+RECEIPT / INVOICE
+Receipt No: INV-2024-0018
+Date Issued: 2024-10-04
+Due: 2024-02-18
+Currency: SGD
+Terms: Net 60
+
+Description                    Qty     Rate (SGD)    Amount (SGD)
+Data Migration Service            17        1362.74      23166.58
+Data Migration Service             3        4402.39      13207.17
+Training Workshop                 10         830.85       8308.50
+
+Sub-Total:                                             44682.25
+Tax (19.00%):                                           8489.63
+Total Amount Due:                                      53171.88

@@ -1,0 +1,17 @@
+==================================================
+         Mumbai Tech Pvt Ltd
+==================================================
+Invoice Date: 2024-03-17
+Due Date: 2024-02-28
+Currency: INR
+Terms: Net 60
+
+Description                    Qty     Rate (INR)    Amount (INR)
+Consultation Hours                17        3064.40      52094.80
+Training Workshop                 12        3824.43      45893.16
+Backup Configuration              17        4596.54      78141.18
+Monthly Maintenance               11        2468.60      27154.60
+
+Sub-Total:                                            203283.74
+Tax (20.00%):                                          40656.75
+Total Amount Due:                                     243940.49

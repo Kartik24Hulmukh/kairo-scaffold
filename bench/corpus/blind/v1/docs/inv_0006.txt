@@ -1,0 +1,17 @@
+Berlin Digital GmbH
+RECEIPT / INVOICE
+Receipt No: INV-2024-0006
+Date Issued: 2024-05-05
+Due: 2024-04-24
+Currency: EUR
+Terms: Due on Receipt
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Backup Configuration              19        2170.75      41244.25
+Consultation Hours                13        1841.88      23944.44
+Cloud Infrastructure Setup        17        2492.90      42379.30
+Consultation Hours                 4         806.56       3226.24
+
+Sub-Total:                                            110794.23
+Tax (7.00%):                                           7755.60
+Total Amount Due:                                     118549.83

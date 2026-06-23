@@ -1,0 +1,17 @@
+InstructGPT: Training Language Models to Follow Instructions
+
+Long Ouyang, Jeffrey Wu
+
+Abstract
+We present a novel approach to instructgpt. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Claims:
+1. Our model achieves 0.94 accuracy on the test set.
+2. We show that the proposed method is more efficient than prior work.
+
+Methodology
+We use a transformer-based architecture with 40 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 2.58 and sFID 0.74. The precision score is 0.52.
+See Figure 5 for sample outputs and Table 4 for quantitative comparisons.

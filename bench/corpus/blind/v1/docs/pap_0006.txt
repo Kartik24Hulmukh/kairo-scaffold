@@ -1,0 +1,17 @@
+Constitutional AI: Harmlessness from AI Feedback
+
+Yuntao Bai, Saurav Kadavath
+
+Abstract
+We present a novel approach to constitutional ai. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Claims:
+1. Our model achieves 0.94 accuracy on the test set.
+2. We show that the proposed method is more efficient than prior work.
+
+Methodology
+We use a transformer-based architecture with 12 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 4.76 and sFID 1.44. The precision score is 0.22.
+See Figure 1 for sample outputs and Table 2 for quantitative comparisons.

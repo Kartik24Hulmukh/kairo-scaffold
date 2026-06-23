@@ -1,0 +1,17 @@
+==================================================
+         CloudPeak Systems
+==================================================
+Invoice Date: 2024-11-23
+Due Date: 2024-09-08
+Currency: USD
+Terms: Due on Receipt
+
+Description                    Qty     Rate (USD)    Amount (USD)
+Cloud Infrastructure Setup         2        1183.79       2367.58
+Monthly Maintenance               11        2035.77      22393.47
+Backup Configuration               7        4570.02      31990.14
+Security Audit                    11        1102.50      12127.50
+
+Sub-Total:                                             68878.69
+Tax (25.00%):                                          17219.67
+Total Amount Due:                                      86098.36

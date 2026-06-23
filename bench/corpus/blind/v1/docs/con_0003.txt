@@ -1,22 +1,23 @@
 PARTNERSHIP AGREEMENT
 
-Effective Date: 2024-02-01
+This agreement is made on the 18th day of June, 2024.
 
-The parties to this agreement are:
-1. BlueOcean Ventures LP, a limited partnership registered in the Cayman Islands
-2. GreenField Capital Ltd, a company incorporated in Ireland
+BETWEEN:
+BlueOcean Ventures LP, a Delaware corporation (the "Company")
+- and -
+GreenField Capital Ltd (the "Employee")
 
-RECITALS
-The parties wish to form a strategic partnership for joint investment in renewable energy projects.
+1. SCOPE OF SERVICES
+BlueOcean Ventures LP shall deliver professional services as described in Schedule A. GreenField Capital Ltd shall remit payment within 90 days of receipt of each invoice.
 
-ARTICLE I — CAPITAL CONTRIBUTIONS
-Each partner shall contribute capital within 60 days of signing. BlueOcean shall contribute $5,000,000. GreenField shall contribute $3,000,000. Additional capital calls require unanimous consent.
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
 
-ARTICLE II — CONFIDENTIALITY OBLIGATIONS
-All financial data, investor information, and proprietary strategies disclosed between partners are deemed strictly confidential. Neither party shall divulge such information to any third party without express written consent. This provision survives dissolution of the partnership.
+3. TERM
+This Agreement commences on 2024-06-18 and shall remain in effect until 2025-03-05, unless terminated earlier.
 
-ARTICLE III — DURATION
-This partnership begins on February 1, 2024 and ends on January 31, 2034 (ten-year term).
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Delaware.
 
-ARTICLE IV — GOVERNING LAW
-This agreement is subject to the laws of Ireland.
+5. TERMINATION
+Either party may terminate this Agreement with 90 days written notice.

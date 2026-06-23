@@ -1,0 +1,14 @@
+Vienna Systems GmbH
+INV# INV-2024-0028
+Invoice Date: 2024-04-16
+Due Date: 2024-10-28
+Currency: EUR
+Terms: Due on Receipt
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Network Optimization              15        2101.48      31522.20
+Database Tuning                   19        1012.45      19236.55
+
+Sub-Total:                                             50758.75
+Tax (25.00%):                                          12689.69
+Total Amount Due:                                      63448.44

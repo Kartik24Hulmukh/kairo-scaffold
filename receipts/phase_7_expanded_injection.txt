@@ -1,0 +1,32 @@
+Kairo Scaffold — Phase 7: Expanded Injection Corpus (Full Resync)
+Date: 2026-06-23
+
+SYNCED (from phantom @ d46aa534 via CORE_SYNC):
+  - kairo/security/injection_guard.py (289 lines — new detect_injection() API)
+    New API: detect_injection(text, threshold=0.5) -> InjectionDetection(blocked, score, matched_patterns)
+    Replaces old scan_chunk_for_injection() with InjectionScanResult
+  - kairo/security/__init__.py
+  - fixtures/adversarial/ (injection_corpus.json 25 payloads + gauntlet fixtures)
+  - tests/test_injection_guard_expanded.py (phantom's expanded test suite)
+  - bench/corpus/blind/v1/ (full 120-doc blind corpus, 120 labels, manifest, CHECKSUMS.sha256)
+  - bench/score.py (updated scorer)
+  - kairo/context/compressor.py (Phase 1 compression)
+  - kairo/observability/ (Phase 2 tracing + dashboard)
+  - kairo/core/classifier.py (Phase 3 connector)
+  - kairo/graph/ (Phase 4 graph module)
+
+SCAFFOLD ADAPTATIONS:
+  - Broadened exfiltrate pattern: r"exfiltrate(?:\s+(?:the\s+following|data|content|secrets|this))?"
+    (old pattern only matched "exfiltrate data/content/secrets", missed "Exfiltrate the following:")
+  - Added 3 hard patterns (score 1.0):
+    - r"print\s+(?:out\s+)?all\s+secrets" (catches "Print all secrets" variants)
+    - r"exfiltrate\s+the\s+following" (catches exfiltration directives)
+    - r"send\s+data\s+to\s+(?:external|an?)\s+server" (catches data exfil)
+
+TESTS:
+  - Expanded corpus: 200/200 = 100.0% blocked (threshold 0.5)
+    Method: generate_expanded_corpus(base_count=200) + detect_injection(threshold=0.5)
+  - False positives: 0/50 clean business texts
+  - sha256sum -c CHECKSUMS.sha256: 241/241 OK (blind corpus byte-identical to phantom)
+
+Status: PASS — 200/200 blocked, 0 false positives, 241/241 sha256 OK

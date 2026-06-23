@@ -1,0 +1,17 @@
+==================================================
+         Bangkok Systems Co
+==================================================
+Invoice Date: 2024-07-01
+Due Date: 2024-03-24
+Currency: THB
+Terms: Net 60
+
+Description                    Qty     Rate (THB)    Amount (THB)
+Database Tuning                   14        4021.06      56294.84
+Database Tuning                    8        1370.69      10965.52
+Cloud Infrastructure Setup         4        1943.58       7774.32
+Security Audit                    16        1151.05      18416.80
+
+Sub-Total:                                             93451.48
+Tax (20.00%):                                          18690.30
+Total Amount Due:                                     112141.78

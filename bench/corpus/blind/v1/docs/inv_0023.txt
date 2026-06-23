@@ -1,0 +1,18 @@
+Istanbul Tech AS
+RECEIPT / INVOICE
+Receipt No: INV-2024-0023
+Date Issued: 2024-04-01
+Due: 2024-11-07
+Currency: TRY
+Terms: Net 30
+
+Description                    Qty     Rate (TRY)    Amount (TRY)
+Monthly Maintenance               11        1429.09      15719.99
+Training Workshop                  9        1788.17      16093.53
+Training Workshop                 13        3413.61      44376.93
+Monthly Maintenance               11        4699.22      51691.42
+Premium Support Package            9         933.91       8405.19
+
+Sub-Total:                                            136287.06
+Tax (8.25%):                                          11243.68
+Total Amount Due:                                     147530.74

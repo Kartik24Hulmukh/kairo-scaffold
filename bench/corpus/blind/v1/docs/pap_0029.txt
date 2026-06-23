@@ -1,0 +1,18 @@
+NeRF: Representing Scenes as Neural Radiance Fields
+
+Ben Mildenhall, Pratul Srinivasan
+
+Abstract
+We present a novel approach to nerf. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Contributions:
+- Our method achieves state-of-the-art results on SuperGLUE.
+- We introduce a new architecture that reduces training time by 75%.
+- Our approach generalizes to unseen domains without additional training.
+
+Methodology
+We use a transformer-based architecture with 40 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 0.66 and sFID 0.81. The precision score is 0.63.
+See Figure 3 for sample outputs and Table 2 for quantitative comparisons.

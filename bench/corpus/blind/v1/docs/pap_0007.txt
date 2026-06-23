@@ -1,0 +1,17 @@
+Chain-of-Thought Prompting Elicits Reasoning
+
+Jason Wei, Xuezhi Wang
+
+Abstract
+We present a novel approach to chain-of-thought prompting elicits reasoning. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Claims:
+1. Our model achieves 0.87 accuracy on the test set.
+2. We show that the proposed method is more efficient than prior work.
+
+Methodology
+We use a transformer-based architecture with 10 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 1.20 and sFID 2.34. The precision score is 0.69.
+See Figure 4 for sample outputs and Table 3 for quantitative comparisons.

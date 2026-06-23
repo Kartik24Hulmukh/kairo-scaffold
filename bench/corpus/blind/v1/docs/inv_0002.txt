@@ -1,24 +1,18 @@
-========================================
-         GLOBAL SERVICES INC
-   500 Corporate Blvd, Wilmington DE
-========================================
+Nordic Tech AB
+RECEIPT / INVOICE
+Receipt No: INV-2024-0002
+Date Issued: 2024-09-07
+Due: 2024-12-21
+Currency: EUR
+Terms: Net 60
 
-Invoice #: 2024-GSI-4471
-Invoice Date: March 28, 2024
-Terms: Due upon receipt
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Premium Support Package            8        2273.58      18188.64
+Consultation Hours                 1        3806.10       3806.10
+Consultation Hours                14        1734.24      24279.36
+Data Migration Service             7        4788.20      33517.40
+Monthly Maintenance                4         509.09       2036.36
 
-Customer: BrightStar LLC
-          789 Commerce Way
-
-Item                          Qty    Unit Price    Line Total
----                           ---    ----------    ----------
-Software License (Annual)     1      $12,000.00   $12,000.00
-Premium Support Package       1      $3,500.00    $3,500.00
-Training Session (On-site)    2      $1,200.00    $2,400.00
-
-                              Sub-Total:          $17,900.00
-                              Sales Tax (6.5%):   $1,163.50
-                              ===========================
-                              GRAND TOTAL:        $19,063.50
-
-Remit to: Global Services Inc, PO Box 1234, Wilmington DE 19801
+Sub-Total:                                             81827.86
+Tax (20.00%):                                          16365.57
+Total Amount Due:                                      98193.43

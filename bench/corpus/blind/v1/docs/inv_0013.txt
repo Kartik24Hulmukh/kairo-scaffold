@@ -1,0 +1,16 @@
+Seoul Systems Co
+RECEIPT / INVOICE
+Receipt No: INV-2024-0013
+Date Issued: 2024-04-07
+Due: 2024-09-15
+Currency: KRW
+Terms: Net 30
+
+Description                    Qty     Rate (KRW)    Amount (KRW)
+Security Audit                    14         958.27      13415.78
+Monthly Maintenance                8        4378.71      35029.68
+Training Workshop                 15        4049.71      60745.65
+
+Sub-Total:                                            109191.11
+Tax (8.25%):                                           9008.27
+Total Amount Due:                                     118199.38

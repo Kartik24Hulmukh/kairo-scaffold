@@ -1,90 +1,853 @@
 {
   "corpus_version": "blind-v1",
   "built_at": "2026-06-22",
-  "doc_count": 11,
+  "doc_count": 120,
   "packs": {
-    "invoice": 4,
-    "contract": 3,
-    "generic": 2,
-    "paper": 2
+    "invoice": 30,
+    "contract": 30,
+    "paper": 30,
+    "generic": 30
   },
   "docs": [
     {
       "doc_id": "inv_0001",
       "pack": "invoice",
-      "tier": "T2",
+      "tier": "T1",
       "file": "docs/inv_0001.txt",
-      "sha256": "3f04a3d025f716025c8d5f4934b1a25e7cb03e42cf056f5c67f102bf8ee1b7f6"
+      "sha256": "1ed4cf6e4fa38ad4a65a2c918695275ad87bf5a9cd95927082dab1fe20f738d1"
     },
     {
       "doc_id": "inv_0002",
       "pack": "invoice",
       "tier": "T2",
       "file": "docs/inv_0002.txt",
-      "sha256": "4a8e4cbb354a14416fa9c83a86139c21e8213875462f1cb51dd912c7ff8ed0b7"
+      "sha256": "76d403847f25b5a032cdcffa6bd16aea4d0317998c785c36f23747e4c224c745"
     },
     {
       "doc_id": "inv_0003",
       "pack": "invoice",
-      "tier": "T2",
+      "tier": "T3",
       "file": "docs/inv_0003.txt",
-      "sha256": "a688ea9d62f8d87bf658c56d6cc0382764df22407b9152b5600173438ea5ebe5"
+      "sha256": "6e2156b035516878938b686e8f2f9eb64340321c2a2967fc2e12128844bae7a6"
     },
     {
       "doc_id": "inv_0004",
       "pack": "invoice",
-      "tier": "T2",
+      "tier": "T1",
       "file": "docs/inv_0004.txt",
-      "sha256": "959b773fe03adf0da2540f53a7cf69093b5de43c55766dff18c38021f87f5c6d"
+      "sha256": "273e1070c8afc2420794b17c3cd14993ecd9806d55ee445cbcfb655b386b2d22"
+    },
+    {
+      "doc_id": "inv_0005",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0005.txt",
+      "sha256": "b5e3344212087235dd7f9c75d1966ff9ff697bcf846c27a91fdba73502f9299b"
+    },
+    {
+      "doc_id": "inv_0006",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0006.txt",
+      "sha256": "44a33be0982137ba3ba0afb34dc713a4c26d1741fde7cefe77ce3fb92c365c1f"
+    },
+    {
+      "doc_id": "inv_0007",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0007.txt",
+      "sha256": "a2de7c12567bb21ffce3f256bcd88ba2f81ce85ee6a12f317fd7a02c84c2b8a3"
+    },
+    {
+      "doc_id": "inv_0008",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0008.txt",
+      "sha256": "d060716ec1cd9cbcf3d1811d83a57f3cf30d4b06754adccb13dc60bf472bb36e"
+    },
+    {
+      "doc_id": "inv_0009",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0009.txt",
+      "sha256": "53ed4be252294cb9aad13fc877f439f06559dec4e243920cb1ab3784b5a127f2"
+    },
+    {
+      "doc_id": "inv_0010",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0010.txt",
+      "sha256": "d4da4d0621eb8ed0ea5418d62a5f659612ff97ac68f1236cb32a29703048ff1d"
+    },
+    {
+      "doc_id": "inv_0011",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0011.txt",
+      "sha256": "c2ed872a372d96c901bc50b8923b767fe23e74d070a3c7b044ac0c02d062e73d"
+    },
+    {
+      "doc_id": "inv_0012",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0012.txt",
+      "sha256": "da802247e6ecedda2cf51cba8fb6cf34f9e01fe439023571e8fb4ea0844dcb64"
+    },
+    {
+      "doc_id": "inv_0013",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0013.txt",
+      "sha256": "8d5b6791cf37416355cf31dea9cf35b63adb60fe006d61129814d8bfb8b5b816"
+    },
+    {
+      "doc_id": "inv_0014",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0014.txt",
+      "sha256": "2a543284fd0c2bf5918de495267122fefa21d75f212ceb1c233e2991f378fac0"
+    },
+    {
+      "doc_id": "inv_0015",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0015.txt",
+      "sha256": "e8014afeb96c85426e9b068757cf40526ac55ba88dd4867ca339e98163b58cd9"
+    },
+    {
+      "doc_id": "inv_0016",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0016.txt",
+      "sha256": "2e9dd108f2099162dae2f71fa1bad65b7571ce92504546b59e4dcf7489537eb8"
+    },
+    {
+      "doc_id": "inv_0017",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0017.txt",
+      "sha256": "32531986b9d1e4892ae31113ba3bd4438c2258629975fc53c75c3d3b2b4c12a5"
+    },
+    {
+      "doc_id": "inv_0018",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0018.txt",
+      "sha256": "be1815ffadae42c8b1c2b7ce45947406423de91aba445633d5720c164f82b8dc"
+    },
+    {
+      "doc_id": "inv_0019",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0019.txt",
+      "sha256": "5c49b45ae27849337f1bd2d8f1e88944535fc94a2b4fd6128243a76caf4d2986"
+    },
+    {
+      "doc_id": "inv_0020",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0020.txt",
+      "sha256": "421dc7b30f663a48367e0981550c4bece82e95aa6defd930910abe3799cd332c"
+    },
+    {
+      "doc_id": "inv_0021",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0021.txt",
+      "sha256": "ec1526f19fab4350094d6376885a450959671ea2df7a4be9dcdd7fcd178a2a66"
+    },
+    {
+      "doc_id": "inv_0022",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0022.txt",
+      "sha256": "bac40ac4634434471ec8f7a3ad0fe13f8c13cc705d52192505a9328a7d97679e"
+    },
+    {
+      "doc_id": "inv_0023",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0023.txt",
+      "sha256": "90d98cf0cabd389a67612b1b114eb54f546ec0f9e985f4f31d24dc4b484b0609"
+    },
+    {
+      "doc_id": "inv_0024",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0024.txt",
+      "sha256": "0b4c33fcf758221c70607af78d2231b5f6354e25fba37fa630b6237f98da703d"
+    },
+    {
+      "doc_id": "inv_0025",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0025.txt",
+      "sha256": "1128cfd2000e2042c7552d5cdf51d96aac7f4979187ea2dc3d8621b4fca1e574"
+    },
+    {
+      "doc_id": "inv_0026",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0026.txt",
+      "sha256": "054ed6e568d50f96762cd27a4e37055be3afac4949bd7ce91f8f52d841ceeb73"
+    },
+    {
+      "doc_id": "inv_0027",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0027.txt",
+      "sha256": "d86cb98281cc02c88eb29d82d5825eeed56d92d084833d76267e469061633c04"
+    },
+    {
+      "doc_id": "inv_0028",
+      "pack": "invoice",
+      "tier": "T1",
+      "file": "docs/inv_0028.txt",
+      "sha256": "28c3fcb3aeae4cb9a412fde07fad5598a7cdffa1e677b849bb9f633e9d0f9d4c"
+    },
+    {
+      "doc_id": "inv_0029",
+      "pack": "invoice",
+      "tier": "T2",
+      "file": "docs/inv_0029.txt",
+      "sha256": "cf8e90a0376d3a74166a3551697efaa8e2d7ec31ba7be7cd78ad75aaa29c3862"
+    },
+    {
+      "doc_id": "inv_0030",
+      "pack": "invoice",
+      "tier": "T3",
+      "file": "docs/inv_0030.txt",
+      "sha256": "a6ef9f2770f43ec296491458420c8220cf6702194c3847eee1063cbe0784acc0"
     },
     {
       "doc_id": "con_0001",
       "pack": "contract",
-      "tier": "T2",
+      "tier": "T1",
       "file": "docs/con_0001.txt",
-      "sha256": "a288ad5012b9a602beb01a9b2603ef0560d5dd12645660b9f3eff52f79daae72"
+      "sha256": "a4cf197c4b466fc3303c10e798a15a47a6e8365288243e54cd0b7c7ce3af748e"
     },
     {
       "doc_id": "con_0002",
       "pack": "contract",
       "tier": "T2",
       "file": "docs/con_0002.txt",
-      "sha256": "f3bbdb626f96b21fb1dc0e0d2b94f2d93337cdf3df0c252dfb7f79cd42713373"
+      "sha256": "0d2ee9424d1e61208af261c1a1ac587e9752ab41e6b24fffe52e6b0657146d6b"
     },
     {
       "doc_id": "con_0003",
       "pack": "contract",
-      "tier": "T2",
+      "tier": "T3",
       "file": "docs/con_0003.txt",
-      "sha256": "fb6dae4b8b17fd67500e666fb64874d8e174193fa42e1f9e3d909df31a080c3e"
+      "sha256": "2b9ea6f184ac6bc141e79baaee39828980fd3bcfb741f675d73cb0400b13939c"
     },
     {
-      "doc_id": "gen_0001",
-      "pack": "generic",
-      "tier": "T2",
-      "file": "docs/gen_0001.txt",
-      "sha256": "a5b3c5e5cb8fa08138e31f1f7fc0727143c57248b631cce453b3dddc83a92ed2"
+      "doc_id": "con_0004",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0004.txt",
+      "sha256": "63a527b2a74f7b5c5d74b745139620033a37942eef06d110e40fa3e3fc40a7dd"
     },
     {
-      "doc_id": "gen_0002",
-      "pack": "generic",
+      "doc_id": "con_0005",
+      "pack": "contract",
       "tier": "T2",
-      "file": "docs/gen_0002.txt",
-      "sha256": "4b56e73cc40ef1f7353325a65f21378a218dc278760d07dda68969d893e9e5e6"
+      "file": "docs/con_0005.txt",
+      "sha256": "494e7d2269b904bab8a845484e3b41eb26d91f311992a0769685d96bb5862ef9"
+    },
+    {
+      "doc_id": "con_0006",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0006.txt",
+      "sha256": "dff6f88b77ec1cd70d949ca35738cecfff51bd77494cd796e973cc7873d026cf"
+    },
+    {
+      "doc_id": "con_0007",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0007.txt",
+      "sha256": "12c5b3bf7f7b1f824d86775876c285e95848f9b5c75316388c62bc4e977c801d"
+    },
+    {
+      "doc_id": "con_0008",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0008.txt",
+      "sha256": "8eb24f9593b00a75116fb79c5c799d38660a2556043593b2824d65a9dbbbafd2"
+    },
+    {
+      "doc_id": "con_0009",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0009.txt",
+      "sha256": "4915faef130494c53af57dfcdb2cd59271a1a57d3a5655bcb6632ba117fe2231"
+    },
+    {
+      "doc_id": "con_0010",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0010.txt",
+      "sha256": "2680b5da0ce87b70e64360dfb01ea221755d0e09afe8c8953942d17ce34fc6ac"
+    },
+    {
+      "doc_id": "con_0011",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0011.txt",
+      "sha256": "793663e604214c8dee3539564012f10a7f74995604843a5b375a044b12fa15ea"
+    },
+    {
+      "doc_id": "con_0012",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0012.txt",
+      "sha256": "a24399943edc36f11d48358983a87ac5f9c18b79886093eb87bfd039c05b9f5a"
+    },
+    {
+      "doc_id": "con_0013",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0013.txt",
+      "sha256": "49d5e8ff0dc80675aee7aa4355433b6e2ac916d43b33d8af103c617ab1729c22"
+    },
+    {
+      "doc_id": "con_0014",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0014.txt",
+      "sha256": "d6573174562425477fb2f7acb4555064ad07c6c9aa70a458aa579f434ced509c"
+    },
+    {
+      "doc_id": "con_0015",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0015.txt",
+      "sha256": "d8425851b0dac86f6e8a26525b4c774170fd4bb9540c92fb59d1a58d0ef5c332"
+    },
+    {
+      "doc_id": "con_0016",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0016.txt",
+      "sha256": "8505834783965c005f7272fa6ffd30b99147679a33adc59b68ecf3a982c1363e"
+    },
+    {
+      "doc_id": "con_0017",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0017.txt",
+      "sha256": "20d78348ff8c0d5b5ea06342932cdcc1124afc45f6aba43330cca4e21a0bc4f5"
+    },
+    {
+      "doc_id": "con_0018",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0018.txt",
+      "sha256": "8ff43e8c83adfd883471e6ff06ba5a1796e810a81a00564f1493bb8fae29d245"
+    },
+    {
+      "doc_id": "con_0019",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0019.txt",
+      "sha256": "a1fbcdcaa9569fe3fd8f90b6e48dc666374539994504338b0b7e063c5a3b74d6"
+    },
+    {
+      "doc_id": "con_0020",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0020.txt",
+      "sha256": "b33887ce03f75ac1cda2a485bbeb411ed3668353cc1fffc6bfc1ac92a7336356"
+    },
+    {
+      "doc_id": "con_0021",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0021.txt",
+      "sha256": "d1a060b8b155788e29e3731cadfbfda3ff20cbdc6e51e23444b24257d1abcbc7"
+    },
+    {
+      "doc_id": "con_0022",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0022.txt",
+      "sha256": "b5d6a53cbf17b57edc98734e79c4e966af0a2c55e3a925d6fc5bc5ae6861f5cf"
+    },
+    {
+      "doc_id": "con_0023",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0023.txt",
+      "sha256": "156252efa1ce7122059f7de663ba3087b58d304f6615a50345dfb8f6fd052c91"
+    },
+    {
+      "doc_id": "con_0024",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0024.txt",
+      "sha256": "2e2203bc35246392aad0ae073bcec8ced3f70dd0dad58be7d194625f7b15f80d"
+    },
+    {
+      "doc_id": "con_0025",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0025.txt",
+      "sha256": "ee5d3ebcdcd90a37805e7a3fdcc512f731e66dd50f6326a1edb6d2fe598ff671"
+    },
+    {
+      "doc_id": "con_0026",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0026.txt",
+      "sha256": "2e53d809fe031b4e90a9db378dcb81d0d49f9339598d5d723853b09542bbc492"
+    },
+    {
+      "doc_id": "con_0027",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0027.txt",
+      "sha256": "88c559e37f2953d195298c9382e318f8ebcf69e4f0aa6625a6e87cebc50b1466"
+    },
+    {
+      "doc_id": "con_0028",
+      "pack": "contract",
+      "tier": "T1",
+      "file": "docs/con_0028.txt",
+      "sha256": "37dcdbbced9522a6481c32b9c02570334ea63b7ba7759caaf56acc5f16415350"
+    },
+    {
+      "doc_id": "con_0029",
+      "pack": "contract",
+      "tier": "T2",
+      "file": "docs/con_0029.txt",
+      "sha256": "1812f0dbaf595bbb24253fa198d910759a8abdde03d6d11daca0f57366587e21"
+    },
+    {
+      "doc_id": "con_0030",
+      "pack": "contract",
+      "tier": "T3",
+      "file": "docs/con_0030.txt",
+      "sha256": "52d68b3dafd76c83701e935231aed3cb92258bb10e2ea04ba774e9821cf5227f"
     },
     {
       "doc_id": "pap_0001",
       "pack": "paper",
-      "tier": "T2",
+      "tier": "T1",
       "file": "docs/pap_0001.txt",
-      "sha256": "63e13d9c0c3d888409bf68c3af1a0f1edaa32027cc61f384d8256b0109392ec9"
+      "sha256": "8627a6a109d12eb4d6312bc85c02ec9667f079ac7bb333bd29805ef8a755c556"
     },
     {
       "doc_id": "pap_0002",
       "pack": "paper",
       "tier": "T2",
       "file": "docs/pap_0002.txt",
-      "sha256": "16a68f7027b83e239a8bd2a2136eb5f79b262e76b6bc3cb5c2ab76355815f5e7"
+      "sha256": "9cd6af6ba5aea80644824f0b7ab307299ac322179c7d4a7b965299b35ece9018"
+    },
+    {
+      "doc_id": "pap_0003",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0003.txt",
+      "sha256": "d476b555d9de86dd47b3f60cadcf21f3c088cabcc335d2fc67cd6c23d49d45a1"
+    },
+    {
+      "doc_id": "pap_0004",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0004.txt",
+      "sha256": "6fc2f5061b39acc73eae474c058f72cb0c136944e0e4cb596ef35ae45b2238d6"
+    },
+    {
+      "doc_id": "pap_0005",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0005.txt",
+      "sha256": "b94ec170c2ee7c9993b15db39d354261e1add3af811dbd6b6500c877e7ffdc52"
+    },
+    {
+      "doc_id": "pap_0006",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0006.txt",
+      "sha256": "82150660ff241eda0752dc40f8e4babb158a84b1db0c9bd9057131e2063953e7"
+    },
+    {
+      "doc_id": "pap_0007",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0007.txt",
+      "sha256": "6425cc4feaeca22ce9fa3b1fbc092950b57c268d761064f27e7083e614bb3733"
+    },
+    {
+      "doc_id": "pap_0008",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0008.txt",
+      "sha256": "7133b6bcb21b293a37bf6a6921acc31baa999f338b71d4519ba4e8571b24d623"
+    },
+    {
+      "doc_id": "pap_0009",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0009.txt",
+      "sha256": "78d0ac3436890e7bc4ee8152c0adcbb91361a87d9fc0ecffbcdeee0542a47660"
+    },
+    {
+      "doc_id": "pap_0010",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0010.txt",
+      "sha256": "4c2c35c2abbc49d6489ef46afdfb44a967ec493ec066f2a1724706daaa5ba0a8"
+    },
+    {
+      "doc_id": "pap_0011",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0011.txt",
+      "sha256": "e93d1cabf649ca2ab8a7cacaaa9abf14943da94bc77ddc351efb471ad382f408"
+    },
+    {
+      "doc_id": "pap_0012",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0012.txt",
+      "sha256": "10aecd79a5c44202f8bc4645b721b7aadb512a083d32801b0de2a3b1d1237600"
+    },
+    {
+      "doc_id": "pap_0013",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0013.txt",
+      "sha256": "ec0e64b7ae04f5dfd6da894e9e320b6238f3381fecdc1dcd4af1eb868774901a"
+    },
+    {
+      "doc_id": "pap_0014",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0014.txt",
+      "sha256": "b6e095ea466626600b4b2a10e9b6d8ccc1d47284cb6a7c67df42ddb85c2e8f93"
+    },
+    {
+      "doc_id": "pap_0015",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0015.txt",
+      "sha256": "88476c8961c0262df634b9b7bec49910e0f4ae6c343c42a29947c6f141f01bcc"
+    },
+    {
+      "doc_id": "pap_0016",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0016.txt",
+      "sha256": "538829d35bb7710aab39bddb290f7f13dd3042e3e0ce754b8a8a43b5b03b8268"
+    },
+    {
+      "doc_id": "pap_0017",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0017.txt",
+      "sha256": "802c28e13696aad6381d6271ca1d3d55cf635a41992967ed42cee6409e9f36ac"
+    },
+    {
+      "doc_id": "pap_0018",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0018.txt",
+      "sha256": "0f36844ef60f5ae3109bf1c05615a09cd571928cd458ed6c9ee51920bece1865"
+    },
+    {
+      "doc_id": "pap_0019",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0019.txt",
+      "sha256": "a21211ead5b37703f8502c7b96b46f1097e6e10b0582b986a811d249d609974e"
+    },
+    {
+      "doc_id": "pap_0020",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0020.txt",
+      "sha256": "a461c3b51ff29e547f3ffc09a08698a1655295a64fadf7ceb8596724a837f5e0"
+    },
+    {
+      "doc_id": "pap_0021",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0021.txt",
+      "sha256": "e67262aca5b3bbe196d7b9dcba4951a0f3f65c0617ad80be065795229e8371d4"
+    },
+    {
+      "doc_id": "pap_0022",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0022.txt",
+      "sha256": "30b74da077ffc75b3617037d1649c73555dc665b2d2607eb57c28f2132d0c620"
+    },
+    {
+      "doc_id": "pap_0023",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0023.txt",
+      "sha256": "e9fa2ba794a55425e793be063e937575bf1e89ab3f471df5b8e3b76b93deb6da"
+    },
+    {
+      "doc_id": "pap_0024",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0024.txt",
+      "sha256": "4932f071e6a20da0e3873f96095bff79c004e0dc57e7f62ec1062ea905871b96"
+    },
+    {
+      "doc_id": "pap_0025",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0025.txt",
+      "sha256": "b92b9560739b1226425455a3f8805bb85cf45097c2413c760baa7fd5c352946f"
+    },
+    {
+      "doc_id": "pap_0026",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0026.txt",
+      "sha256": "093942cdd0042168b4eb45fff1c4d682ffd242180f689f6d3ac90f78bfbd8636"
+    },
+    {
+      "doc_id": "pap_0027",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0027.txt",
+      "sha256": "9c08b41e5431158fba1fd5075a004af8f58d6c146e011716964b1843504a287f"
+    },
+    {
+      "doc_id": "pap_0028",
+      "pack": "paper",
+      "tier": "T1",
+      "file": "docs/pap_0028.txt",
+      "sha256": "8fd49d81a98fe10f4301d4f8fb9f9ed82ec158acbe8978ef1ec00a20c2bebe30"
+    },
+    {
+      "doc_id": "pap_0029",
+      "pack": "paper",
+      "tier": "T2",
+      "file": "docs/pap_0029.txt",
+      "sha256": "8f2b6f64f09b0c019ed4dc84e703a7247d870c797d36dad1a1ac89335743e9f6"
+    },
+    {
+      "doc_id": "pap_0030",
+      "pack": "paper",
+      "tier": "T3",
+      "file": "docs/pap_0030.txt",
+      "sha256": "b0db4e97e62f1e092c3402b8a42e9ce9e8689896d5eb1a1438636bf04dd15e44"
+    },
+    {
+      "doc_id": "gen_0001",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0001.txt",
+      "sha256": "8e56314f2f7a6f31f8e3a14f15ad03d3a866a9634b4329b8675e63d8209815b3"
+    },
+    {
+      "doc_id": "gen_0002",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0002.txt",
+      "sha256": "423d38f515ef95df868ea537d2252f04d2d672ca92ef33eb4969b40df150721a"
+    },
+    {
+      "doc_id": "gen_0003",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0003.txt",
+      "sha256": "d0edddc8a5cc5b913c7350bd9ac8928cbfc1fd1ef0d8a5b8b33102e7b0962085"
+    },
+    {
+      "doc_id": "gen_0004",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0004.txt",
+      "sha256": "77ee31d5b5a14d692fbc332ba6e901517adc22650ebb87cf389f61a21d8e4cc0"
+    },
+    {
+      "doc_id": "gen_0005",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0005.txt",
+      "sha256": "a4f4f4917cc2522079cbf82c6d2176ef727d5b1166f531506bfe373b67ad4700"
+    },
+    {
+      "doc_id": "gen_0006",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0006.txt",
+      "sha256": "969625393ae8e0876b534e1af1e8f27976414e208ba82be80736a03d4decac95"
+    },
+    {
+      "doc_id": "gen_0007",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0007.txt",
+      "sha256": "1a963218d16abb0f465832549c61c509ad365f1ce2da5aac1e4b3455fae3684c"
+    },
+    {
+      "doc_id": "gen_0008",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0008.txt",
+      "sha256": "fa4e58612c709341caf3a6c675ef87cb8861e06802dbed5357fbb88e0cc4cd4b"
+    },
+    {
+      "doc_id": "gen_0009",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0009.txt",
+      "sha256": "e3c71fbf0434d72a64fbdf584562eb376214d03c67517b3610886f9cc0d4f16e"
+    },
+    {
+      "doc_id": "gen_0010",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0010.txt",
+      "sha256": "3a3f595cfe795f192b7f39d77cc7f493885e1a8bb8182a6e362be2a7d1d4ed00"
+    },
+    {
+      "doc_id": "gen_0011",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0011.txt",
+      "sha256": "b5972d7d7fde7d667d69b5275ef054bdce509142c1f5f3cf90025bbdfca83a6c"
+    },
+    {
+      "doc_id": "gen_0012",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0012.txt",
+      "sha256": "d094cbe64f423b5a0acff630049fc2f6c674f4c8107f3e04b092d4d3e84b9112"
+    },
+    {
+      "doc_id": "gen_0013",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0013.txt",
+      "sha256": "b86a5be959800e69633bfef902d5969e1bb25fad33f4f745f4dba8e5cadb6049"
+    },
+    {
+      "doc_id": "gen_0014",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0014.txt",
+      "sha256": "aa0f3d6c0ad33ecce5fe0251bf25fa4704ea5d147481a4e9dccfd52fba3247fc"
+    },
+    {
+      "doc_id": "gen_0015",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0015.txt",
+      "sha256": "e1a35027afd6e5c6f9ec78abd491424e18da60ec9a98bc650eb56c592b0244e3"
+    },
+    {
+      "doc_id": "gen_0016",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0016.txt",
+      "sha256": "53c868c9dc2d4711f7375070e846b23a77b2ed2534829c014a34b19263b5cb1e"
+    },
+    {
+      "doc_id": "gen_0017",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0017.txt",
+      "sha256": "7ce39fd191ee975367a9ac9069a67c0072d0ff47f0cb184b4cecc2521281df0c"
+    },
+    {
+      "doc_id": "gen_0018",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0018.txt",
+      "sha256": "05534c4a1a073b4e42d1608bd582f02e93b43adbbc8378d1c0dbbb5ff66fe919"
+    },
+    {
+      "doc_id": "gen_0019",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0019.txt",
+      "sha256": "7fba8d8b5cc48a927e4878ab2e384c023d8ec713821381f30ff63cf14219937d"
+    },
+    {
+      "doc_id": "gen_0020",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0020.txt",
+      "sha256": "8f11b05bee20fc8ea250c67d0c6b1787d27ea6483782c3f8a3abafba78b76cbe"
+    },
+    {
+      "doc_id": "gen_0021",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0021.txt",
+      "sha256": "84803b171272e40eb657fc5893714abb9438625f33385815a7e8faa31c6c6be6"
+    },
+    {
+      "doc_id": "gen_0022",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0022.txt",
+      "sha256": "cf8134e50e6992d1dca04155e4f51ee723acf64a51ee4c86ff6de6ef6d845fa6"
+    },
+    {
+      "doc_id": "gen_0023",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0023.txt",
+      "sha256": "ef4a837de14ca5bdfa44eaf0547e50c170d85724593cf7a79d2da42c7950ad22"
+    },
+    {
+      "doc_id": "gen_0024",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0024.txt",
+      "sha256": "d0f1ecff34400f3182bd6c929153dc678985ac15477ca5dd065d5a86fab7f6ed"
+    },
+    {
+      "doc_id": "gen_0025",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0025.txt",
+      "sha256": "ea647bba39f2ed089f8b137aaf2987c6152bc66686f3d694454bb5f755b65f53"
+    },
+    {
+      "doc_id": "gen_0026",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0026.txt",
+      "sha256": "f78474f6ef73cf4a56511cb49a59420e0061798f007b961383e707476fc3c3c8"
+    },
+    {
+      "doc_id": "gen_0027",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0027.txt",
+      "sha256": "8bf534e49af505cf4d28dc04cc4f31444845d4d79a7f4105ab08377c1cdaae2c"
+    },
+    {
+      "doc_id": "gen_0028",
+      "pack": "generic",
+      "tier": "T1",
+      "file": "docs/gen_0028.txt",
+      "sha256": "e2ae90b38bd9b0b5232215f92d73e738e340dfcfd5955c4aa52d43dbd2aa1cdc"
+    },
+    {
+      "doc_id": "gen_0029",
+      "pack": "generic",
+      "tier": "T2",
+      "file": "docs/gen_0029.txt",
+      "sha256": "57541ab1ff19a75a5d5dd53cdab085338b0237428d44f75ae8908a69bb489849"
+    },
+    {
+      "doc_id": "gen_0030",
+      "pack": "generic",
+      "tier": "T3",
+      "file": "docs/gen_0030.txt",
+      "sha256": "d3337431652f813f0d1ae9a31ea8d3137999bb9f007afb025861ee744473dbb8"
     }
   ]
 }

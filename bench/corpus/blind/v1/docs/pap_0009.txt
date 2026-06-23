@@ -1,0 +1,18 @@
+Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+
+Patrick Lewis, Ethan Perez
+
+Abstract
+We present a novel approach to retrieval-augmented generation for knowledge-intensive nlp tasks. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Main Results:
+1. Our model achieves FID 4.31 on the primary benchmark.
+2. Performance improves with scale following a power law.
+3. The proposed method outperforms all baselines by a significant margin.
+
+Methodology
+We use a transformer-based architecture with 18 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 2.41 and sFID 2.95. The precision score is 0.64.
+See Figure 3 for sample outputs and Table 2 for quantitative comparisons.

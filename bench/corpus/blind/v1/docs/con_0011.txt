@@ -1,0 +1,21 @@
+LICENSE AGREEMENT
+
+This License Agreement is dated as of the 24th day of January, 2024, by and between:
+Crimson Pharma, a limited liability company organized under the laws of the State of Delaware (hereinafter "Provider"),
+and
+Scarlet Therapeutics, a corporation incorporated in Delaware (hereinafter "Client").
+
+1. SCOPE OF SERVICES
+Crimson Pharma shall deliver professional services as described in Schedule A. Scarlet Therapeutics shall remit payment within 30 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-01-24 and shall remain in effect until 2034-01-12, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Delaware.
+
+5. TERMINATION
+Either party may terminate this Agreement with 30 days written notice.

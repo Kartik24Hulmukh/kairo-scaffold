@@ -1,7 +1,7 @@
 {
   "doc_id": "pap_0001",
   "pack": "paper",
-  "tier": "T2",
+  "tier": "T1",
   "page_dims": [
     {
       "page": 1,
@@ -28,7 +28,10 @@
     },
     {
       "field": "authors",
-      "value": "['Prafulla Dhariwal', 'Alex Nichol']",
+      "value": [
+        "Prafulla Dhariwal",
+        "Alex Nichol"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -44,7 +47,7 @@
     },
     {
       "field": "abstract_summary",
-      "value": "We show that diffusion models achieve image sample quality superior to current state-of-the-art generative models.",
+      "value": "We present a novel approach to diffusion models beat gans on image synthesis. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -60,7 +63,10 @@
     },
     {
       "field": "key_claims",
-      "value": "['Our model achieves FID 2.45 on CIFAR-10, compared to 3.05 for the best GAN.', 'Diffusion models show better diversity metrics across all evaluated datasets.']",
+      "value": [
+        "Our model achieves 0.93 accuracy on the test set.",
+        "We show that the proposed method is more efficient than prior work."
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -76,7 +82,9 @@
     },
     {
       "field": "methods",
-      "value": "['We use a U-Net architecture with attention mechanisms at each resolution.']",
+      "value": [
+        "We use a transformer-based architecture with 14 layers and attention mechanisms."
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -92,7 +100,11 @@
     },
     {
       "field": "reported_numbers",
-      "value": "['2.45', '3.05', '2.27', '4.59', '0.84', '0.53']",
+      "value": [
+        "3.37",
+        "3.89",
+        "0.11"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -108,7 +120,9 @@
     },
     {
       "field": "figure_references",
-      "value": "['Figure 1']",
+      "value": [
+        "Figure 1"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -124,7 +138,9 @@
     },
     {
       "field": "table_references",
-      "value": "['Table 2']",
+      "value": [
+        "Table 5"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,

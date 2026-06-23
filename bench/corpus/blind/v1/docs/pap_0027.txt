@@ -1,0 +1,17 @@
+Whisper: Robust Speech Recognition via Large-Scale Weak Supervision
+
+Alec Radford
+
+Abstract
+We present a novel approach to whisper. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Claims:
+1. Our model achieves 0.92 accuracy on the test set.
+2. We show that the proposed method is more efficient than prior work.
+
+Methodology
+We use a transformer-based architecture with 35 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 0.57 and sFID 1.15. The precision score is 0.86.
+See Figure 2 for sample outputs and Table 1 for quantitative comparisons.

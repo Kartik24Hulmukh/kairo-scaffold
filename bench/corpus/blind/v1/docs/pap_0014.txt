@@ -1,0 +1,18 @@
+ViT: An Image is Worth 16x16 Words
+
+Alexey Dosovitskiy
+
+Abstract
+We present a novel approach to vit. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Contributions:
+- Our method achieves state-of-the-art results on ImageNet.
+- We introduce a new architecture that reduces training time by 57%.
+- Our approach generalizes to unseen domains without additional training.
+
+Methodology
+We use a transformer-based architecture with 33 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 3.36 and sFID 2.71. The precision score is 0.10.
+See Figure 3 for sample outputs and Table 4 for quantitative comparisons.

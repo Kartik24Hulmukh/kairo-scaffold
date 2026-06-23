@@ -1,0 +1,16 @@
+==================================================
+         Sydney Data Pty
+==================================================
+Invoice Date: 2024-09-28
+Due Date: 2024-10-14
+Currency: AUD
+Terms: Net 30
+
+Description                    Qty     Rate (AUD)    Amount (AUD)
+Database Tuning                   18        3788.56      68194.08
+API Gateway Setup                  7        3579.10      25053.70
+Training Workshop                 12        2218.60      26623.20
+
+Sub-Total:                                            119870.98
+Tax (25.00%):                                          29967.74
+Total Amount Due:                                     149838.72

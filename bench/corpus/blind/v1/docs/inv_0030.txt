@@ -1,0 +1,15 @@
+Tel Aviv Tech Ltd
+INV# INV-2024-0030
+Invoice Date: 2024-09-08
+Due Date: 2024-02-15
+Currency: ILS
+Terms: 2/10 Net 30
+
+Description                    Qty     Rate (ILS)    Amount (ILS)
+Training Workshop                 15        3354.51      50317.65
+Security Audit                    20        1620.62      32412.40
+Training Workshop                 20        4084.28      81685.60
+
+Sub-Total:                                            164415.65
+Tax (25.00%):                                          41103.91
+Total Amount Due:                                     205519.56

@@ -1,0 +1,15 @@
+Amsterdam Cloud BV
+RECEIPT / INVOICE
+Receipt No: INV-2024-0015
+Date Issued: 2024-04-02
+Due: 2024-10-24
+Currency: EUR
+Terms: Net 30
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Backup Configuration              11         332.97       3662.67
+Training Workshop                 16        2539.11      40625.76
+
+Sub-Total:                                             44288.43
+Tax (9.00%):                                           3985.96
+Total Amount Due:                                      48274.39

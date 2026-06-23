@@ -1,7 +1,7 @@
 {
   "doc_id": "inv_0004",
   "pack": "invoice",
-  "tier": "T2",
+  "tier": "T1",
   "page_dims": [
     {
       "page": 1,
@@ -12,7 +12,7 @@
   "extractions": [
     {
       "field": "vendor_name",
-      "value": "ACME Dynamics",
+      "value": "Acme Dynamics",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -20,7 +20,7 @@
           0.0,
           0.0,
           1.0,
-          0.06666666666666667
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -28,15 +28,15 @@
     },
     {
       "field": "invoice_number",
-      "value": "RC-9981",
+      "value": "INV-2024-0004",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.08333333333333333,
+          0.0,
           1.0,
-          0.06666666666666667
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -44,15 +44,15 @@
     },
     {
       "field": "invoice_date",
-      "value": "2024-04-12",
+      "value": "2024-07-09",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -60,15 +60,15 @@
     },
     {
       "field": "due_date",
-      "value": "2024-04-12",
+      "value": "2024-08-21",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -76,13 +76,13 @@
     },
     {
       "field": "total_amount",
-      "value": "2029.69",
+      "value": 147589.16,
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.3,
+          0.23333333333333334,
           1.0,
           0.04999999999999999
         ]
@@ -97,10 +97,10 @@
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -108,7 +108,32 @@
     },
     {
       "field": "line_items",
-      "value": "[{'description': 'Equipment Calibration', 'quantity': 8, 'unit_price': 175.0, 'total': 1400.0}, {'description': 'Diagnostic Report Generation', 'quantity': 1, 'unit_price': 350.0, 'total': 350.0}, {'description': 'Travel Reimbursement', 'quantity': 1, 'unit_price': 125.0, 'total': 125.0}]",
+      "value": [
+        {
+          "description": "Software License (Annual)",
+          "quantity": 6,
+          "unit_price": 1882.4,
+          "total": 11294.4
+        },
+        {
+          "description": "Network Optimization",
+          "quantity": 9,
+          "unit_price": 3524.01,
+          "total": 31716.09
+        },
+        {
+          "description": "Consultation Hours",
+          "quantity": 3,
+          "unit_price": 3065.2,
+          "total": 9195.6
+        },
+        {
+          "description": "Consultation Hours",
+          "quantity": 18,
+          "unit_price": 3659.18,
+          "total": 65865.24
+        }
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -124,13 +149,13 @@
     },
     {
       "field": "tax_amount",
-      "value": "154.69",
+      "value": 29517.83,
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.3,
+          0.23333333333333334,
           1.0,
           0.04999999999999999
         ]
@@ -145,10 +170,10 @@
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],

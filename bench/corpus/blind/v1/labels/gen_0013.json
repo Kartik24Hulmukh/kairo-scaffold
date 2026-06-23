@@ -1,0 +1,90 @@
+{
+  "doc_id": "gen_0013",
+  "pack": "generic",
+  "tier": "T1",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "summary",
+      "value": "The fiscal year 2024 budget review shows total expenditure of $6M against an allocation of $8M.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.03333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": [
+        "Budget utilization at 79% of allocated funds",
+        "Cost savings of $460K achieved through vendor renegotiation",
+        "Q4 projections indicate full utilization by year-end"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "entities",
+      "value": [
+        "Finance Department",
+        "Budget Committee"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "topics",
+      "value": [
+        "financial",
+        "data",
+        "analysis"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

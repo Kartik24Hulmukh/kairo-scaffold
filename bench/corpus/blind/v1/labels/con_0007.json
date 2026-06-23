@@ -1,0 +1,133 @@
+{
+  "doc_id": "con_0007",
+  "pack": "contract",
+  "tier": "T1",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "parties",
+      "value": [
+        "Helix Biotech Inc",
+        "Strand Genomics"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "effective_date",
+      "value": "2024-05-14",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "termination_date",
+      "value": "2029-01-13",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "obligations",
+      "value": [
+        "Helix Biotech Inc shall deliver professional services as described in Schedule A.",
+        "Strand Genomics shall remit payment within 90 days of receipt of each invoice."
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.15,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "governing_law",
+      "value": "Illinois",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.3,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "within 90 days",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.15,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "confidentiality_clause",
+      "value": "Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.2,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

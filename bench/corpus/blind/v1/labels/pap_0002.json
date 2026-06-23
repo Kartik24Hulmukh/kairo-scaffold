@@ -28,7 +28,12 @@
     },
     {
       "field": "authors",
-      "value": "['Tom Brown', 'Benjamin Mann', 'Nick Ryder', 'Melanie Subbiah']",
+      "value": [
+        "Tom Brown",
+        "Benjamin Mann",
+        "Nick Ryder",
+        "Melanie Subbiah"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -44,7 +49,7 @@
     },
     {
       "field": "abstract_summary",
-      "value": "We investigate the scaling properties of neural language models and find that performance depends strongly on model size, dataset size, and compute.",
+      "value": "We present a novel approach to scaling laws for neural language models. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -60,7 +65,11 @@
     },
     {
       "field": "key_claims",
-      "value": "['Performance follows a power law in model parameters with exponent 0.076', 'Optimal batch size scales linearly with model size', 'Overfitting occurs when dataset size is insufficient relative to model parameters']",
+      "value": [
+        "Our method achieves state-of-the-art results on SuperGLUE.",
+        "We introduce a new architecture that reduces training time by 50%.",
+        "Our approach generalizes to unseen domains without additional training."
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -76,7 +85,9 @@
     },
     {
       "field": "methods",
-      "value": "['We trained models ranging from 10^7 to 10^11 parameters on datasets from 10^9 to 10^12 tokens.']",
+      "value": [
+        "We use a transformer-based architecture with 34 layers and attention mechanisms."
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -92,15 +103,19 @@
     },
     {
       "field": "reported_numbers",
-      "value": "['0.076']",
+      "value": [
+        "2.03",
+        "4.84",
+        "0.26"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0.0,
-          0.11666666666666667,
-          1.0,
-          0.06666666666666665
+          0,
+          0,
+          0,
+          0
         ]
       },
       "accept_variants": [],
@@ -108,7 +123,9 @@
     },
     {
       "field": "figure_references",
-      "value": "['Figure 3']",
+      "value": [
+        "Figure 4"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -124,7 +141,9 @@
     },
     {
       "field": "table_references",
-      "value": "['Table 1']",
+      "value": [
+        "Table 1"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,

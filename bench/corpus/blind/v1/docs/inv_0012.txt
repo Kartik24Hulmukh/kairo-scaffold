@@ -1,0 +1,18 @@
+==================================================
+         Paris Numerique SARL
+==================================================
+Invoice Date: 2024-09-05
+Due Date: 2024-12-19
+Currency: EUR
+Terms: Net 30
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+API Gateway Setup                  8        3933.87      31470.96
+Network Optimization               7         516.91       3618.37
+API Gateway Setup                 14        1803.77      25252.78
+Cloud Infrastructure Setup        15        4325.99      64889.85
+Database Tuning                    4         350.03       1400.12
+
+Sub-Total:                                            126632.08
+Tax (20.00%):                                          25326.42
+Total Amount Due:                                     151958.50

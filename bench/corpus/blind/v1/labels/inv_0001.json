@@ -1,7 +1,7 @@
 {
   "doc_id": "inv_0001",
   "pack": "invoice",
-  "tier": "T2",
+  "tier": "T1",
   "page_dims": [
     {
       "page": 1,
@@ -20,7 +20,7 @@
           0.0,
           0.0,
           1.0,
-          0.05
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -28,15 +28,15 @@
     },
     {
       "field": "invoice_number",
-      "value": "TF-2024-0892",
+      "value": "INV-2024-0001",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.06666666666666667,
+          0.0,
           1.0,
-          0.05
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -44,15 +44,15 @@
     },
     {
       "field": "invoice_date",
-      "value": "2024-03-15",
+      "value": "2024-11-04",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -60,21 +60,31 @@
     },
     {
       "field": "due_date",
-      "value": null,
-      "answerable": false,
-      "notes": "no value present — correct behavior is BLOCK/refuse"
-    },
-    {
-      "field": "total_amount",
-      "value": "9483.0",
+      "value": "2024-01-24",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.2833333333333333,
+          0.0,
           1.0,
-          0.09999999999999998
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "total_amount",
+      "value": 40015.26,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.23333333333333334,
+          1.0,
+          0.04999999999999999
         ]
       },
       "accept_variants": [],
@@ -88,9 +98,9 @@
         "page": 1,
         "bbox": [
           0.0,
-          0.2,
+          0.0,
           1.0,
-          0.06666666666666665
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -98,7 +108,32 @@
     },
     {
       "field": "line_items",
-      "value": "[{'description': 'Cloud Infrastructure Setup', 'quantity': 1, 'unit_price': 4500.0, 'total': 4500.0}, {'description': 'Monthly Maintenance', 'quantity': 3, 'unit_price': 800.0, 'total': 2400.0}, {'description': 'Consultation Hours', 'quantity': 12, 'unit_price': 150.0, 'total': 1800.0}]",
+      "value": [
+        {
+          "description": "Database Tuning",
+          "quantity": 8,
+          "unit_price": 1154.89,
+          "total": 9239.12
+        },
+        {
+          "description": "Training Workshop",
+          "quantity": 4,
+          "unit_price": 3399.66,
+          "total": 13598.64
+        },
+        {
+          "description": "Cloud Infrastructure Setup",
+          "quantity": 3,
+          "unit_price": 2972.94,
+          "total": 8918.82
+        },
+        {
+          "description": "Software License (Annual)",
+          "quantity": 1,
+          "unit_price": 513.79,
+          "total": 513.79
+        }
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -114,15 +149,15 @@
     },
     {
       "field": "tax_amount",
-      "value": "783.0",
+      "value": 7744.89,
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.2833333333333333,
+          0.23333333333333334,
           1.0,
-          0.09999999999999998
+          0.04999999999999999
         ]
       },
       "accept_variants": [],
@@ -136,9 +171,9 @@
         "page": 1,
         "bbox": [
           0.0,
-          0.2833333333333333,
+          0.0,
           1.0,
-          0.09999999999999998
+          0.11666666666666667
         ]
       },
       "accept_variants": [],

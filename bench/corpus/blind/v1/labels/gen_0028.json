@@ -1,0 +1,90 @@
+{
+  "doc_id": "gen_0028",
+  "pack": "generic",
+  "tier": "T1",
+  "page_dims": [
+    {
+      "page": 1,
+      "width_px": 800,
+      "height_px": 1000
+    }
+  ],
+  "extractions": [
+    {
+      "field": "summary",
+      "value": "Workforce Planning Report is a cross-functional initiative to modernize the company's data infrastructure. The project has completed 69% of planned milestones.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.03333333333333333
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "key_claims",
+      "value": [
+        "Data migration completed for 5 of 6 business units",
+        "API gateway latency reduced by 23% after optimization",
+        "Two critical security vulnerabilities patched in November"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.08333333333333333,
+          1.0,
+          0.06666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "entities",
+      "value": [
+        "Workforce Planning Report",
+        "Infrastructure Modernization Team"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "topics",
+      "value": [
+        "technology",
+        "security",
+        "data"
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    }
+  ],
+  "qa": []
+}

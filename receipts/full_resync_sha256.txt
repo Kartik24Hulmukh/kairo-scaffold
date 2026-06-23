@@ -1,0 +1,10 @@
+Kairo Scaffold — Full Resync SHA256 Verification
+Date: 2026-06-23
+
+Command: cd bench/corpus/blind/v1 && sha256sum -c CHECKSUMS.sha256
+
+Result: 241/241 OK (0 FAILED)
+Exit code: 0
+
+The blind corpus (120 docs, 120 labels, manifest.json, CHECKSUMS.sha256) is
+byte-identical to phantom's. The shared oracle is verified.

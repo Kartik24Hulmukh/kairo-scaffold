@@ -1,0 +1,17 @@
+Helsinki Solutions Oy
+RECEIPT / INVOICE
+Receipt No: INV-2024-0019
+Date Issued: 2024-11-17
+Due: 2024-01-22
+Currency: EUR
+Terms: Net 60
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Consultation Hours                 4        4697.70      18790.80
+Monthly Maintenance                9         621.37       5592.33
+Premium Support Package           18         819.47      14750.46
+Data Migration Service            20        1092.62      21852.40
+
+Sub-Total:                                             60985.99
+Tax (9.00%):                                           5488.74
+Total Amount Due:                                      66474.73

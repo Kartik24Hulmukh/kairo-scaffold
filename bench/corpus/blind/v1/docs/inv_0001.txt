@@ -1,22 +1,17 @@
 TechFlow Solutions Ltd
-Level 12, Innovation Tower
-Singapore 048583
-
-TAX INVOICE
-No. TF-2024-0892
-Date: 15/03/2024
-
-Billed To:
-Apex Industries Pte Ltd
-10 Harbour Drive
+INVOICE
+Invoice Number: INV-2024-0001
+Invoice Date: 2024-11-04
+Due Date: 2024-01-24
+Currency: SGD
+Terms: 2/10 Net 30
 
 Description                    Qty     Rate (SGD)    Amount (SGD)
-Cloud Infrastructure Setup    1       4,500.00      4,500.00
-Monthly Maintenance           3       800.00        2,400.00
-Consultation Hours            12      150.00        1,800.00
+Database Tuning                    8        1154.89       9239.12
+Training Workshop                  4        3399.66      13598.64
+Cloud Infrastructure Setup         3        2972.94       8918.82
+Software License (Annual)          1         513.79        513.79
 
-Sub-Total:                                           8,700.00
-GST (9%):                                              783.00
-Amount Payable:                                       9,483.00
-All amounts in SGD
-Payment: 2/10 Net 30
+Sub-Total:                                             32270.37
+Tax (24.00%):                                           7744.89
+Total Amount Due:                                      40015.26

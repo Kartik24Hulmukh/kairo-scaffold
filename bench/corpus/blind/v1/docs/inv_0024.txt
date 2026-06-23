@@ -1,0 +1,17 @@
+From: Prague Digital sro
+FAKTURA / INVOICE
+Fakturanr: INV-2024-0024
+Fakturadatum: 2024-07-12
+Förfallodatum: 2024-12-26
+Valuta: CZK
+Betalningsvillkor: Net 45
+
+Description                    Qty     Rate (CZK)    Amount (CZK)
+Training Workshop                 14        3050.73      42710.22
+Backup Configuration               4        1956.72       7826.88
+Database Tuning                    7        1310.88       9176.16
+Training Workshop                 14          58.37        817.18
+
+Sub-Total:                                             60530.44
+Tax (19.00%):                                          11500.78
+Total Amount Due:                                      72031.22

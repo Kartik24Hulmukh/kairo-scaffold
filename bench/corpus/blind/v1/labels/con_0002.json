@@ -12,7 +12,10 @@
   "extractions": [
     {
       "field": "parties",
-      "value": "['Sigma Technologies Inc.', 'Jane Marie Doe']",
+      "value": [
+        "Sigma Technologies Inc",
+        "Jane Marie Doe"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -28,15 +31,15 @@
     },
     {
       "field": "effective_date",
-      "value": "2024-06-03",
+      "value": "2024-04-09",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.03333333333333333,
+          1.0,
+          0.01666666666666667
         ]
       },
       "accept_variants": [],
@@ -44,51 +47,7 @@
     },
     {
       "field": "termination_date",
-      "value": null,
-      "answerable": false,
-      "notes": "no value present — correct behavior is BLOCK/refuse"
-    },
-    {
-      "field": "obligations",
-      "value": "['The Employee shall serve as Chief Technology Officer and shall perform duties as may be assigned by the Board.', 'The Employee agrees to devote substantially all of her professional time to the Company.', 'Salary shall be paid bi-weekly at the rate of $250,000 per annum.']",
-      "answerable": true,
-      "anchor": {
-        "page": 1,
-        "bbox": [
-          0.0,
-          0.18333333333333332,
-          1.0,
-          0.033333333333333354
-        ]
-      },
-      "accept_variants": [],
-      "notes": ""
-    },
-    {
-      "field": "governing_law",
-      "value": "New York",
-      "answerable": true,
-      "anchor": {
-        "page": 1,
-        "bbox": [
-          0.0,
-          0.3333333333333333,
-          1.0,
-          0.04999999999999999
-        ]
-      },
-      "accept_variants": [],
-      "notes": ""
-    },
-    {
-      "field": "payment_terms",
-      "value": null,
-      "answerable": false,
-      "notes": "no value present — correct behavior is BLOCK/refuse"
-    },
-    {
-      "field": "confidentiality_clause",
-      "value": "The Employee acknowledges that all inventions, designs, and proprietary information created during employment are the exclusive property of the Company.",
+      "value": "2029-02-23",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -97,6 +56,73 @@
           0.23333333333333334,
           1.0,
           0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "obligations",
+      "value": [
+        "Sigma Technologies Inc shall deliver professional services as described in Schedule A.",
+        "Jane Marie Doe shall remit payment within 45 days of receipt of each invoice."
+      ],
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.13333333333333333,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "governing_law",
+      "value": "Texas",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.06666666666666667,
+          1.0,
+          0.05
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "payment_terms",
+      "value": "within 45 days",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.13333333333333333,
+          1.0,
+          0.033333333333333326
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "confidentiality_clause",
+      "value": "Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.",
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.18333333333333332,
+          1.0,
+          0.033333333333333354
         ]
       },
       "accept_variants": [],

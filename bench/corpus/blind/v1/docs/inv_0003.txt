@@ -1,23 +1,18 @@
-From: Nordic Tech AB
-Address: Storgatan 22, 114 51 Stockholm, Sweden
-VAT No: SE556789012301
+Global Services Inc
+INVOICE
+Invoice Number: INV-2024-0003
+Invoice Date: 2024-05-26
+Due Date: 2024-01-24
+Currency: USD
+Terms: Net 45
 
-FAKTURA / INVOICE
-Fakturanr: NT-2024-0033
-Fakturadatum: 2024-04-10
-Förfallodatum: 2024-05-10
+Description                    Qty     Rate (USD)    Amount (USD)
+API Gateway Setup                 18         667.89      12022.02
+Network Optimization               3        2782.60       8347.80
+Data Migration Service            20        4432.99      88659.80
+Monthly Maintenance               19        1001.83      19034.77
+Premium Support Package            2        3323.25       6646.50
 
-Kund / Customer:
-DataCorp Oy
-Helsinki, Finland
-
-Beskrivning              Antal    Pris (EUR)    Belopp (EUR)
-Konsulttjänster          40       95.00         3,800.00
-Licens (årlig)           1        2,200.00      2,200.00
-Support-paket            1        600.00        600.00
-
-Delsumma:                                         6,600.00
-Moms (24%):                                         1,584.00
-Totalt att betala:                                  8,184.00
-Valuta: EUR
-Betalningsvillkor: 30 dagar
+Sub-Total:                                            134710.89
+Tax (8.25%):                                          11113.65
+Total Amount Due:                                     145824.54

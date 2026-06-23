@@ -1,0 +1,17 @@
+Conformer: Convolution-augmented Transformer
+
+Anmol Gulati, Jasmine Qin
+
+Abstract
+We present a novel approach to conformer. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Claims:
+1. Our model achieves 0.86 accuracy on the test set.
+2. We show that the proposed method is more efficient than prior work.
+
+Methodology
+We use a transformer-based architecture with 25 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 3.18 and sFID 4.21. The precision score is 0.91.
+See Figure 4 for sample outputs and Table 1 for quantitative comparisons.

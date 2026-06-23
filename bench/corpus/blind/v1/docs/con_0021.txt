@@ -1,0 +1,22 @@
+PARTNERSHIP AGREEMENT
+
+Effective Date: 2024-04-25
+
+The parties to this agreement are:
+1. Omega Systems LLC, a limited partnership registered in the Cayman Islands
+2. Delta Corporation, a company incorporated in Switzerland
+
+1. SCOPE OF SERVICES
+Omega Systems LLC shall deliver professional services as described in Schedule A. Delta Corporation shall remit payment within 90 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-04-25 and shall remain in effect until 2029-10-20, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Switzerland.
+
+5. TERMINATION
+Either party may terminate this Agreement with 30 days written notice.

@@ -12,7 +12,7 @@
   "extractions": [
     {
       "field": "summary",
-      "value": "The electric vehicle (EV) market has experienced significant growth in 2024, with global sales reaching 14.2 million units.",
+      "value": "This security audit identified 8 vulnerabilities across the organization's IT infrastructure.",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -28,7 +28,11 @@
     },
     {
       "field": "key_claims",
-      "value": "['China remains the largest EV market with 8.1 million units sold', 'European adoption accelerated due to new EU emissions regulations', 'North American growth was slower at 18% YoY', 'Battery costs declined to $98/kWh, approaching price parity with ICE vehicles']",
+      "value": [
+        "5 critical vulnerabilities require immediate patching",
+        "Network segmentation needs improvement in 3 zones",
+        "Access control policies are outdated for 17% of systems"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -36,7 +40,7 @@
           0.0,
           0.08333333333333333,
           1.0,
-          0.08333333333333333
+          0.06666666666666667
         ]
       },
       "accept_variants": [],
@@ -44,7 +48,10 @@
     },
     {
       "field": "entities",
-      "value": "['Market Intelligence Group', 'China', 'European', 'North American']",
+      "value": [
+        "Security Operations Team",
+        "IT Infrastructure"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -60,7 +67,11 @@
     },
     {
       "field": "topics",
-      "value": "['technology', 'market', 'automotive']",
+      "value": [
+        "security",
+        "data",
+        "technology"
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,

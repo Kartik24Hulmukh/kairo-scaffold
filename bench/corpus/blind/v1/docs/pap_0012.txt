@@ -1,0 +1,17 @@
+DALL-E 3: Improving Image Generation
+
+James Betker, Gabriel Goh
+
+Abstract
+We present a novel approach to dall-e 3. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Claims:
+1. Our model achieves 0.97 accuracy on the test set.
+2. We show that the proposed method is more efficient than prior work.
+
+Methodology
+We use a transformer-based architecture with 26 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 3.22 and sFID 0.62. The precision score is 0.23.
+See Figure 5 for sample outputs and Table 5 for quantitative comparisons.

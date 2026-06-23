@@ -1,0 +1,18 @@
+AlphaFold: Highly Accurate Protein Structure Prediction
+
+John Jumper, Richard Evans
+
+Abstract
+We present a novel approach to alphafold. Our method demonstrates significant improvements over baseline approaches across multiple benchmarks.
+
+Key Contributions:
+- Our method achieves state-of-the-art results on GLUE.
+- We introduce a new architecture that reduces training time by 62%.
+- Our approach generalizes to unseen domains without additional training.
+
+Methodology
+We use a transformer-based architecture with 12 layers and attention mechanisms.
+
+Experimental Results
+On the primary benchmark, our model achieves FID 4.36 and sFID 1.98. The precision score is 0.69.
+See Figure 3 for sample outputs and Table 4 for quantitative comparisons.

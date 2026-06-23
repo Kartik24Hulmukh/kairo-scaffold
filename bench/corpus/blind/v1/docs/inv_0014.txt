@@ -1,0 +1,18 @@
+From: Mexico City IT SA
+FAKTURA / INVOICE
+Fakturanr: INV-2024-0014
+Fakturadatum: 2024-01-03
+Förfallodatum: 2024-04-06
+Valuta: MXN
+Betalningsvillkor: Net 45
+
+Description                    Qty     Rate (MXN)    Amount (MXN)
+API Gateway Setup                 16        2432.72      38923.52
+Cloud Infrastructure Setup         2         864.95       1729.90
+Security Audit                    13        1362.76      17715.88
+Database Tuning                   10        2143.89      21438.90
+Security Audit                    18        3326.26      59872.68
+
+Sub-Total:                                            139680.88
+Tax (9.00%):                                          12571.28
+Total Amount Due:                                     152252.16

@@ -1,0 +1,23 @@
+MASTER SERVICE AGREEMENT
+
+This agreement is made on the 14th day of May, 2024.
+
+BETWEEN:
+Helix Biotech Inc, a Delaware corporation (the "Company")
+- and -
+Strand Genomics (the "Employee")
+
+1. SCOPE OF SERVICES
+Helix Biotech Inc shall deliver professional services as described in Schedule A. Strand Genomics shall remit payment within 90 days of receipt of each invoice.
+
+2. NON-DISCLOSURE
+Both parties covenant and agree that all proprietary or confidential information shared during the engagement shall be held in strict confidence.
+
+3. TERM
+This Agreement commences on 2024-05-14 and shall remain in effect until 2029-01-13, unless terminated earlier.
+
+4. GOVERNING LAW
+This Agreement shall be governed by the laws of Illinois.
+
+5. TERMINATION
+Either party may terminate this Agreement with 60 days written notice.

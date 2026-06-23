@@ -1,0 +1,18 @@
+Tokyo Solutions KK
+RECEIPT / INVOICE
+Receipt No: INV-2024-0007
+Date Issued: 2024-02-13
+Due: 2024-07-20
+Currency: JPY
+Terms: Net 60
+
+Description                    Qty     Rate (JPY)    Amount (JPY)
+Training Workshop                 17        1294.50      22006.50
+Monthly Maintenance                1        3417.40       3417.40
+Network Optimization              18        3766.85      67803.30
+API Gateway Setup                 11         602.18       6623.98
+Database Tuning                    6        2295.93      13775.58
+
+Sub-Total:                                            113626.76
+Tax (19.00%):                                          21589.08
+Total Amount Due:                                     135215.84

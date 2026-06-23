@@ -1,0 +1,17 @@
+==================================================
+         Oslo Networks AS
+==================================================
+Invoice Date: 2024-07-03
+Due Date: 2024-11-11
+Currency: NOK
+Terms: Due on Receipt
+
+Description                    Qty     Rate (NOK)    Amount (NOK)
+Premium Support Package            4        3612.78      14451.12
+API Gateway Setup                 17        1580.96      26876.32
+Premium Support Package           11        2041.88      22460.68
+API Gateway Setup                 18         680.07      12241.26
+
+Sub-Total:                                             76029.38
+Tax (19.00%):                                          14445.58
+Total Amount Due:                                      90474.96

@@ -12,7 +12,7 @@
   "extractions": [
     {
       "field": "vendor_name",
-      "value": "GLOBAL SERVICES INC",
+      "value": "Nordic Tech AB",
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -20,7 +20,7 @@
           0.0,
           0.0,
           1.0,
-          0.06666666666666667
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -28,15 +28,15 @@
     },
     {
       "field": "invoice_number",
-      "value": "2024-GSI-4471",
+      "value": "INV-2024-0002",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.08333333333333333,
+          0.0,
           1.0,
-          0.05
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -44,15 +44,15 @@
     },
     {
       "field": "invoice_date",
-      "value": "2024-03-28",
+      "value": "2024-09-07",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -60,21 +60,31 @@
     },
     {
       "field": "due_date",
-      "value": null,
-      "answerable": false,
-      "notes": "no value present — correct behavior is BLOCK/refuse"
-    },
-    {
-      "field": "total_amount",
-      "value": "19063.5",
+      "value": "2024-12-21",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.3,
+          0.0,
           1.0,
-          0.06666666666666665
+          0.11666666666666667
+        ]
+      },
+      "accept_variants": [],
+      "notes": ""
+    },
+    {
+      "field": "total_amount",
+      "value": 98193.43,
+      "answerable": true,
+      "anchor": {
+        "page": 1,
+        "bbox": [
+          0.0,
+          0.25,
+          1.0,
+          0.04999999999999999
         ]
       },
       "accept_variants": [],
@@ -82,15 +92,15 @@
     },
     {
       "field": "currency",
-      "value": "USD",
+      "value": "EUR",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
-          0,
-          0,
-          0,
-          0
+          0.0,
+          0.0,
+          1.0,
+          0.11666666666666667
         ]
       },
       "accept_variants": [],
@@ -98,7 +108,38 @@
     },
     {
       "field": "line_items",
-      "value": "[{'description': 'Software License (Annual)', 'quantity': 1, 'unit_price': 12000.0, 'total': 12000.0}, {'description': 'Premium Support Package', 'quantity': 1, 'unit_price': 3500.0, 'total': 3500.0}, {'description': 'Training Session (On-site)', 'quantity': 2, 'unit_price': 1200.0, 'total': 2400.0}]",
+      "value": [
+        {
+          "description": "Premium Support Package",
+          "quantity": 8,
+          "unit_price": 2273.58,
+          "total": 18188.64
+        },
+        {
+          "description": "Consultation Hours",
+          "quantity": 1,
+          "unit_price": 3806.1,
+          "total": 3806.1
+        },
+        {
+          "description": "Consultation Hours",
+          "quantity": 14,
+          "unit_price": 1734.24,
+          "total": 24279.36
+        },
+        {
+          "description": "Data Migration Service",
+          "quantity": 7,
+          "unit_price": 4788.2,
+          "total": 33517.4
+        },
+        {
+          "description": "Monthly Maintenance",
+          "quantity": 4,
+          "unit_price": 509.09,
+          "total": 2036.36
+        }
+      ],
       "answerable": true,
       "anchor": {
         "page": 1,
@@ -114,15 +155,15 @@
     },
     {
       "field": "tax_amount",
-      "value": "1163.5",
+      "value": 16365.57,
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.3,
+          0.25,
           1.0,
-          0.06666666666666665
+          0.04999999999999999
         ]
       },
       "accept_variants": [],
@@ -130,15 +171,15 @@
     },
     {
       "field": "payment_terms",
-      "value": "Due upon receipt",
+      "value": "Net 60",
       "answerable": true,
       "anchor": {
         "page": 1,
         "bbox": [
           0.0,
-          0.08333333333333333,
+          0.0,
           1.0,
-          0.05
+          0.11666666666666667
         ]
       },
       "accept_variants": [],

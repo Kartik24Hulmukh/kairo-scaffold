@@ -1,0 +1,14 @@
+Stockholm AI AB
+INV# INV-2024-0016
+Invoice Date: 2024-02-28
+Due Date: 2024-03-03
+Currency: EUR
+Terms: Net 30
+
+Description                    Qty     Rate (EUR)    Amount (EUR)
+Backup Configuration               8        2048.69      16389.52
+Cloud Infrastructure Setup         8        2915.65      23325.20
+
+Sub-Total:                                             39714.72
+Tax (24.00%):                                           9531.53
+Total Amount Due:                                      49246.25

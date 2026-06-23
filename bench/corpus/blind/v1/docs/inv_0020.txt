@@ -1,0 +1,18 @@
+Warsaw Digital Sp
+INVOICE
+Invoice Number: INV-2024-0020
+Invoice Date: 2024-08-09
+Due Date: 2024-01-03
+Currency: PLN
+Terms: 2/10 Net 30
+
+Description                    Qty     Rate (PLN)    Amount (PLN)
+Data Migration Service             9         268.23       2414.07
+Premium Support Package            5        3203.71      16018.55
+Training Workshop                  6        3719.09      22314.54
+Monthly Maintenance               14        2826.49      39570.86
+Database Tuning                    3        4728.00      14184.00
+
+Sub-Total:                                             94502.02
+Tax (9.00%):                                           8505.18
+Total Amount Due:                                     103007.20
