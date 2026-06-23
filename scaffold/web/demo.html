@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kairo — Grounded Document Demo</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #c9d1d9; min-height: 100vh; }
+  .header { background: #161b22; border-bottom: 1px solid #30363d; padding: 16px 24px; display: flex; align-items: center; gap: 12px; }
+  .header h1 { font-size: 20px; color: #56d364; }
+  .header .tag { font-size: 12px; color: #8b949e; background: #21262d; padding: 4px 10px; border-radius: 12px; }
+  .container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; max-width: 1400px; margin: 0 auto; }
+  .panel { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .panel h2 { font-size: 15px; color: #79c0ff; margin-bottom: 16px; border-bottom: 1px solid #21262d; padding-bottom: 8px; }
+  /* Upload */
+  .dropzone { border: 2px dashed #30363d; border-radius: 8px; padding: 40px; text-align: center; cursor: pointer; transition: border-color 0.2s; }
+  .dropzone:hover, .dropzone.dragover { border-color: #56d364; background: #161b22; }
+  .dropzone p { color: #8b949e; font-size: 14px; }
+  .dropzone .icon { font-size: 32px; margin-bottom: 8px; }
+  .sample-btns { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .sample-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+  .sample-btn:hover { border-color: #58a6ff; }
+  /* Results table */
+  .results-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .results-table th { text-align: left; color: #8b949e; padding: 8px; border-bottom: 1px solid #30363d; font-weight: 600; }
+  .results-table td { padding: 8px; border-bottom: 1px solid #21262d; }
+  .results-table tr.grounded { cursor: pointer; }
+  .results-table tr.grounded:hover { background: #161b22; }
+  .results-table tr.refused td { color: #f85149; }
+  .check { color: #56d364; font-weight: bold; }
+  .cross { color: #f85149; font-weight: bold; }
+  .cascade-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; background: #1f6feb33; color: #58a6ff; }
+  .conf { color: #8b949e; font-size: 12px; }
+  /* Document viewer */
+  .doc-viewer { position: relative; background: #fff; border-radius: 4px; min-height: 400px; overflow: auto; }
+  .doc-viewer img { width: 100%; display: block; }
+  .bbox-overlay { position: absolute; border: 2px solid #56d364; border-radius: 2px; cursor: pointer; animation: pulse 1.5s infinite; }
+  .bbox-overlay.refused { border-color: #f85149; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 #56d36444; } 50% { box-shadow: 0 0 0 6px #56d36400; } }
+  /* Ask panel */
+  .ask-bar { display: flex; gap: 8px; margin-top: 16px; }
+  .ask-bar input { flex: 1; background: #0d1117; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; border-radius: 6px; font-size: 14px; }
+  .ask-bar input:focus { outline: none; border-color: #58a6ff; }
+  .ask-bar button { background: #238636; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+  .ask-bar button:hover { background: #2ea043; }
+  .answer-box { margin-top: 12px; padding: 12px; background: #0d1117; border-radius: 6px; border: 1px solid #30363d; font-size: 14px; }
+  .answer-box.refused { border-color: #f85149; color: #f85149; }
+  .answer-box.grounded { border-color: #56d364; }
+  .citation-link { color: #58a6ff; cursor: pointer; text-decoration: underline; font-size: 12px; }
+  /* Cascade trace */
+  .cascade-trace { margin-top: 16px; }
+  .cascade-step { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 12px; }
+  .cascade-step .step-name { color: #8b949e; min-width: 100px; }
+  .cascade-step .step-bar { flex: 1; height: 4px; background: #21262d; border-radius: 2px; overflow: hidden; }
+  .cascade-step .step-fill { height: 100%; background: #56d364; border-radius: 2px; }
+  .cascade-step .step-conf { color: #8b949e; min-width: 40px; text-align: right; }
+  .status-msg { padding: 12px; border-radius: 6px; margin: 8px 0; font-size: 13px; }
+  .status-msg.info { background: #1f6feb11; color: #58a6ff; }
+  .status-msg.error { background: #f8514911; color: #f85149; }
+  .loading { color: #8b949e; font-style: italic; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📎 Kairo</h1>
+  <span class="tag">Grounded Document Demo</span>
+  <span class="tag" style="border-color:#56d364; color:#56d364;">cites the pixel or refuses</span>
+</div>
+
+<div class="container">
+  <!-- LEFT: Upload + Results + Ask -->
+  <div class="panel">
+    <h2>📤 Upload Document</h2>
+    <div class="dropzone" id="dropzone">
+      <div class="icon">📄</div>
+      <p>Drag & drop a PDF/TXT here, or click to browse</p>
+    </div>
+    <input type="file" id="file-input" accept=".pdf,.txt" style="display:none">
+    <div class="sample-btns">
+      <button class="sample-btn" onclick="loadSample('invoice')">Sample Invoice</button>
+      <button class="sample-btn" onclick="loadSample('contract')">Sample Contract</button>
+      <button class="sample-btn" onclick="loadSample('paper')">Sample Paper</button>
+    </div>
+
+    <div id="status-area"></div>
+
+    <h2 style="margin-top:20px;">📋 Extraction Results</h2>
+    <div id="results-area">
+      <p class="loading">Upload a document to see grounded extractions...</p>
+    </div>
+
+    <h2 style="margin-top:20px;">❓ Ask a Question</h2>
+    <div class="ask-bar">
+      <input type="text" id="question-input" placeholder="Ask about the document..." disabled>
+      <button id="ask-btn" onclick="askQuestion()" disabled>Ask</button>
+    </div>
+    <div id="answer-area"></div>
+  </div>
+
+  <!-- RIGHT: Document Viewer + Cascade Trace -->
+  <div class="panel">
+    <h2>📄 Document Viewer</h2>
+    <div class="doc-viewer" id="doc-viewer">
+      <p class="loading" style="padding:40px; text-align:center; color:#8b949e;">No document loaded</p>
+    </div>
+
+    <h2 style="margin-top:20px;">🔬 Cascade Trace</h2>
+    <div class="cascade-trace" id="cascade-trace">
+      <p class="loading">No extraction run yet</p>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = window.location.origin;
+let currentDocId = null;
+
+// ── Stub response (used when sidecar API not available) ──────────────
+const STUB_RESPONSES = {
+  invoice: {
+    doc_type: "invoice",
+    doc_id: "stub-inv-001",
+    fields: [
+      {field: "vendor_name", value: "ACME Corp", status: "grounded", bbox: [0.05, 0.02, 0.40, 0.04], page: 1, method: "EXACT", confidence: 1.0},
+      {field: "invoice_number", value: "INV-2026-001", status: "grounded", bbox: [0.05, 0.08, 0.30, 0.03], page: 1, method: "EXACT", confidence: 1.0},
+      {field: "invoice_date", value: "2026-06-15", status: "grounded", bbox: [0.05, 0.11, 0.25, 0.03], page: 1, method: "EXACT", confidence: 1.0},
+      {field: "total_amount", value: "$1250.00", status: "grounded", bbox: [0.35, 0.85, 0.55, 0.04], page: 1, method: "FUZZY", confidence: 0.96},
+      {field: "purchase_order_number", value: null, status: "blocked", reason: "value not present in document text"},
+      {field: "tax_id", value: null, status: "blocked", reason: "no bbox anchor found in document"}
+    ],
+    cascade: [
+      {step: "NORMALIZE", confidence: 1.0},
+      {step: "EXACT", confidence: 1.0},
+      {step: "FUZZY", confidence: 0.96},
+      {step: "SEMANTIC", confidence: 0.0},
+      {step: "VISUAL IoU", confidence: 0.0}
+    ]
+  },
+  contract: {
+    doc_type: "contract",
+    doc_id: "stub-con-001",
+    fields: [
+      {field: "party_a", value: "TechFlow Solutions Ltd", status: "grounded", bbox: [0.05, 0.05, 0.50, 0.03], page: 1, method: "EXACT", confidence: 1.0},
+      {field: "party_b", value: "Client Solutions Inc", status: "grounded", bbox: [0.05, 0.08, 0.45, 0.03], page: 1, method: "FUZZY", confidence: 0.94},
+      {field: "effective_date", value: "2024-01-15", status: "grounded", bbox: [0.05, 0.12, 0.25, 0.03], page: 1, method: "EXACT", confidence: 1.0},
+      {field: "governing_law", value: null, status: "blocked", reason: "no governing law clause found in document"}
+    ],
+    cascade: [
+      {step: "NORMALIZE", confidence: 1.0},
+      {step: "EXACT", confidence: 1.0},
+      {step: "FUZZY", confidence: 0.94},
+      {step: "SEMANTIC", confidence: 0.0},
+      {step: "VISUAL IoU", confidence: 0.0}
+    ]
+  },
+  paper: {
+    doc_type: "paper",
+    doc_id: "stub-pap-001",
+    fields: [
+      {field: "title", value: "Attention Is All You Need", status: "grounded", bbox: [0.10, 0.02, 0.80, 0.05], page: 1, method: "EXACT", confidence: 1.0},
+      {field: "authors", value: "Vaswani et al.", status: "grounded", bbox: [0.15, 0.08, 0.70, 0.03], page: 1, method: "FUZZY", confidence: 0.92},
+      {field: "abstract", value: "We propose a new architecture...", status: "grounded", bbox: [0.05, 0.15, 0.90, 0.20], page: 1, method: "SEMANTIC", confidence: 0.88}
+    ],
+    cascade: [
+      {step: "NORMALIZE", confidence: 1.0},
+      {step: "EXACT", confidence: 1.0},
+      {step: "FUZZY", confidence: 0.92},
+      {step: "SEMANTIC", confidence: 0.88},
+      {step: "VISUAL IoU", confidence: 0.0}
+    ]
+  }
+};
+
+// ── File upload handlers ─────────────────────────────────────────────
+const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('file-input');
+
+dropzone.addEventListener('click', () => fileInput.click());
+dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
+dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+dropzone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropzone.classList.remove('dragover');
+  if (e.dataTransfer.files[0]) uploadFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) uploadFile(e.target.files[0]); });
+
+function loadSample(type) {
+  showStatus('info', `Loading sample ${type}...`);
+  const data = STUB_RESPONSES[type];
+  if (data) {
+    currentDocId = data.doc_id;
+    renderResults(data.fields);
+    renderCascade(data.cascade);
+    renderDocViewer(type);
+    document.getElementById('question-input').disabled = false;
+    document.getElementById('ask-btn').disabled = false;
+    showStatus('info', `Loaded sample ${type}. ${data.fields.filter(f=>f.status==='grounded').length} grounded, ${data.fields.filter(f=>f.status==='blocked').length} refused.`);
+  }
+}
+
+async function uploadFile(file) {
+  showStatus('info', `Uploading ${file.name}...`);
+  const formData = new FormData();
+  formData.append('file', file);
+  try {
+    // Try real API first
+    const resp = await fetch(`${API_BASE}/api/extract-document`, { method: 'POST', body: formData });
+    if (resp.ok) {
+      const data = await resp.json();
+      currentDocId = data.doc_id;
+      renderResults(data.fields);
+      renderCascade(data.cascade || []);
+      renderDocViewer('uploaded');
+      document.getElementById('question-input').disabled = false;
+      document.getElementById('ask-btn').disabled = false;
+      showStatus('info', `Extracted ${data.fields.length} fields from ${file.name}`);
+    } else if (resp.status === 404) {
+      // API not synced yet — use stub
+      showStatus('info', 'API not available, using demo stub. Upload a sample instead.');
+      loadSample('invoice');
+    } else {
+      showStatus('error', `Server error: ${resp.status}`);
+    }
+  } catch (err) {
+    showStatus('info', 'Sidecar not running. Using demo stub — try a sample button.');
+    loadSample('invoice');
+  }
+}
+
+// ── Render functions ─────────────────────────────────────────────────
+function renderResults(fields) {
+  const area = document.getElementById('results-area');
+  if (!fields || fields.length === 0) {
+    area.innerHTML = '<p class="loading">No fields extracted</p>';
+    return;
+  }
+  let html = '<table class="results-table"><thead><tr><th></th><th>Field</th><th>Value</th><th>Cascade</th><th>Conf</th></tr></thead><tbody>';
+  fields.forEach(f => {
+    const grounded = f.status === 'grounded';
+    const icon = grounded ? '<span class="check">✓</span>' : '<span class="cross">✗</span>';
+    const val = grounded ? escapeHtml(f.value) : `<em style="color:#f85149;">REFUSED: ${escapeHtml(f.reason || 'no source')}</em>`;
+    const method = grounded ? `<span class="cascade-badge">${f.method || '—'}</span>` : '—';
+    const conf = grounded ? `<span class="conf">${((f.confidence || 0) * 100).toFixed(0)}%</span>` : '—';
+    const rowClass = grounded ? 'grounded' : 'refused';
+    const onclick = grounded && f.bbox ? `onclick="highlightBbox(${f.bbox[0]},${f.bbox[1]},${f.bbox[2]},${f.bbox[3]},${f.page||1})"` : '';
+    html += `<tr class="${rowClass}" ${onclick}><td>${icon}</td><td>${escapeHtml(f.field)}</td><td>${val}</td><td>${method}</td><td>${conf}</td></tr>`;
+  });
+  html += '</tbody></table>';
+  area.innerHTML = html;
+}
+
+function renderCascade(steps) {
+  const area = document.getElementById('cascade-trace');
+  if (!steps || steps.length === 0) {
+    area.innerHTML = '<p class="loading">No cascade data</p>';
+    return;
+  }
+  let html = '';
+  steps.forEach(s => {
+    const pct = (s.confidence * 100).toFixed(0);
+    const color = s.confidence > 0.9 ? '#56d364' : s.confidence > 0.5 ? '#d29922' : '#f85149';
+    html += `<div class="cascade-step">
+      <span class="step-name">${s.step}</span>
+      <div class="step-bar"><div class="step-fill" style="width:${pct}%; background:${color};"></div></div>
+      <span class="step-conf">${pct}%</span>
+    </div>`;
+  });
+  area.innerHTML = html;
+}
+
+function renderDocViewer(type) {
+  const viewer = document.getElementById('doc-viewer');
+  // Render a placeholder document page (real PDF rendering needs sidecar)
+  const labels = { invoice: 'INVOICE', contract: 'CONTRACT', paper: 'RESEARCH PAPER', uploaded: 'UPLOADED DOCUMENT' };
+  viewer.innerHTML = `<div style="padding:40px; background:#fff; color:#333; font-family:monospace; font-size:13px; min-height:400px;">
+    <div style="border:1px solid #ddd; padding:30px; border-radius:4px;">
+      <h3 style="color:#333; margin-bottom:16px;">${labels[type] || 'DOCUMENT'}</h3>
+      <p style="color:#666; margin-bottom:8px;">Vendor: ACME Corp</p>
+      <p style="color:#666; margin-bottom:8px;">Invoice #: INV-2026-001</p>
+      <p style="color:#666; margin-bottom:8px;">Date: 2026-06-15</p>
+      <p style="color:#666; margin-bottom:8px;">Total: $1,250.00</p>
+      <p style="color:#999; font-size:11px; margin-top:20px;">[Document preview — connect sidecar for live PDF rendering]</p>
+    </div>
+  </div>`;
+}
+
+function highlightBbox(x, y, w, h, page) {
+  const viewer = document.getElementById('doc-viewer');
+  // Remove existing overlays
+  viewer.querySelectorAll('.bbox-overlay').forEach(el => el.remove());
+  // Add new overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'bbox-overlay';
+  overlay.style.left = `${x * 100}%`;
+  overlay.style.top = `${y * 100}%`;
+  overlay.style.width = `${w * 100}%`;
+  overlay.style.height = `${h * 100}%`;
+  viewer.appendChild(overlay);
+  // Scroll to it
+  overlay.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+async function askQuestion() {
+  const q = document.getElementById('question-input').value.trim();
+  if (!q) return;
+  const area = document.getElementById('answer-area');
+  area.innerHTML = '<div class="answer-box"><span class="loading">Searching document...</span></div>';
+  try {
+    const resp = await fetch(`${API_BASE}/api/ask-document`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ doc_id: currentDocId, question: q })
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      renderAnswer(data);
+    } else if (resp.status === 404) {
+      // Stub answer
+      renderAnswer({ status: 'grounded', answer: 'The total amount is $1,250.00, due by 2026-07-15.', anchors: [{ page: 1, bbox: [0.35, 0.85, 0.55, 0.04] }] });
+    } else {
+      area.innerHTML = '<div class="answer-box refused">Server error</div>';
+    }
+  } catch (err) {
+    // Stub
+    renderAnswer({ status: 'grounded', answer: 'The total amount is $1,250.00, due by 2026-07-15.', anchors: [{ page: 1, bbox: [0.35, 0.85, 0.55, 0.04] }] });
+  }
+}
+
+function renderAnswer(data) {
+  const area = document.getElementById('answer-area');
+  if (data.status === 'blocked') {
+    area.innerHTML = `<div class="answer-box refused">✗ REFUSED: ${escapeHtml(data.reason || 'No grounded source found for this question')}</div>`;
+  } else {
+    let html = `<div class="answer-box grounded">✓ ${escapeHtml(data.answer || '')}`;
+    if (data.anchors && data.anchors[0]) {
+      const a = data.anchors[0];
+      html += `<br><span class="citation-link" onclick="highlightBbox(${a.bbox[0]},${a.bbox[1]},${a.bbox[2]},${a.bbox[3]},${a.page})">📎 Citation: page ${a.page}, bbox [${a.bbox.map(v=>v.toFixed(2)).join(', ')}]</span>`;
+    }
+    html += '</div>';
+    area.innerHTML = html;
+  }
+}
+
+function showStatus(type, msg) {
+  document.getElementById('status-area').innerHTML = `<div class="status-msg ${type}">${escapeHtml(msg)}</div>`;
+}
+
+function escapeHtml(s) {
+  if (s === null || s === undefined) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// Enter key for question
+document.getElementById('question-input').addEventListener('keydown', e => { if (e.key === 'Enter') askQuestion(); });
+</script>
+</body>
+</html>

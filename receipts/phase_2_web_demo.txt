@@ -1,0 +1,23 @@
+Kairo Scaffold — Phase 2: Interactive Web Demo
+Date: 2026-06-23
+
+BUILT:
+  - scaffold/web/demo.html (17.6 KB, vanilla HTML/CSS/JS)
+    Features: upload panel, sample buttons, results table (grounded/refused),
+    document viewer with bbox overlay, cascade trace waterfall, ask panel with citation
+  - kernel/sidecar/app.py: added /demo, /api/extract-document, /api/ask-document routes
+
+STUB FALLBACK:
+  - When sidecar API returns 404 or is unreachable, demo uses canned JSON stub
+    for 3 sample docs (invoice, contract, paper)
+  - Stub includes grounded fields with bbox + refused fields with reasons
+  - Swap to real API when phantom syncs connector routes
+
+TESTS:
+  - HTML structure validation: OK (no unclosed tags, no mismatches)
+  - Routes verified in app.py: /demo (GET), /api/extract-document (POST), /api/ask-document (POST)
+  - Stub responses load on sample button click
+
+SYNCED: N/A (scaffold-only; stub API built since phantom Phase 3 not yet pulled)
+
+Status: PASS

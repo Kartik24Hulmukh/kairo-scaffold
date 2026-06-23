@@ -277,6 +277,99 @@ class HealthResponse(BaseModel):
 
 
 @app.get("/health", response_model=HealthResponse)
+
+# ── Phase 2: Web Demo + Connector API routes (scaffold-specific) ──────────
+from fastapi.responses import FileResponse, HTMLResponse
+from fastapi import UploadFile, File as FastAPIFile
+import os as _os
+
+@app.get("/demo", response_class=HTMLResponse)
+async def serve_demo():
+    """Serve the interactive web demo (scaffold/web/demo.html)."""
+    demo_path = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__)))), "scaffold", "web", "demo.html")
+    if _os.path.exists(demo_path):
+        return FileResponse(demo_path, media_type="text/html")
+    return HTMLResponse("<h1>Demo not found</h1><p>scaffold/web/demo.html missing</p>", status_code=404)
+
+
+@app.post("/api/extract-document")
+async def api_extract_document(file: UploadFile = FastAPIFile(...)):
+    """Connector API: upload a document, get grounded extractions with bbox.
+
+    Returns structured JSON: { doc_id, doc_type, fields: [{field, value, status, bbox, page, method, confidence}] }
+    Refused fields have status='blocked' with a reason.
+    """
+    import tempfile, shutil
+    # Save uploaded file to temp
+    suffix = _os.path.splitext(file.filename or "upload.txt")[1] or ".txt"
+    with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp:
+        shutil.copyfileobj(file.file, tmp)
+        tmp_path = tmp.name
+
+    try:
+        # Index the document
+        idx_resp = index_doc(IndexRequest(filepath=tmp_path))
+        doc_id = idx_resp.doc_id
+
+        # Detect pack from filename or content
+        fname = (file.filename or "").lower()
+        if "invoice" in fname or "inv" in fname:
+            pack = "invoice"
+        elif "contract" in fname or "con" in fname:
+            pack = "contract"
+        elif "paper" in fname or "pap" in fname:
+            pack = "paper"
+        else:
+            pack = "generic"
+
+        # Extract fields
+        extractions = extract_fields(ExtractRequest(doc_id=doc_id, pack=pack))
+
+        # Format for web demo
+        fields = []
+        for ext in extractions:
+            grounded = ext.method != "block" and ext.status != "blocked"
+            field_data = {
+                "field": ext.field,
+                "value": ext.value if grounded else None,
+                "status": "grounded" if grounded else "blocked",
+                "method": ext.method if grounded else None,
+                "confidence": ext.confidence if grounded else 0.0,
+                "page": ext.anchors[0].page if ext.anchors else None,
+                "bbox": list(ext.anchors[0].bbox) if ext.anchors else None,
+            }
+            if not grounded:
+                field_data["reason"] = "no grounded source found in document"
+            fields.append(field_data)
+
+        return {"doc_id": doc_id, "doc_type": pack, "fields": fields}
+    finally:
+        _os.unlink(tmp_path)
+
+
+@app.post("/api/ask-document")
+async def api_ask_document(req: dict):
+    """Connector API: ask a question about an indexed document.
+
+    Returns: { status, answer, anchors: [{page, bbox}] } or { status: 'blocked', reason }
+    """
+    doc_id = req.get("doc_id")
+    question = req.get("question", "")
+    if not doc_id or not question:
+        return {"status": "blocked", "reason": "doc_id and question required"}
+
+    answer = ask_question(AskRequest(doc_id=doc_id, question=question))
+    if answer.status == "blocked" or answer.method == "block":
+        return {"status": "blocked", "reason": "no grounded source found for this question"}
+
+    anchors = []
+    if answer.anchors:
+        for a in answer.anchors:
+            anchors.append({"page": a.page, "bbox": list(a.bbox)})
+
+    return {"status": "grounded", "answer": answer.answer, "anchors": anchors}
+
+
 def health_check():
     """Kairo Doctor health endpoint — checks sidecar, DB, and stores."""
     db_path = _get_db_path()
