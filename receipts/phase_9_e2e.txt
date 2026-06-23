@@ -1,0 +1,50 @@
+Kairo Scaffold — Phase 9: End-to-End Verification
+Date: 2026-06-23
+
+VERIFICATION RESULTS:
+
+1. Git log (all 9 phases committed + pushed):
+   ad34126 phase 8: launch assets restructured
+   4f32aee phase 7: security hardening verified
+   50b32d5 phase 6: knowledge graph demo
+   12be635 phase 5: context compression
+   f135e2b phase 4: connector protocol + guide
+   e3ce371 phase 3: live dashboard
+   4dca736 phase 2: interactive web demo
+   4b5f0dd phase 1: one-command quickstart
+   44c78e0 pass 2: corpus pull-in + injection fix
+   0463764 pass 1: prod-hardening
+
+2. SHA256 oracle: 23/23 files OK (blind corpus byte-identical to phantom)
+
+3. Injection corpus: 25/25 = 100.0% blocked
+
+4. Routes present (12 total):
+   /health, /demo, /dashboard, /graph (GET)
+   /api/traces, /api/compression-stats (GET)
+   /api/extract-document, /api/ask-document (POST)
+   /parse, /index, /extract, /ask (POST, internal)
+
+5. Scaffold-specific files (11):
+   quickstart.sh, requirements-min.txt, scaffold/web/demo.html, scaffold/web/graph.html,
+   docs/connector_guide.md, docs/SHOW_HN.md, refusal_demo.gif,
+   BENCHMARKS.md, FAILURE_TAXONOMY.md, SCAFFOLD_LEDGER.md, CORE_SYNC.md
+
+6. Synced from phantom (7 files):
+   kairo/observability/trace.py, kairo/observability/dashboard.html,
+   kairo/core/classifier.py, kairo/context/compressor.py, kairo/graph/__init__.py,
+   bench/score.py, bench/corpus/blind/v1/manifest.json
+
+7. Receipts: 23 files in /receipts/
+
+8. quickstart.sh syntax: OK
+
+INFRA-PENDING:
+  - make bench (needs GPU machine: PyTorch venv ~2GB, sandbox tmpfs 2GB limit)
+  - Tauri signed installers (needs 5 signing secrets)
+
+SYNC-PENDING:
+  - phantom Phase 7: expanded 200+ injection corpus + semgrep rules
+  - Full CHECKSUMS.sha256 verification (not present in phantom at pulled commit)
+
+Status: ALL 9 PHASES COMPLETE. Ready for Show HN (pending bench run on GPU machine).
