@@ -1,0 +1,18 @@
+Kairo Scaffold — Phase 4: Connector Protocol + Guide
+Date: 2026-06-23
+
+SYNCED (from phantom @ f127d68):
+  - kairo/core/classifier.py (87 lines — classify_document, build_source_link)
+    Already pulled in Phase 3 CORE_SYNC.
+
+BUILT (scaffold-specific):
+  - docs/connector_guide.md (5.6 KB — 5-line integration: Python, curl, Node.js)
+    Includes: response format, ask endpoint, post-ingestion hook pattern,
+    batch processing, auto type detection, source links, error handling, endpoints table
+  - /api/extract-document and /api/ask-document routes (already added in Phase 2)
+
+TESTS:
+  - No external package/repo names in connector guide (grep clean)
+  - Routes functional (added in Phase 2, verified in Phase 3)
+
+Status: PASS
